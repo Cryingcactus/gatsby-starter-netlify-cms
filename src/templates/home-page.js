@@ -47,8 +47,11 @@ export const HomePageQuery = graphql`
     query HomePage($id: String!) {
         markdownRemark(id: { eq: $id }) {
             frontmatter {
-                title
-                swim
+                titleOptions {
+                    title
+                    titleColor
+                    titleHighlightColor
+                }
                 backgroundImage {
                     alt
                     image {

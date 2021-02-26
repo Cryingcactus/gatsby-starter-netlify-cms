@@ -45,23 +45,44 @@ collections:
                       widget: "hidden",
                       default: "home-page",
                   }
-                - { label: Title, name: title, widget: string }
+                - {
+                      label: Title Options,
+                      name: titleOptions,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              {
+                                  label: Title Color,
+                                  name: titleColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Title Highlight Color,
+                                  name: titleHighlightColor,
+                                  widget: color,
+                              },
+                              
+                          ],
+                  }
                 - {
                       label: BackgroundImage,
                       name: backgroundImage,
                       widget: object,
                       fields:
                           [
-                              { label: Image, name: image, widget: image },
-                              { label: Alt, name: alt, widget: string },
+                              {
+                                  label: Image,
+                                  name: image,
+                                  widget: image,
+                              },
+                              {
+                                  label: Alt,
+                                  name: alt,
+                                  widget: string,
+                              },
                           ],
-                  }
-                - {
-                      label: Swim,
-                      name: swim,
-                      widget: string,
-                      default: "SWIMMINGGGG",
-                  }
+                  },
           - file: "src/pages/index.md"
             label: "Landing Page"
             name: "index"
