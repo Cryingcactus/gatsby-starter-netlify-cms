@@ -2,16 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-// import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
+import styles from "../styles/home.module.css";
 
-export const HomePageTemplate = (props) => {
-    // console.log(props);
-    // <PreviewCompatibleImage imageInfo={heroImage} />;
+export const HomePageTemplate = ({ title, backgroundImage }) => {
     return (
-        <section className="hero">
-            <div className="container">
+        <section className={styles.hero}>
+            <div
+                className="full-width-image-container"
+                style={{
+                    backgroundImage: `url(${backgroundImage.image.childImageSharp.fluid.src})`,
+                }}
+            >
                 <div className="columns">
-                    <h1 className="title">{props.title}</h1>
+                    <h1 className="title">{title}</h1>
                 </div>
             </div>
         </section>
@@ -24,12 +27,11 @@ HomePageTemplate.propTypes = {
 
 const HomePage = ({ data }) => {
     const { markdownRemark: post } = data;
-    console.log(post);
     return (
         <Layout>
             <HomePageTemplate
                 title={post.frontmatter.title}
-                heroImage={post.frontmatter.heroImage}
+                backgroundImage={post.frontmatter.backgroundImage}
             />
         </Layout>
     );
