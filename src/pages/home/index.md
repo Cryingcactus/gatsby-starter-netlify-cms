@@ -1,6 +1,8 @@
 ---
-templateKey: "home-page"
-path: /home
-title: we solve digital challenges for mission-driven organizations.
-swim: test
+title: asds
+image: /img/hero.png
+backgroundImage:
+    alt: sss
+    image: /img/hero.png
+swim: asdasdasd
 ---
