@@ -16,7 +16,7 @@ typingSection:
     - word: Someotherword
   backgroundColor: "#1e3468"
   textColor: "#bdddf4"
-  title: tgthr we can
+  title: tgthr we cans
   copy: we’re a digital consultancy  passionate about building a radically better
     future.
 ---
