@@ -1,23 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import styles from "../styles/home.module.css";
+import Hero from "../components/Hero";
 
-export const HomePageTemplate = ({ title, backgroundImage }) => {
+export const HomePageTemplate = ({
+    title,
+    titleOptions,
+    backgroundImage,
+    typingSection,
+}) => {
+    const [activeWord, setActiveWord] = useState(0);
+
+    useEffect(() => {
+        setInterval(() => {
+            setActiveWord(
+                activeWord + 1 <= typingSection.typedWords.length
+                    ? activeWord + 1
+                    : 0
+            );
+        }, 5000);
+    }, []);
+
     return (
-        <section className={styles.hero}>
-            <div
-                className="full-width-image-container"
-                style={{
-                    backgroundImage: `url(${backgroundImage.image.childImageSharp.fluid.src})`,
-                }}
-            >
-                <div className="columns">
-                    <h1 className="title">{title}</h1>
+        <div>
+            <Hero
+                title={title}
+                titleOptions={titleOptions}
+                backgroundImage={backgroundImage}
+            />
+            <section className={styles.typer}>
+                <div
+                    className={`full-width-image-container ${styles.container}`}
+                    style={{
+                        backgroundColor: typingSection.backgroundColor,
+                        color: typingSection.textColor,
+                    }}
+                >
+                    <div className={styles.titleContainer}>
+                        <h2>
+                            {typingSection.title}{" "}
+                            <span>{typingSection.typedWords[activeWord]}</span>
+                        </h2>
+                        <h3>{typingSection.copy}</h3>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };
 
@@ -30,7 +60,8 @@ const HomePage = ({ data }) => {
     return (
         <Layout>
             <HomePageTemplate
-                title={post.frontmatter.title}
+                title={post.frontmatter.titleOptions.title}
+                titleOptions={post.frontmatter.titleOptions}
                 backgroundImage={post.frontmatter.backgroundImage}
             />
         </Layout>
@@ -61,6 +92,11 @@ export const HomePageQuery = graphql`
                             }
                         }
                     }
+                }
+                typingSection {
+                    title
+                    copy
+                    typedWords
                 }
             }
         }

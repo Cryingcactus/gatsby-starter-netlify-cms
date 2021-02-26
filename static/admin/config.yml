@@ -62,7 +62,6 @@ collections:
                                   name: titleHighlightColor,
                                   widget: color,
                               },
-                              
                           ],
                   }
                 - {
@@ -71,18 +70,43 @@ collections:
                       widget: object,
                       fields:
                           [
+                              { label: Image, name: image, widget: image },
+                              { label: Alt, name: alt, widget: string },
+                          ],
+                  }
+                - {
+                      label: Typing Section,
+                      name: typingSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: string },
                               {
-                                  label: Image,
-                                  name: image,
-                                  widget: image,
+                                  label: Typed Words,
+                                  name: typedWords,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Word,
+                                              name: word,
+                                              widget: string,
+                                          },
+                                      ],
                               },
                               {
-                                  label: Alt,
-                                  name: alt,
-                                  widget: string,
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
                               },
                           ],
-                  },
+                  }
           - file: "src/pages/index.md"
             label: "Landing Page"
             name: "index"
