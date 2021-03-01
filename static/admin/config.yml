@@ -81,7 +81,7 @@ collections:
                       fields:
                           [
                               { label: Title, name: title, widget: string },
-                              { label: Copy, name: copy, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
                               {
                                   label: Typed Words,
                                   name: typedWords,

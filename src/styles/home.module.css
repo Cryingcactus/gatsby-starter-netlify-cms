@@ -1,44 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap");
-
-.hero {
-    display: flex;
-    width: 100vw;
-}
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 .container {
-    height: 980px;
+    height: 637px;
     justify-content: unset;
 }
 
 .titleContainer {
     display: flex;
-    padding: 0 9vw;
-    max-width: 70%;
+    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 0 3vw;
+    flex: 1;
 }
 
-.title {
-    position: relative;
-    color: #000000;
-}
-
-.title > span {
-    display: inline;
-
-    padding-left: 0.2em;
-    position: relative;
-    background-repeat: no-repeat;
-    background-position: 0px 0.28em;
-    background-size: auto 0.57em;
+.titleContainer > h2 {
+    display: flex;
 
     font-family: "Source Serif Pro";
     font-style: normal;
-    /* font-weight: 900; */
     font-size: 110px;
     line-height: 1.05em;
     letter-spacing: 0.05em;
     word-spacing: -0.2em;
+
+    margin-bottom: 30px;
 }
 
-.title > span ~ span {
-    /* background-color: aliceblue; */
+.titleContainer > h3 {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 63px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+}
+
+.underlineContainer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.underlineLetterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 75px;
+    margin: 0 5px;
+}
+
+.letter {
+    height: 100%;
+    text-align: center;
+}
+
+.underline {
+    background-color: grey;
+    height: 9px;
 }

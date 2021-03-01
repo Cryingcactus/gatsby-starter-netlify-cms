@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
@@ -12,16 +12,55 @@ export const HomePageTemplate = ({
     typingSection,
 }) => {
     const [activeWord, setActiveWord] = useState(0);
+    const [typedIndex, setTypedIndex] = useState(0);
+    const notTimeout = useRef(true);
 
     useEffect(() => {
-        setInterval(() => {
-            setActiveWord(
-                activeWord + 1 <= typingSection.typedWords.length
-                    ? activeWord + 1
-                    : 0
+        const curentWord = typingSection.typedWords[activeWord].word;
+        if (notTimeout.current) {
+            notTimeout.current = false;
+            setTimeout(() => {
+                if (typedIndex + 1 <= curentWord.length) {
+                    notTimeout.current = true;
+                    setTypedIndex(typedIndex + 1);
+                } else {
+                    setTimeout(() => {
+                        notTimeout.current = true;
+                        setActiveWord(
+                            activeWord + 1 <=
+                                typingSection.typedWords.length - 1
+                                ? activeWord + 1
+                                : 0
+                        );
+                        setTypedIndex(0);
+                    }, 5000);
+                }
+            }, 100);
+        }
+    }, [typedIndex]);
+
+    const Underlines = () => {
+        let underlines = [];
+        for (let i = 0; i < 10; i++) {
+            underlines.push(
+                <span key={i} className={styles.underlineLetterContainer}>
+                    <span
+                        className={`${styles.letter} ${
+                            typedIndex === i ? styles.typeWriter : ""
+                        }`}
+                    >
+                        {typingSection.typedWords && typedIndex >= i
+                            ? typingSection.typedWords[activeWord].word.charAt(
+                                  i
+                              )
+                            : " "}
+                    </span>
+                    <span className={styles.underline} />
+                </span>
             );
-        }, 5000);
-    }, []);
+        }
+        return underlines;
+    };
 
     return (
         <div>
@@ -40,8 +79,12 @@ export const HomePageTemplate = ({
                 >
                     <div className={styles.titleContainer}>
                         <h2>
-                            {typingSection.title}{" "}
-                            <span>{typingSection.typedWords[activeWord]}</span>
+                            <span className={styles.title}>
+                                {typingSection.title}
+                            </span>
+                            <span className={styles.underlineContainer}>
+                                <Underlines />.
+                            </span>
                         </h2>
                         <h3>{typingSection.copy}</h3>
                     </div>
@@ -63,6 +106,7 @@ const HomePage = ({ data }) => {
                 title={post.frontmatter.titleOptions.title}
                 titleOptions={post.frontmatter.titleOptions}
                 backgroundImage={post.frontmatter.backgroundImage}
+                typingSection={post.frontmatter.typingSection}
             />
         </Layout>
     );
@@ -96,7 +140,11 @@ export const HomePageQuery = graphql`
                 typingSection {
                     title
                     copy
-                    typedWords
+                    backgroundColor
+                    textColor
+                    typedWords {
+                        word
+                    }
                 }
             }
         }
