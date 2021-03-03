@@ -1,0 +1,65 @@
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+
+    color: #2a2f35;
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+
+    text-align: center;
+
+    color: #d66042;
+}
+
+.item {
+    padding: 0 18px;
+}
+
+.contact {
+    padding: 7px 14px;
+    background-color: #d66042;
+    color: #f2e3e1;
+}
+
+a.contact {
+    color: #f2e3e1;
+}

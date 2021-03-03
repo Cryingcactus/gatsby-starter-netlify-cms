@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+.container {
+    height: 637px;
+    display: flex;
+    justify-content: unset;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 7vw;
+    flex: 1;
+}
+
+.titleContainer > h2 {
+    display: flex;
+
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-size: 110px;
+    line-height: 1.05em;
+    letter-spacing: 0.05em;
+    word-spacing: -0.2em;
+
+    margin: 0 0 30px 0;
+}
+
+.titleContainer > h3 {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 63px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+
+    margin: 0;
+}
+
+.underlineContainer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.underlineLetterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 55px;
+    margin: 0 5px;
+}
+
+.letter {
+    height: 100%;
+    text-align: center;
+}
+
+.underline {
+    background-color: grey;
+    height: 9px;
+}

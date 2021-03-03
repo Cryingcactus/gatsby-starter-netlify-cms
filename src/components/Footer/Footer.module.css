@@ -1,0 +1,83 @@
+.container {
+    display: flex;
+    height: 868px;
+    padding: 0 7vw;
+    background-color: #d66042;
+    color: #f2e3e1;
+
+    font-style: normal;
+    font-weight: normal;
+}
+
+.centered {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.row {
+    flex: 3;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer .container h2 {
+    font-family: "Source Serif Pro";
+    font-size: 80px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0;
+}
+
+footer .container h3 {
+    font-family: "Source Sans Pro";
+    font-size: 60px;
+    line-height: 75px;
+    text-align: center;
+    margin: 0;
+}
+
+.row.lineContainer {
+    flex: 1;
+}
+
+.line {
+    height: 2px;
+    width: 70vw;
+    background-color: #f2e3e1;
+}
+
+.bottomRowContainer {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.verticalColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 174px;
+}
+
+footer h3.logo {
+    font-family: "Source Serif Pro";
+    text-align: start;
+}
+
+.email {
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+    line-height: 25px;
+    text-decoration-line: underline;
+}
+
+.legal {
+    font-family: "Source Sans Pro";
+    font-size: 20px;
+    line-height: 25px;
+}

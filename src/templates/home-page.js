@@ -1,119 +1,49 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import styles from "../styles/home.module.css";
 import Hero from "../components/Hero";
+import Typer from "../components/Typer";
 
 export const HomePageTemplate = ({
     title,
     titleOptions,
-    backgroundImage,
+    image,
     typingSection,
 }) => {
-    const [activeWord, setActiveWord] = useState(0);
-    const [typedIndex, setTypedIndex] = useState(0);
-    const notTimeout = useRef(true);
-
-    useEffect(() => {
-        const curentWord = typingSection.typedWords[activeWord].word;
-        if (notTimeout.current) {
-            notTimeout.current = false;
-            setTimeout(() => {
-                if (typedIndex + 1 <= curentWord.length) {
-                    notTimeout.current = true;
-                    setTypedIndex(typedIndex + 1);
-                } else {
-                    setTimeout(() => {
-                        notTimeout.current = true;
-                        setActiveWord(
-                            activeWord + 1 <=
-                                typingSection.typedWords.length - 1
-                                ? activeWord + 1
-                                : 0
-                        );
-                        setTypedIndex(0);
-                    }, 5000);
-                }
-            }, 100);
-        }
-    }, [typedIndex]);
-
-    const Underlines = () => {
-        let underlines = [];
-        for (let i = 0; i < 10; i++) {
-            underlines.push(
-                <span key={i} className={styles.underlineLetterContainer}>
-                    <span
-                        className={`${styles.letter} ${
-                            typedIndex === i ? styles.typeWriter : ""
-                        }`}
-                    >
-                        {typingSection.typedWords && typedIndex >= i
-                            ? typingSection.typedWords[activeWord].word.charAt(
-                                  i
-                              )
-                            : " "}
-                    </span>
-                    <span className={styles.underline} />
-                </span>
-            );
-        }
-        return underlines;
-    };
-
     return (
         <div>
-            <Hero
-                title={title}
-                titleOptions={titleOptions}
-                backgroundImage={backgroundImage}
-            />
-            <section className={styles.typer}>
-                <div
-                    className={`full-width-image-container ${styles.container}`}
-                    style={{
-                        backgroundColor: typingSection.backgroundColor,
-                        color: typingSection.textColor,
-                    }}
-                >
-                    <div className={styles.titleContainer}>
-                        <h2>
-                            <span className={styles.title}>
-                                {typingSection.title}
-                            </span>
-                            <span className={styles.underlineContainer}>
-                                <Underlines />.
-                            </span>
-                        </h2>
-                        <h3>{typingSection.copy}</h3>
-                    </div>
-                </div>
-            </section>
+            <Hero title={title} titleOptions={titleOptions} image={image} />
+            <Typer typingSection={typingSection} />
         </div>
     );
 };
 
 HomePageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
+    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };
 
 const HomePage = ({ data }) => {
-    const { markdownRemark: post } = data;
+    const { frontmatter } = data.markdownRemark;
     return (
         <Layout>
             <HomePageTemplate
-                title={post.frontmatter.titleOptions.title}
-                titleOptions={post.frontmatter.titleOptions}
-                backgroundImage={post.frontmatter.backgroundImage}
-                typingSection={post.frontmatter.typingSection}
+                title={frontmatter.titleOptions.title}
+                titleOptions={frontmatter.titleOptions}
+                image={frontmatter.backgroundImage.image}
+                typingSection={frontmatter.typingSection}
             />
         </Layout>
     );
 };
 
 HomePage.propTypes = {
-    data: PropTypes.object.isRequired,
+    data: PropTypes.shape({
+        markdownRemark: PropTypes.shape({
+            frontmatter: PropTypes.object,
+        }),
+    }),
 };
 
 export default HomePage;
@@ -121,6 +51,7 @@ export default HomePage;
 export const HomePageQuery = graphql`
     query HomePage($id: String!) {
         markdownRemark(id: { eq: $id }) {
+            rawMarkdownBody
             frontmatter {
                 titleOptions {
                     title

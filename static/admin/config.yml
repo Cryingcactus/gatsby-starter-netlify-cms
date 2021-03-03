@@ -46,32 +46,52 @@ collections:
                       default: "home-page",
                   }
                 - {
-                      label: Title Options,
-                      name: titleOptions,
+                      label: Hero Section,
+                      name: heroSection,
                       widget: object,
                       fields:
                           [
-                              { label: Title, name: title, widget: string },
                               {
-                                  label: Title Color,
-                                  name: titleColor,
-                                  widget: color,
+                                  label: Title Options,
+                                  name: titleOptions,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Title Color,
+                                              name: titleColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Title Highlight Color,
+                                              name: titleHighlightColor,
+                                              widget: color,
+                                          },
+                                      ],
                               },
                               {
-                                  label: Title Highlight Color,
-                                  name: titleHighlightColor,
-                                  widget: color,
+                                  label: BackgroundImage,
+                                  name: backgroundImage,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Image,
+                                              name: image,
+                                              widget: image,
+                                          },
+                                          {
+                                              label: Alt,
+                                              name: alt,
+                                              widget: string,
+                                          },
+                                      ],
                               },
-                          ],
-                  }
-                - {
-                      label: BackgroundImage,
-                      name: backgroundImage,
-                      widget: object,
-                      fields:
-                          [
-                              { label: Image, name: image, widget: image },
-                              { label: Alt, name: alt, widget: string },
                           ],
                   }
                 - {
@@ -104,6 +124,165 @@ collections:
                                   label: Text Color,
                                   name: textColor,
                                   widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Services Section,
+                      name: servicesSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              {
+                                  label: Services,
+                                  name: services,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Service,
+                                              name: service,
+                                              widget: string,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Button,
+                                  name: button,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Background Color,
+                                              name: backgroundColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Background Color on Hover,
+                                              name: backgroundColorHover,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color,
+                                              name: textColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color on Hover,
+                                              name: textColorHover,
+                                              widget: color,
+                                          },
+                                      ],
+                              },
+                              { label: Image, name: image, widget: image },
+                              {
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Icons Section,
+                      name: iconsSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: string },
+                              {
+                                  label: Services,
+                                  name: services,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Icon Container,
+                                              name: iconContainer,
+                                              widget: object,
+                                              fields:
+                                                  [
+                                                      {
+                                                          label: Icon,
+                                                          name: icon,
+                                                          widget: image,
+                                                      },
+                                                      {
+                                                          label: Text,
+                                                          name: text,
+                                                          widget: string,
+                                                      },
+                                                  ],
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Blog Section,
+                      name: blogSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              {
+                                  label: Number of Posts,
+                                  name: numberOfPosts,
+                                  widget: number,
+                              },
+                              {
+                                  label: Button,
+                                  name: button,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Background Color,
+                                              name: backgroundColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Background Color on Hover,
+                                              name: backgroundColorHover,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color,
+                                              name: textColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color on Hover,
+                                              name: textColorHover,
+                                              widget: color,
+                                          },
+                                      ],
                               },
                           ],
                   }
