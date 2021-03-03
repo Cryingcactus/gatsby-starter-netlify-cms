@@ -5,14 +5,21 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Typer from "../components/Typer";
 import Services from "../components/Services";
+import IconsSection from "../components/IconsSection";
 
 export const HomePageTemplate = ({ sections }) => {
-    const { heroSection, typingSection, servicesSection } = sections;
+    const {
+        heroSection,
+        typingSection,
+        servicesSection,
+        iconsSection,
+    } = sections;
     return (
         <div>
             <Hero section={heroSection} />
             <Typer section={typingSection} />
             <Services section={servicesSection} />
+            <IconsSection section={iconsSection} />
         </div>
     );
 };
