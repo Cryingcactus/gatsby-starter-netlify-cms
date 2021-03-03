@@ -1,0 +1,80 @@
+.services {
+}
+
+.container {
+    height: 932px;
+    display: flex;
+}
+
+.servicesContentContainer {
+    flex: 3;
+    padding: 0 3em;
+    display: flex;
+}
+
+.servicesContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.servicesContent h2 {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 100px;
+    text-align: right;
+    margin: 0.5em 0;
+}
+
+.servicesWrapper {
+    flex: 1;
+    display: flex;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.service {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: right;
+    letter-spacing: 0.05em;
+}
+
+.ctaContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta {
+    margin: 50px 0;
+    padding: 16px 38px;
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 60px;
+    text-align: right;
+    letter-spacing: 0.03em;
+    border: 2px transparent;
+    cursor: pointer;
+}
+
+.imageContainer {
+    flex: 2;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+}

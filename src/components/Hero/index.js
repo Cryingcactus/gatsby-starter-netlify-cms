@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "./Hero.module.css";
 
-const Hero = ({ titleOptions, image }) => {
+const Hero = ({ section }) => {
+    const { titleOptions, backgroundImage } = section;
+    const { image } = backgroundImage;
     let words = titleOptions.title.split(" ");
     let titleRend = words.map((word, i) => {
         return (

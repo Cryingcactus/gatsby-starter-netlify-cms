@@ -4,36 +4,28 @@ import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Typer from "../components/Typer";
+import Services from "../components/Services";
 
-export const HomePageTemplate = ({
-    title,
-    titleOptions,
-    image,
-    typingSection,
-}) => {
+export const HomePageTemplate = ({ sections }) => {
+    const { heroSection, typingSection, servicesSection } = sections;
     return (
         <div>
-            <Hero title={title} titleOptions={titleOptions} image={image} />
-            <Typer typingSection={typingSection} />
+            <Hero section={heroSection} />
+            <Typer section={typingSection} />
+            <Services section={servicesSection} />
         </div>
     );
 };
 
 HomePageTemplate.propTypes = {
-    title: PropTypes.string.isRequired,
-    image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+    sections: PropTypes.object.isRequired,
 };
 
 const HomePage = ({ data }) => {
     const { frontmatter } = data.markdownRemark;
     return (
         <Layout>
-            <HomePageTemplate
-                title={frontmatter.titleOptions.title}
-                titleOptions={frontmatter.titleOptions}
-                image={frontmatter.backgroundImage.image}
-                typingSection={frontmatter.typingSection}
-            />
+            <HomePageTemplate sections={frontmatter} />
         </Layout>
     );
 };
@@ -53,17 +45,19 @@ export const HomePageQuery = graphql`
         markdownRemark(id: { eq: $id }) {
             rawMarkdownBody
             frontmatter {
-                titleOptions {
-                    title
-                    titleColor
-                    titleHighlightColor
-                }
-                backgroundImage {
-                    alt
-                    image {
-                        childImageSharp {
-                            fluid(maxWidth: 2048, quality: 100) {
-                                ...GatsbyImageSharpFluid
+                heroSection {
+                    titleOptions {
+                        title
+                        titleColor
+                        titleHighlightColor
+                    }
+                    backgroundImage {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 90) {
+                                    ...GatsbyImageSharpFluid
+                                }
                             }
                         }
                     }
@@ -75,6 +69,57 @@ export const HomePageQuery = graphql`
                     textColor
                     typedWords {
                         word
+                    }
+                }
+                servicesSection {
+                    services {
+                        service
+                    }
+                    title
+                    button {
+                        title
+                        backgroundColor
+                        textColorHover
+                        textColor
+                        backgroundColorHover
+                    }
+                    image {
+                        childImageSharp {
+                            fluid(maxWidth: 2048, quality: 90) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                    backgroundColor
+                    textColor
+                }
+                iconsSection {
+                    backgroundColor
+                    textColor
+                    title
+                    copy
+                    services {
+                        iconContainer {
+                            icon {
+                                childImageSharp {
+                                    fluid(maxWidth: 150, quality: 70) {
+                                        ...GatsbyImageSharpFluid
+                                    }
+                                }
+                            }
+                            text
+                        }
+                    }
+                }
+                blogSection {
+                    title
+                    numberOfPosts
+                    button {
+                        title
+                        backgroundColor
+                        textColorHover
+                        textColor
+                        backgroundColorHover
                     }
                 }
             }

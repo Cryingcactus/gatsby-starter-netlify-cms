@@ -4,14 +4,8 @@ import styles from "./Typer.module.css";
 import ReactMarkdown from "react-markdown";
 import Underlines from "./Underlines";
 
-const Typer = ({ typingSection }) => {
-    const {
-        backgroundColor,
-        textColor,
-        title,
-        typedWords,
-        copy,
-    } = typingSection;
+const Typer = ({ section }) => {
+    const { backgroundColor, textColor, title, typedWords, copy } = section;
     return (
         <section className={styles.typer}>
             <div
@@ -42,7 +36,7 @@ const Typer = ({ typingSection }) => {
 };
 
 Typer.propTypes = {
-    typingSection: PropTypes.shape({
+    section: PropTypes.shape({
         backgroundColor: PropTypes.string,
         textColor: PropTypes.string,
         title: PropTypes.string,
