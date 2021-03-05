@@ -28,6 +28,27 @@ typingSection:
   title: tgthr we cans
   copy: we’re a **digital consultancy** passionate about building a **radically
     better future**.
+WheelSection:
+  title: we believe in empathy.
+  copy: our process is rooted in understanding. we believe in asking why, asking
+    why again, and then using those answers to drive lasting growth and
+    transformation. our philosophy is that marketing should be human first and
+    technology second.
+  services:
+    - title: understand
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. "
+    - title: know
+      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. "
+  image: /img/approach-cycle-02-1.png
+  backgroundColor: "#ffffff"
+  textColor: "#181924"
+  carouselColor: "#17346c"
 servicesSection:
   services:
     - service: strategy + consulting
