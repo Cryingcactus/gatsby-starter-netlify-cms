@@ -8,7 +8,6 @@ blogSection:
         textColorHover: "#181924"
         backgroundColorHover: "#ffffff"
         textColor: "#ffffff"
-
 templateKey: index-page
 heroSection:
     titleOptions:

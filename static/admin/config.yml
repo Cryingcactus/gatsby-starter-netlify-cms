@@ -36,8 +36,8 @@ collections:
       label: "Pages"
       files:
           - file: "src/pages/index.md"
-            label: "Home"
-            name: "home"
+            label: "Index"
+            name: "index"
             fields:
                 - {
                       label: "Template Key",

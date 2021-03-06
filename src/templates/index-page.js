@@ -8,7 +8,7 @@ import Services from "../components/Services";
 import IconsSection from "../components/IconsSection";
 import WheelSection from "../components/WheelSection";
 
-export const HomePageTemplate = ({ sections }) => {
+export const IndexPageTemplate = ({ sections }) => {
     const {
         heroSection,
         typingSection,
@@ -27,20 +27,20 @@ export const HomePageTemplate = ({ sections }) => {
     );
 };
 
-HomePageTemplate.propTypes = {
+IndexPageTemplate.propTypes = {
     sections: PropTypes.object.isRequired,
 };
 
-const HomePage = ({ data }) => {
+const IndexPage = ({ data }) => {
     const { frontmatter } = data.markdownRemark;
     return (
         <Layout>
-            <HomePageTemplate sections={frontmatter} />
+            <IndexPageTemplate sections={frontmatter} />
         </Layout>
     );
 };
 
-HomePage.propTypes = {
+IndexPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.shape({
             frontmatter: PropTypes.object,
@@ -48,10 +48,10 @@ HomePage.propTypes = {
     }),
 };
 
-export default HomePage;
+export default IndexPage;
 
-export const HomePageQuery = graphql`
-    query HomePage($id: String!) {
+export const IndexPageQuery = graphql`
+    query IndexPage($id: String!) {
         markdownRemark(id: { eq: $id }) {
             rawMarkdownBody
             frontmatter {
