@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { HomePageTemplate } from "../../templates/index-page";
+import { IndexPageTemplate } from "../../templates/index-page";
 
-const HomePagePreview = ({ entry, widgetFor }) => {
-    return <HomePageTemplate sections={entry.getIn(["data"]).toJS()} />;
+const IndexPagePreview = ({ entry, widgetFor }) => {
+    return <IndexPageTemplate sections={entry.getIn(["data"]).toJS()} />;
 };
 
-HomePagePreview.propTypes = {};
+IndexPagePreview.propTypes = {};
 
-export default HomePagePreview;
+export default IndexPagePreview;
