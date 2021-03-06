@@ -31,7 +31,7 @@ const Letters = ({ typedWords }) => {
     }, [letterIndex]);
 
     let letters = [];
-    for (let i = 0; i < 3 /*curentWord.length*/; i++) {
+    for (let i = 0; i < curentWord.length; i++) {
         const currentChar = letterIndex >= i ? curentWord.charAt(i) : " ";
         letters.push(<span className={styles.letter}>{currentChar}</span>);
     }
