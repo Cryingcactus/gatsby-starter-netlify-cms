@@ -1,70 +1,91 @@
 ---
+blogSection:
+    title: what’s on our mind
+    numberOfPosts: 0
+    button:
+        title: read more
+        backgroundColor: "#181924"
+        textColorHover: "#181924"
+        backgroundColorHover: "#ffffff"
+        textColor: "#ffffff"
+
 templateKey: index-page
-title: Great coffee with a conscience
-image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
-subheading: Support sustainable farming while enjoying a cup
-mainpitch:
-    title: Why Kaldi
-    description: >
-        Kaldi is the coffee store for everyone who believes that great coffee
-        shouldn't just taste good, it should do good too. We source all of our beans
-        directly from small scale sustainable farmers and make sure part of the
-        profits are reinvested in their communities.
-description: >-
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee production,
-    roasting and brewing seriously and we’re glad to pass that knowledge to
-    anyone.
-intro:
-    blurbs:
-        - image: /img/coffee.png
-          text: >
-              We sell green and roasted coffee beans that are sourced directly from
-              independent farmers and farm cooperatives. We’re proud to offer a
-              variety of coffee beans grown with great care for the environment and
-              local communities. Check our post or contact us directly for current
-              availability.
-        - image: /img/coffee-gear.png
-          text: >
-              We offer a small, but carefully curated selection of brewing gear and
-              tools for every taste and experience level. No matter if you roast your
-              own beans or just bought your first french press, you’ll find a gadget
-              to fall in love with in our shop.
-        - image: /img/tutorials.png
-          text: >
-              Love a great cup of coffee, but never knew how to make one? Bought a
-              fancy new Chemex but have no clue how to use it? Don't worry, we’re here
-              to help. You can schedule a custom 1-on-1 consultation with our baristas
-              to learn anything you want to know about coffee roasting and brewing.
-              Email us or call the store for details.
-        - image: /img/meeting-space.png
-          text: >
-              We believe that good coffee has the power to bring people together.
-              That’s why we decided to turn a corner of our shop into a cozy meeting
-              space where you can hang out with fellow coffee lovers and learn about
-              coffee making techniques. All of the artwork on display there is for
-              sale. The full price you pay goes to the artist.
-    heading: What we offer
-    description: >
-        Kaldi is the ultimate spot for coffee lovers who want to learn about their
-        java’s origin and support the farmers that grew it. We take coffee
-        production, roasting and brewing seriously and we’re glad to pass that
-        knowledge to anyone. This is an edit via identity...
-main:
-    heading: Great coffee with no compromises
-    description: >
-        We hold our coffee to the highest standards from the shrub to the cup.
-        That’s why we’re meticulous and transparent about each step of the coffee’s
-        journey. We personally visit each farm to make sure the conditions are
-        optimal for the plants, farmers and the local environment.
-    image1:
-        alt: A close-up of a paper filter filled with ground coffee
-        image: /img/products-grid3.jpg
-    image2:
-        alt: A green cup of a coffee on a wooden table
-        image: /img/products-grid2.jpg
-    image3:
-        alt: Coffee beans
-        image: /img/products-grid1.jpg
+heroSection:
+    titleOptions:
+        title: we solve digital challenges for mission-driven organizations.
+        titleColor: "#ffffff"
+        titleHighlightColor: "#d66042"
+    backgroundImage:
+        image: /img/hero.png
+        alt: alt
+typingSection:
+    typedWords:
+        - word: Test
+        - word: Someotherword
+        - word: Hello
+    backgroundColor: "#1e3468"
+    textColor: "#bdddf4"
+    title: tgthr we cans
+    copy:
+        we’re a **digital consultancy** passionate about building a **radically
+        better future**.
+wheelSection:
+    title: we believe in empathy.
+    copy:
+        our process is rooted in understanding. we believe in asking why, asking
+        why again, and then using those answers to drive lasting growth and
+        transformation. our philosophy is that marketing should be human first and
+        technology second.
+    carousel:
+        - title: understand
+          copy:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. "
+        - copy:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+              commodo consequat. "
+          title: learn
+    image: /img/approach-cycle-02-1.png
+    backgroundColor: "#ffffff"
+    carouselColor: "#17346c"
+    textColor: "#181924"
+servicesSection:
+    services:
+        - service: strategy + consulting
+        - service: consumer understanding
+        - service: CSR + citizenship
+        - service: digital experiences
+        - service: e-commerce + DTC
+        - service: marking + media
+    title: "our team has deep expertise in:"
+    button:
+        title: our services
+        backgroundColor: "#f2e3e1"
+        textColorHover: "#f2e3e1"
+        textColor: "#d66042"
+        backgroundColorHover: "#d66042"
+    image: /img/robin-benzrihem-mfhetsgqm6a-unsplash.png
+    backgroundColor: "#d66042"
+    textColor: "#f2e3e1"
+iconsSection:
+    backgroundColor: "#ede3d4"
+    textColor: "#9f7767"
+    title: "who we love to work with:"
+    copy: we’re passionate about partnering with organizations that are working
+        towards a more diverse, equitable and habitable world for all.
+    icons:
+        - icon: /img/noun_campaign_1697845.png
+          text: campaigns + initiatives
+        - text: non-profits + NGOs
+          icon: /img/noun_charity_2727773.png
+        - text: brands + cause marketers
+          icon: /img/vector.png
+        - text: government agencies
+          icon: /img/group.png
+        - text: startups + investors
+          icon: /img/rocket.png
 ---
