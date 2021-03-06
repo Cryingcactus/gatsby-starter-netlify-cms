@@ -128,6 +128,54 @@ collections:
                           ],
                   }
                 - {
+                      label: Wheel Section,
+                      name: wheelSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                              {
+                                  label: Carousel,
+                                  name: carousel,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Copy,
+                                              name: copy,
+                                              widget: string,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Wheel Image,
+                                  name: image,
+                                  widget: image,
+                              },
+                              {
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Carousel Color,
+                                  name: carouselColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
                       label: Services Section,
                       name: servicesSection,
                       widget: object,
@@ -202,28 +250,20 @@ collections:
                               { label: Title, name: title, widget: string },
                               { label: Copy, name: copy, widget: string },
                               {
-                                  label: Services,
-                                  name: services,
+                                  label: Icons,
+                                  name: icons,
                                   widget: list,
                                   fields:
                                       [
                                           {
-                                              label: Icon Container,
-                                              name: iconContainer,
-                                              widget: object,
-                                              fields:
-                                                  [
-                                                      {
-                                                          label: Icon,
-                                                          name: icon,
-                                                          widget: image,
-                                                      },
-                                                      {
-                                                          label: Text,
-                                                          name: text,
-                                                          widget: string,
-                                                      },
-                                                  ],
+                                              label: Icon,
+                                              name: icon,
+                                              widget: image,
+                                          },
+                                          {
+                                              label: Text,
+                                              name: text,
+                                              widget: string,
                                           },
                                       ],
                               },

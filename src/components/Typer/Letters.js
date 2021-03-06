@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import Underline from "./Underline";
+import styles from "./Typer.module.css";
 
-const Underlines = ({ typedWords, textColor }) => {
+const Letters = ({ typedWords }) => {
     const [wordIndex, setWordIndex] = useState(0);
     const [letterIndex, setLetterIndex] = useState(0);
     const notTimeout = useRef(true);
@@ -30,20 +30,17 @@ const Underlines = ({ typedWords, textColor }) => {
         }
     }, [letterIndex]);
 
-    let underlines = [];
-    for (let i = 0; i < 13; i++) {
+    let letters = [];
+    for (let i = 0; i < 3 /*curentWord.length*/; i++) {
         const currentChar = letterIndex >= i ? curentWord.charAt(i) : " ";
-        underlines.push(
-            <Underline key={i} char={currentChar} textColor={textColor} />
-        );
+        letters.push(<span className={styles.letter}>{currentChar}</span>);
     }
-    return underlines;
+    return letters;
 };
 
-Underlines.propTypes = {
+Letters.propTypes = {
     typedWords: PropTypes.arrayOf(PropTypes.shape({ word: PropTypes.string }))
         .isRequired,
-    textColor: PropTypes.string,
 };
 
-export default Underlines;
+export default Letters;

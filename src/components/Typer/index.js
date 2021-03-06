@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Typer.module.css";
+import TitledCopy from "../TitledCopy";
 import ReactMarkdown from "react-markdown";
-import Underlines from "./Underlines";
+import Letters from "./Letters";
 
 const Typer = ({ section }) => {
     const { backgroundColor, textColor, title, typedWords, copy } = section;
@@ -15,21 +16,15 @@ const Typer = ({ section }) => {
                     color: textColor,
                 }}
             >
-                <div className={styles.titleContainer}>
-                    <h2>
-                        <span className={styles.title}>{title}</span>
-                        <span className={styles.underlineContainer}>
-                            <Underlines
-                                typedWords={typedWords}
-                                textColor={textColor}
-                            />
-                            .
+                <TitledCopy titleSize="6.875em" copySize="3.125em">
+                    <span className={styles.title}>
+                        {title}{" "}
+                        <span className={styles.lettersContainer}>
+                            <Letters typedWords={typedWords} />.
                         </span>
-                    </h2>
-                    <h3>
-                        <ReactMarkdown>{copy}</ReactMarkdown>
-                    </h3>
-                </div>
+                    </span>
+                    <ReactMarkdown>{copy}</ReactMarkdown>
+                </TitledCopy>
             </div>
         </section>
     );

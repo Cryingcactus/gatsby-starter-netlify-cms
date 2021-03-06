@@ -81,3 +81,36 @@ footer h3.logo {
     font-size: 20px;
     line-height: 25px;
 }
+
+.socialBar {
+    width: 500px;
+    justify-content: center;
+}
+
+.social {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social span {
+    margin-right: 2vw;
+}
+
+.social span:last-of-type {
+    margin-right: 0;
+}
+
+.emailInput {
+    display: flex;
+    height: 44px;
+}
+
+.emailInput input {
+    flex: 3;
+    height: 44px;
+}
+
+.emailInput span {
+    flex: 1;
+}

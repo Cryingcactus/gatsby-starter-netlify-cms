@@ -2,7 +2,6 @@
 }
 
 .container {
-    height: 932px;
     display: flex;
 }
 
@@ -23,7 +22,7 @@
     font-family: "Source Serif Pro";
     font-style: normal;
     font-weight: 900;
-    font-size: 80px;
+    font-size: 5em;
     line-height: 100px;
     text-align: right;
     margin: 0.5em 0;
@@ -45,10 +44,11 @@
     font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 50px;
     text-align: right;
     letter-spacing: 0.05em;
+    margin-bottom: 0.7em;
 }
 
 .ctaContainer {
@@ -64,7 +64,7 @@
     font-family: "Source Serif Pro";
     font-style: normal;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 3em;
     line-height: 60px;
     text-align: right;
     letter-spacing: 0.03em;

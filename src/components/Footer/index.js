@@ -31,7 +31,27 @@ const Footer = ({ ...props }) => {
                                 <div>Privacy Policy</div>
                             </span>
                         </div>
-                        <div></div>
+                        {false ? (
+                            <div
+                                className={[
+                                    styles.verticalColumn,
+                                    styles.socialBar,
+                                ].join(" ")}
+                            >
+                                <div>get insights delivered to your inbox.</div>
+                                <div className={styles.emailInput}>
+                                    <input />
+                                    <span />
+                                </div>
+                                <div className={styles.social}>
+                                    <span>f</span>
+                                    <span>s</span>
+                                    <span>i</span>
+                                </div>
+                            </div>
+                        ) : (
+                            <div></div>
+                        )}
                     </div>
                 </div>
             </div>

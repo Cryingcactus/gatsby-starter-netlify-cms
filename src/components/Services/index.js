@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./Services.module.css";
 import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import ServicesWrapper from "./ServicesWrapper";
+import Background from "../Background";
 
 const Services = ({ section }) => {
     const {
@@ -26,7 +27,7 @@ const Services = ({ section }) => {
                     <div className={styles.servicesContent}>
                         <h2>{title}</h2>
                         <ServicesWrapper services={services} />
-                        <div className={styles.ctaContainer}>
+                        {/*<div className={styles.ctaContainer}>
                             <button
                                 className={styles.cta}
                                 style={{
@@ -36,19 +37,10 @@ const Services = ({ section }) => {
                             >
                                 {button.title}
                             </button>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
-                <div
-                    className={styles.imageContainer}
-                    style={{
-                        backgroundImage: `url(${
-                            !!image.childImageSharp
-                                ? image.childImageSharp.fluid.src
-                                : image
-                        })`,
-                    }}
-                ></div>
+                <Background image={image} styles={styles.imageContainer} />
             </div>
         </section>
     );

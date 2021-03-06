@@ -6,11 +6,13 @@ import Hero from "../components/Hero";
 import Typer from "../components/Typer";
 import Services from "../components/Services";
 import IconsSection from "../components/IconsSection";
+import WheelSection from "../components/WheelSection";
 
 export const HomePageTemplate = ({ sections }) => {
     const {
         heroSection,
         typingSection,
+        wheelSection,
         servicesSection,
         iconsSection,
     } = sections;
@@ -18,6 +20,7 @@ export const HomePageTemplate = ({ sections }) => {
         <div>
             <Hero section={heroSection} />
             <Typer section={typingSection} />
+            <WheelSection section={wheelSection} />
             <Services section={servicesSection} />
             <IconsSection section={iconsSection} />
         </div>
@@ -78,6 +81,24 @@ export const HomePageQuery = graphql`
                         word
                     }
                 }
+                wheelSection {
+                    title
+                    copy
+                    backgroundColor
+                    textColor
+                    carouselColor
+                    image {
+                        childImageSharp {
+                            fluid(maxWidth: 2048, quality: 90) {
+                                ...GatsbyImageSharpFluid
+                            }
+                        }
+                    }
+                    carousel {
+                        title
+                        copy
+                    }
+                }
                 servicesSection {
                     services {
                         service
@@ -105,17 +126,15 @@ export const HomePageQuery = graphql`
                     textColor
                     title
                     copy
-                    services {
-                        iconContainer {
-                            icon {
-                                childImageSharp {
-                                    fluid(maxWidth: 150, quality: 70) {
-                                        ...GatsbyImageSharpFluid
-                                    }
+                    icons {
+                        icon {
+                            childImageSharp {
+                                fluid(maxWidth: 150, quality: 70) {
+                                    ...GatsbyImageSharpFluid
                                 }
                             }
-                            text
                         }
+                        text
                     }
                 }
                 blogSection {

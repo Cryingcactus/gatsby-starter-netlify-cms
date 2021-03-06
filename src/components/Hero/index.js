@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.css";
-
+import Background from "../Background";
 const Hero = ({ section }) => {
     const { titleOptions, backgroundImage } = section;
     const { image } = backgroundImage;
@@ -19,15 +19,9 @@ const Hero = ({ section }) => {
     });
     return (
         <section className={styles.hero}>
-            <div
-                className={`full-width-image-container ${styles.container}`}
-                style={{
-                    backgroundImage: `url(${
-                        !!image.childImageSharp
-                            ? image.childImageSharp.fluid.src
-                            : image
-                    })`,
-                }}
+            <Background
+                image={image}
+                styles={`full-width-image-container ${styles.container}`}
             >
                 <div className={styles.titleContainer}>
                     <h1
@@ -39,7 +33,7 @@ const Hero = ({ section }) => {
                         {titleRend}
                     </h1>
                 </div>
-            </div>
+            </Background>
         </section>
     );
 };
