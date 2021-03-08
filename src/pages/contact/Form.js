@@ -40,13 +40,15 @@ const Form = ({ children }) => {
     return (
         <form
             className={styles.form}
-            name="contactLeads"
+            name="contact"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            netlify
+            netlify-honeypot="bot-field"
         >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="contactLeads" />
+            <input type="hidden" name="form-name" value="contact" />
             <div hidden>
                 <label>
                     Don’t fill this out:{" "}

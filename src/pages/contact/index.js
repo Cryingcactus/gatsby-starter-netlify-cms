@@ -53,7 +53,10 @@ const Index = () => {
                                 name={"name"}
                                 label={"what should we call you?"}
                             />
-                            <Field name={"work"} label={"where do you work?"} />
+                            <Field
+                                name={"company"}
+                                label={"where do you work?"}
+                            />
                             <Field
                                 name={"title"}
                                 label={"what’s your title?"}
@@ -68,69 +71,14 @@ const Index = () => {
                 </div>
                 <form
                     name="contact"
-                    method="post"
-                    action="/contact/thanks/"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
+                    netlify
+                    netlify-honeypot="bot-field"
+                    hidden
                 >
-                    {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                    <input type="hidden" name="form-name" value="contact" />
-                    <div hidden>
-                        <label>
-                            Don’t fill this out:{" "}
-                            <input name="bot-field" onChange={handleChange} />
-                        </label>
-                    </div>
-                    <div className="field">
-                        <label className="label" htmlFor={"name"}>
-                            Your name
-                        </label>
-                        <div className="control">
-                            <input
-                                className="input"
-                                type={"text"}
-                                name={"name"}
-                                onChange={handleChange}
-                                id={"name"}
-                                required={true}
-                            />
-                        </div>
-                    </div>
-                    <div className="field">
-                        <label className="label" htmlFor={"email"}>
-                            Email
-                        </label>
-                        <div className="control">
-                            <input
-                                className="input"
-                                type={"email"}
-                                name={"email"}
-                                onChange={handleChange}
-                                id={"email"}
-                                required={true}
-                            />
-                        </div>
-                    </div>
-                    <div className="field">
-                        <label className="label" htmlFor={"message"}>
-                            Message
-                        </label>
-                        <div className="control">
-                            <textarea
-                                className="textarea"
-                                name={"message"}
-                                onChange={handleChange}
-                                id={"message"}
-                                required={true}
-                            />
-                        </div>
-                    </div>
-                    <div className="field">
-                        <button className="button is-link" type="submit">
-                            Send
-                        </button>
-                    </div>
+                    <input type={"text"} name={"name"} />
+                    <input type={"text"} name={"company"} />
+                    <input type={"text"} name={"title"} />
+                    <textarea name={"message"} />
                 </form>
             </section>
         </Layout>
@@ -147,3 +95,95 @@ function encode(data) {
 }
 
 export default Index;
+
+/*
+<form
+                            name="contact"
+                            method="post"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                        >
+                            {/* The `form-name` hidden field is required to support form submissions without JavaScript /}
+                            <input
+                                type="hidden"
+                                name="form-name"
+                                value="contact"
+                            />
+                            <div hidden>
+                                <label>
+                                    Don’t fill this out:{" "}
+                                    <input
+                                        name="bot-field"
+                                        onChange={handleChange}
+                                    />
+                                </label>
+                            </div>
+                            <div className="field">
+                                <label className="label" htmlFor={"name"}>
+                                    what should we call you?
+                                </label>
+                                <div className="control">
+                                    <input
+                                        className="input"
+                                        type={"text"}
+                                        name={"name"}
+                                        onChange={handleChange}
+                                        id={"name"}
+                                        required={true}
+                                    />
+                                </div>
+                            </div>
+                            <div className="field">
+                                <label className="label" htmlFor={"compnay"}>
+                                    where do you work?
+                                </label>
+                                <div className="control">
+                                    <input
+                                        className="input"
+                                        type={"text"}
+                                        name={"compnay"}
+                                        onChange={handleChange}
+                                        id={"compnay"}
+                                        required={true}
+                                    />
+                                </div>
+                            </div>
+                            <div className="field">
+                                <label className="label" htmlFor={"title"}>
+                                    what’s your title?
+                                </label>
+                                <div className="control">
+                                    <input
+                                        className="input"
+                                        type={"text"}
+                                        name={"title"}
+                                        onChange={handleChange}
+                                        id={"title"}
+                                        required={true}
+                                    />
+                                </div>
+                            </div>
+                            <div className="field">
+                                <label className="label" htmlFor={"message"}>
+                                    what’s on your mind?
+                                </label>
+                                <div className="control">
+                                    <textarea
+                                        className="textarea"
+                                        name={"message"}
+                                        onChange={handleChange}
+                                        id={"message"}
+                                        required={true}
+                                    />
+                                </div>
+                            </div>
+                            <div className="field">
+                                <button
+                                    className="button is-link"
+                                    type="submit"
+                                >
+                                    Send
+                                </button>
+                            </div>
+                        </form>
+*/
