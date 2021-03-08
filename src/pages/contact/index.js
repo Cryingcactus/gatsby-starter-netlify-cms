@@ -49,7 +49,7 @@ const Index = () => {
                     </div>
                     <div className={styles.formContainer}>
                         <form
-                            name="contact2"
+                            name="contact3"
                             method="post"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
@@ -59,7 +59,7 @@ const Index = () => {
                             <input
                                 type="hidden"
                                 name="form-name"
-                                value="contact2"
+                                value="contact3"
                             />
                             <p hidden>
                                 <label>
@@ -70,6 +70,30 @@ const Index = () => {
                                     />
                                 </label>
                             </p>
+                            <div className={[styles.field].join(" ")}>
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "name" ||
+                                        (state.name !== undefined &&
+                                            state.name !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"name"}
+                                >
+                                    what should we call you?
+                                </label>
+                                <div className={styles.control}>
+                                    <input
+                                        type={"text"}
+                                        name={"nameTest"}
+                                        id={"nameTest"}
+                                        required={true}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                            </div>
                             <p>
                                 <label>
                                     Your name:
