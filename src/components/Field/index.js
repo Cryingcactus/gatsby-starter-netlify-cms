@@ -1,6 +1,16 @@
 import React from "react";
 
-const Field = ({ name, label, type, styles, button, ...props }) => {
+const Field = ({
+    name,
+    label,
+    handleChange,
+    handleFocus,
+    handleUnfocus,
+    type,
+    styles,
+    button,
+    ...props
+}) => {
     return (
         <div className={styles.field}>
             <label className={styles.label} htmlFor={name}>
@@ -13,6 +23,9 @@ const Field = ({ name, label, type, styles, button, ...props }) => {
                     name={name}
                     id={name}
                     required={true}
+                    onChange={handleChange}
+                    onFocus={handleFocus}
+                    onBlur={handleUnfocus}
                     {...props}
                 />
                 {button ?? ""}

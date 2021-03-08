@@ -5,6 +5,7 @@ const Form = ({ children, button, ...props }) => {
     const [state, setState] = useState({});
     const [fieldFocused, setFieldFocused] = useState();
     const handleChange = (e) => {
+        console.log(e.target.name);
         setState({ ...state, [e.target.name]: e.target.value });
     };
     const handleFocus = (e) => {
@@ -41,7 +42,7 @@ const Form = ({ children, button, ...props }) => {
             onSubmit={handleSubmit}
         >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="Email List" />
+            <input type="hidden" name="form-name" value={props.name} />
             <p hidden>
                 <label>
                     Don’t fill this out:{" "}
