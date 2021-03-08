@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import styles from "./Contact.module.css";
-import Form from "./Form";
-import Field from "./Field";
 
 const Index = () => {
     const [isValidated, setIsValidated] = useState(false);
