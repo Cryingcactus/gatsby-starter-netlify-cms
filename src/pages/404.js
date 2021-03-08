@@ -1,13 +1,16 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react";
+import Layout from "../components/Layout";
+import styles from "../styles/404.module.css";
 
 const NotFoundPage = () => (
-  <Layout>
-    <div>
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Layout>
-)
+    <Layout>
+        <div className={styles.container}>
+            <h1 className={styles.header}>whoops.</h1>
+            <p className={styles.copy}>
+                we may be lost. let’s try that again, shall we?
+            </p>
+        </div>
+    </Layout>
+);
 
-export default NotFoundPage
+export default NotFoundPage;
