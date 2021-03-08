@@ -46,7 +46,7 @@ const Form = ({ children }) => {
             data-netlify-honeypot="bot-field"
         >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="form-name" value="contactLeads" />
             <div hidden>
                 <label>
                     Don’t fill this out:{" "}
