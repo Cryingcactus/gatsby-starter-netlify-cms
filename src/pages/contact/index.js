@@ -49,7 +49,8 @@ const Index = () => {
                     </div>
                     <div className={styles.formContainer}>
                         <form
-                            name="contact4"
+                            className={styles.form}
+                            name="contact5"
                             method="post"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
@@ -59,7 +60,7 @@ const Index = () => {
                             <input
                                 type="hidden"
                                 name="form-name"
-                                value="contact4"
+                                value="contact5"
                             />
                             <p hidden>
                                 <label>
