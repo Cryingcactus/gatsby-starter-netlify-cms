@@ -1,6 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Footer.module.css";
+import FooterForm from "./FooterForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+    faTwitter,
+    faInstagram,
+    faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { Link } from "gatsby";
 
 const Footer = ({ ...props }) => {
     return (
@@ -31,27 +39,38 @@ const Footer = ({ ...props }) => {
                                 <div>Privacy Policy</div>
                             </span>
                         </div>
-                        {false ? (
-                            <div
-                                className={[
-                                    styles.verticalColumn,
-                                    styles.socialBar,
-                                ].join(" ")}
-                            >
-                                <div>get insights delivered to your inbox.</div>
-                                <div className={styles.emailInput}>
-                                    <input />
-                                    <span />
-                                </div>
-                                <div className={styles.social}>
-                                    <span>f</span>
-                                    <span>s</span>
-                                    <span>i</span>
-                                </div>
+                        <div
+                            className={[
+                                styles.verticalColumn,
+                                styles.socialBar,
+                            ].join(" ")}
+                        >
+                            <FooterForm />
+                            <div className={styles.social}>
+                                <Link
+                                    to={
+                                        "https://www.instagram.com/tgthrcollective/"
+                                    }
+                                    target="_blank"
+                                >
+                                    <FontAwesomeIcon icon={faInstagram} />
+                                </Link>
+                                <Link
+                                    to={"https://twitter.com/tgthrco"}
+                                    target="_blank"
+                                >
+                                    <FontAwesomeIcon icon={faTwitter} />
+                                </Link>
+                                <Link
+                                    to={
+                                        "https://www.linkedin.com/company/tgthr-collective"
+                                    }
+                                    target="_blank"
+                                >
+                                    <FontAwesomeIcon icon={faLinkedin} />
+                                </Link>
                             </div>
-                        ) : (
-                            <div></div>
-                        )}
+                        </div>
                     </div>
                 </div>
             </div>
