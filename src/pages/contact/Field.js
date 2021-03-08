@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Contact.module.css";
 
 const Field = ({
-    index,
+    name,
     label,
     fieldFocused,
     handleChange,
@@ -22,7 +22,7 @@ const Field = ({
                     styles.label,
                     fieldFocused ? styles.fieldTitle : styles.placeholder,
                 ].join(" ")}
-                htmlFor={index}
+                htmlFor={name}
             >
                 {label}
             </label>
@@ -31,20 +31,20 @@ const Field = ({
                     <textArea
                         className={styles.reversedColors}
                         type={"text"}
-                        name={index}
-                        onChange={handleChange}
-                        id={index}
+                        name={name}
+                        id={name}
                         required={true}
+                        onChange={handleChange}
                         onFocus={handleFocus}
                         onBlur={handleUnfocus}
                     />
                 ) : (
                     <input
                         type={"text"}
-                        name={index}
-                        onChange={handleChange}
-                        id={index}
+                        name={name}
+                        id={name}
                         required={true}
+                        onChange={handleChange}
                         onFocus={handleFocus}
                         onBlur={handleUnfocus}
                     />

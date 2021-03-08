@@ -57,11 +57,12 @@ const Form = ({ children }) => {
                 </div>
                 {React.Children.map(children, (child) => {
                     return React.cloneElement(child, {
-                        key: child.props.index,
+                        key: child.props.name,
+                        name: child.props.name,
                         fieldFocused:
-                            (state[child.props.index] !== undefined &&
-                                state[child.props.index] !== "") ||
-                            fieldFocused === child.props.index,
+                            (state[child.props.name] !== undefined &&
+                                state[child.props.name] !== "") ||
+                            fieldFocused === child.props.name,
                         handleChange: handleChange,
                         handleFocus: handleFocus,
                         handleUnfocus: handleUnfocus,

@@ -48,92 +48,22 @@ const Index = () => {
                         <h1 className={styles.header}>let's get tgthr.</h1>
                     </div>
                     <div className={styles.formContainer}>
-                        <form
-                            className={styles.form}
-                            name="test2"
-                            method="post"
-                            data-netlify="true"
-                            data-netlify-honeypot="bot-field"
-                        >
-                            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                            <input
-                                type="hidden"
-                                name="form-name"
-                                value="test2"
-                            />
-                            <div hidden>
-                                <label>
-                                    Don’t fill this out:{" "}
-                                    <input
-                                        name="bot-field"
-                                        onChange={handleChange}
-                                    />
-                                </label>
-                            </div>
-                            <input
+                        <Form>
+                            <Field
                                 name={"name"}
-                                index={"name"}
                                 label={"what should we call you?"}
-                                fieldFocused={
-                                    (state["name"] !== undefined &&
-                                        state["name"] !== "") ||
-                                    fieldFocused === "name"
-                                }
-                                handleChange={handleChange}
-                                handleFocus={handleFocus}
-                                handleUnfocus={handleUnfocus}
                             />
-                            <input
-                                name={"work"}
-                                index={"work"}
-                                label={"where do you work?"}
-                                fieldFocused={
-                                    (state["work"] !== undefined &&
-                                        state["work"] !== "") ||
-                                    fieldFocused === "work"
-                                }
-                                handleChange={handleChange}
-                                handleFocus={handleFocus}
-                                handleUnfocus={handleUnfocus}
-                            />
-                            <input
+                            <Field name={"work"} label={"where do you work?"} />
+                            <Field
                                 name={"title"}
-                                index={"title"}
                                 label={"what’s your title?"}
-                                fieldFocused={
-                                    (state["title"] !== undefined &&
-                                        state["title"] !== "") ||
-                                    fieldFocused === "title"
-                                }
-                                handleChange={handleChange}
-                                handleFocus={handleFocus}
-                                handleUnfocus={handleUnfocus}
                             />
-                            <textarea
+                            <Field
                                 name={"message"}
-                                index={"message"}
                                 label={"what’s on your mind?"}
-                                fieldFocused={
-                                    (state["title"] !== undefined &&
-                                        state["title"] !== "") ||
-                                    fieldFocused === "title"
-                                }
-                                handleChange={handleChange}
-                                handleFocus={handleFocus}
-                                handleUnfocus={handleUnfocus}
+                                textArea
                             />
-                            <div className={styles.field}>
-                                <button
-                                    className={[
-                                        styles.button,
-                                        styles.reversedColors,
-                                    ].join(" ")}
-                                    type="submit"
-                                >
-                                    Send
-                                </button>
-                            </div>
-                        </form>
+                        </Form>
                     </div>
                 </div>
             </section>
@@ -151,22 +81,3 @@ function encode(data) {
 }
 
 export default Index;
-/*<Form>
-                            <Field
-                                index={"name"}
-                                label={"what should we call you?"}
-                            />
-                            <Field
-                                index={"work"}
-                                label={"where do you work?"}
-                            />
-                            <Field
-                                index={"title"}
-                                label={"what’s your title?"}
-                            />
-                            <Field
-                                index={"message"}
-                                label={"what’s on your mind?"}
-                                textArea
-                            />
-                        </Form>*/
