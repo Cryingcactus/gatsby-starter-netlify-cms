@@ -77,6 +77,10 @@
     top: 0;
 }
 
+.textareaField .placeholder {
+    top: 8px;
+}
+
 .textareaField .fieldTitle {
     color: #f2e3e1;
 }
@@ -92,7 +96,7 @@
     height: 100%;
 }
 
-.control input {
+.control * {
     background-color: transparent;
     border: none;
     width: 100%;
@@ -108,9 +112,10 @@
     border-bottom: solid 2px #ffffff;
 }
 
-.textareaField input {
+.textareaField textarea {
     background-color: #f2e3e1;
     border-bottom: none;
+    padding: 8px 15px;
 }
 
 .reversedColors {

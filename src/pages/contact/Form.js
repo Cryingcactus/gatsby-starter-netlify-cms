@@ -17,6 +17,12 @@ const Form = ({ children }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
+        console.log(
+            encode({
+                "form-name": form.getAttribute("name"),
+                ...state,
+            })
+        );
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -25,8 +31,9 @@ const Form = ({ children }) => {
                 ...state,
             }),
         })
-            .then(() => {
+            .then((response) => {
                 console.log("success");
+                console.log(response);
             })
             .catch((error) => alert(error));
     };

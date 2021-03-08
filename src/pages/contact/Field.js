@@ -27,15 +27,28 @@ const Field = ({
                 {label}
             </label>
             <div className={styles.control}>
-                <input
-                    type={"text"}
-                    name={index}
-                    onChange={handleChange}
-                    id={index}
-                    required={true}
-                    onFocus={handleFocus}
-                    onBlur={handleUnfocus}
-                />
+                {textArea ? (
+                    <textArea
+                        className={styles.reversedColors}
+                        type={"text"}
+                        name={index}
+                        onChange={handleChange}
+                        id={index}
+                        required={true}
+                        onFocus={handleFocus}
+                        onBlur={handleUnfocus}
+                    />
+                ) : (
+                    <input
+                        type={"text"}
+                        name={index}
+                        onChange={handleChange}
+                        id={index}
+                        required={true}
+                        onFocus={handleFocus}
+                        onBlur={handleUnfocus}
+                    />
+                )}
             </div>
         </div>
     );
