@@ -147,9 +147,8 @@ const Form = ({ children }) => {
                     index={"name"}
                     label={"what should we call you?"}
                     fieldFocused={
-                        (state[child.props.index] !== undefined &&
-                            state[child.props.index] !== "") ||
-                        fieldFocused === child.props.index
+                        (state["name"] !== undefined && state["name"] !== "") ||
+                        fieldFocused === "name"
                     }
                     handleChange={handleChange}
                     handleFocus={handleFocus}
@@ -159,9 +158,8 @@ const Form = ({ children }) => {
                     index={"work"}
                     label={"where do you work?"}
                     fieldFocused={
-                        (state[child.props.index] !== undefined &&
-                            state[child.props.index] !== "") ||
-                        fieldFocused === child.props.index
+                        (state["work"] !== undefined && state["work"] !== "") ||
+                        fieldFocused === "work"
                     }
                     handleChange={handleChange}
                     handleFocus={handleFocus}
@@ -171,9 +169,9 @@ const Form = ({ children }) => {
                     index={"title"}
                     label={"what’s your title?"}
                     fieldFocused={
-                        (state[child.props.index] !== undefined &&
-                            state[child.props.index] !== "") ||
-                        fieldFocused === child.props.index
+                        (state["title"] !== undefined &&
+                            state["title"] !== "") ||
+                        fieldFocused === "title"
                     }
                     handleChange={handleChange}
                     handleFocus={handleFocus}
