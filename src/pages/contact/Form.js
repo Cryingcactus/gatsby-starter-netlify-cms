@@ -40,7 +40,7 @@ const Form = ({ children }) => {
     return (
         <form
             className={styles.form}
-            name="contact"
+            name="contactLeads"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
