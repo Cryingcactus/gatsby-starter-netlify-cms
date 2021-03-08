@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Contact.module.css";
-import Field from "./Field";
+
 const Form = ({ children }) => {
     const [isValidated, setIsValidated] = useState(false);
     const [state, setState] = useState({});
