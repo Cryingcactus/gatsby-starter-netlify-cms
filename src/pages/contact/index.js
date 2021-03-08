@@ -49,11 +49,70 @@ const Index = () => {
                     </div>
                     <div className={styles.formContainer}>
                         <form
+                            name="contact2"
+                            method="post"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                            onSubmit={handleSubmit}
+                        >
+                            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                            <input
+                                type="hidden"
+                                name="form-name"
+                                value="contact2"
+                            />
+                            <p hidden>
+                                <label>
+                                    Don’t fill this out:{" "}
+                                    <input
+                                        name="bot-field"
+                                        onChange={handleChange}
+                                    />
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Your name:
+                                    <br />
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        onChange={handleChange}
+                                    />
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Your email:
+                                    <br />
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        onChange={handleChange}
+                                    />
+                                </label>
+                            </p>
+                            <p>
+                                <label>
+                                    Message:
+                                    <br />
+                                    <textarea
+                                        name="message"
+                                        onChange={handleChange}
+                                    />
+                                </label>
+                            </p>
+                            <p>
+                                <button type="submit">Send</button>
+                            </p>
+                        </form>
+                        <form
                             className={styles.form}
                             name="contact"
                             method="post"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
+                            onSubmit={handleSubmit}
                         >
                             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                             <input
@@ -208,3 +267,36 @@ function encode(data) {
 }
 
 export default Index;
+
+/*
+<Form>
+                            <Field
+                                name={"name"}
+                                label={"what should we call you?"}
+                            />
+                            <Field
+                                name={"company"}
+                                label={"where do you work?"}
+                            />
+                            <Field
+                                name={"title"}
+                                label={"what’s your title?"}
+                            />
+                            <Field
+                                name={"message"}
+                                label={"what’s on your mind?"}
+                                textArea
+                            />
+                        </Form>
+<form
+                    name="contact"
+                    netlify
+                    netlify-honeypot="bot-field"
+                    hidden
+                >
+                    <input type={"text"} name={"name"} />
+                    <input type={"text"} name={"company"} />
+                    <input type={"text"} name={"title"} />
+                    <textarea name={"message"} />
+                </form>
+*/
