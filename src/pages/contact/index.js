@@ -49,7 +49,7 @@ const Index = () => {
                     </div>
                     <div className={styles.formContainer}>
                         <form
-                            name="contact3"
+                            name="contact4"
                             method="post"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
@@ -59,7 +59,7 @@ const Index = () => {
                             <input
                                 type="hidden"
                                 name="form-name"
-                                value="contact3"
+                                value="contact4"
                             />
                             <p hidden>
                                 <label>
@@ -87,48 +87,108 @@ const Index = () => {
                                 <div className={styles.control}>
                                     <input
                                         type={"text"}
-                                        name={"nameTest"}
-                                        id={"nameTest"}
+                                        name={"name"}
+                                        id={"name"}
                                         required={true}
                                         onChange={handleChange}
                                     />
                                 </div>
                             </div>
-                            <p>
-                                <label>
-                                    Your name:
-                                    <br />
-                                    <input
-                                        type="text"
-                                        name="name"
-                                        onChange={handleChange}
-                                    />
+                            <div className={[styles.field].join(" ")}>
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "company" ||
+                                        (state.company !== undefined &&
+                                            state.company !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"company"}
+                                >
+                                    where do you work?
                                 </label>
-                            </p>
-                            <p>
-                                <label>
-                                    Your email:
-                                    <br />
+                                <div className={styles.control}>
                                     <input
-                                        type="email"
-                                        name="email"
+                                        type={"text"}
+                                        name={"company"}
+                                        id={"company"}
+                                        required={true}
                                         onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
                                     />
+                                </div>
+                            </div>
+                            <div className={[styles.field].join(" ")}>
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "title" ||
+                                        (state.title !== undefined &&
+                                            state.title !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"title"}
+                                >
+                                    what’s your title?
                                 </label>
-                            </p>
-                            <p>
-                                <label>
-                                    Message:
-                                    <br />
+                                <div className={styles.control}>
+                                    <input
+                                        type={"text"}
+                                        name={"title"}
+                                        id={"title"}
+                                        required={true}
+                                        onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                className={[
+                                    styles.field,
+                                    styles.textareaField,
+                                ].join(" ")}
+                            >
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "message" ||
+                                        (state.message !== undefined &&
+                                            state.message !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"message"}
+                                >
+                                    what’s on your mind?
+                                </label>
+                                <div className={styles.control}>
                                     <textarea
-                                        name="message"
+                                        className={styles.reversedColors}
+                                        name={"message"}
+                                        id={"message"}
+                                        required={true}
                                         onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
                                     />
-                                </label>
-                            </p>
-                            <p>
-                                <button type="submit">Send</button>
-                            </p>
+                                </div>
+                            </div>
+
+                            <div className={styles.field}>
+                                <button
+                                    className={[
+                                        styles.button,
+                                        styles.reversedColors,
+                                    ].join(" ")}
+                                    type="submit"
+                                >
+                                    Send
+                                </button>
+                            </div>
                         </form>
                         <form
                             className={styles.form}
