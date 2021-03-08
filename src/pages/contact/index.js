@@ -71,6 +71,7 @@ const Index = () => {
                                 </label>
                             </div>
                             <input
+                                name={"name"}
                                 index={"name"}
                                 label={"what should we call you?"}
                                 fieldFocused={
@@ -83,6 +84,7 @@ const Index = () => {
                                 handleUnfocus={handleUnfocus}
                             />
                             <input
+                                name={"work"}
                                 index={"work"}
                                 label={"where do you work?"}
                                 fieldFocused={
@@ -95,6 +97,7 @@ const Index = () => {
                                 handleUnfocus={handleUnfocus}
                             />
                             <input
+                                name={"title"}
                                 index={"title"}
                                 label={"what’s your title?"}
                                 fieldFocused={
@@ -107,6 +110,7 @@ const Index = () => {
                                 handleUnfocus={handleUnfocus}
                             />
                             <textarea
+                                name={"message"}
                                 index={"message"}
                                 label={"what’s on your mind?"}
                                 fieldFocused={
