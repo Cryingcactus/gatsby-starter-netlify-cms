@@ -48,38 +48,151 @@ const Index = () => {
                         <h1 className={styles.header}>let's get tgthr.</h1>
                     </div>
                     <div className={styles.formContainer}>
-                        <Form>
-                            <Field
-                                name={"name"}
-                                label={"what should we call you?"}
+                        <form
+                            className={styles.form}
+                            name="contact"
+                            method="post"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                        >
+                            {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+                            <input
+                                type="hidden"
+                                name="form-name"
+                                value="contact"
                             />
-                            <Field
-                                name={"company"}
-                                label={"where do you work?"}
-                            />
-                            <Field
-                                name={"title"}
-                                label={"what’s your title?"}
-                            />
-                            <Field
-                                name={"message"}
-                                label={"what’s on your mind?"}
-                                textArea
-                            />
-                        </Form>
+                            <div hidden>
+                                <label>
+                                    Don’t fill this out:{" "}
+                                    <input
+                                        name="bot-field"
+                                        onChange={handleChange}
+                                    />
+                                </label>
+                            </div>
+                            <div className={[styles.field].join(" ")}>
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "name" ||
+                                        (state.name !== undefined &&
+                                            state.name !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"name"}
+                                >
+                                    what should we call you?
+                                </label>
+                                <div className={styles.control}>
+                                    <input
+                                        type={"text"}
+                                        name={"name"}
+                                        id={"name"}
+                                        required={true}
+                                        onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
+                                    />
+                                </div>
+                            </div>
+                            <div className={[styles.field].join(" ")}>
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "company" ||
+                                        (state.company !== undefined &&
+                                            state.company !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"company"}
+                                >
+                                    where do you work?
+                                </label>
+                                <div className={styles.control}>
+                                    <input
+                                        type={"text"}
+                                        name={"company"}
+                                        id={"company"}
+                                        required={true}
+                                        onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
+                                    />
+                                </div>
+                            </div>
+                            <div className={[styles.field].join(" ")}>
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "title" ||
+                                        (state.title !== undefined &&
+                                            state.title !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"title"}
+                                >
+                                    what’s your title?
+                                </label>
+                                <div className={styles.control}>
+                                    <input
+                                        type={"text"}
+                                        name={"title"}
+                                        id={"title"}
+                                        required={true}
+                                        onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
+                                    />
+                                </div>
+                            </div>
+                            <div
+                                className={[
+                                    styles.field,
+                                    styles.textareaField,
+                                ].join(" ")}
+                            >
+                                <label
+                                    className={[
+                                        styles.label,
+                                        fieldFocused === "message" ||
+                                        (state.message !== undefined &&
+                                            state.message !== "")
+                                            ? styles.fieldTitle
+                                            : styles.placeholder,
+                                    ].join(" ")}
+                                    htmlFor={"message"}
+                                >
+                                    what’s on your mind?
+                                </label>
+                                <div className={styles.control}>
+                                    <textarea
+                                        className={styles.reversedColors}
+                                        name={"message"}
+                                        id={"message"}
+                                        required={true}
+                                        onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
+                                    />
+                                </div>
+                            </div>
+                            <div className={styles.field}>
+                                <button
+                                    className={[
+                                        styles.button,
+                                        styles.reversedColors,
+                                    ].join(" ")}
+                                    type="submit"
+                                >
+                                    Send
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <form
-                    name="contact"
-                    netlify
-                    netlify-honeypot="bot-field"
-                    hidden
-                >
-                    <input type={"text"} name={"name"} />
-                    <input type={"text"} name={"company"} />
-                    <input type={"text"} name={"title"} />
-                    <textarea name={"message"} />
-                </form>
             </section>
         </Layout>
     );
@@ -95,95 +208,3 @@ function encode(data) {
 }
 
 export default Index;
-
-/*
-<form
-                            name="contact"
-                            method="post"
-                            data-netlify="true"
-                            data-netlify-honeypot="bot-field"
-                        >
-                            {/* The `form-name` hidden field is required to support form submissions without JavaScript /}
-                            <input
-                                type="hidden"
-                                name="form-name"
-                                value="contact"
-                            />
-                            <div hidden>
-                                <label>
-                                    Don’t fill this out:{" "}
-                                    <input
-                                        name="bot-field"
-                                        onChange={handleChange}
-                                    />
-                                </label>
-                            </div>
-                            <div className="field">
-                                <label className="label" htmlFor={"name"}>
-                                    what should we call you?
-                                </label>
-                                <div className="control">
-                                    <input
-                                        className="input"
-                                        type={"text"}
-                                        name={"name"}
-                                        onChange={handleChange}
-                                        id={"name"}
-                                        required={true}
-                                    />
-                                </div>
-                            </div>
-                            <div className="field">
-                                <label className="label" htmlFor={"compnay"}>
-                                    where do you work?
-                                </label>
-                                <div className="control">
-                                    <input
-                                        className="input"
-                                        type={"text"}
-                                        name={"compnay"}
-                                        onChange={handleChange}
-                                        id={"compnay"}
-                                        required={true}
-                                    />
-                                </div>
-                            </div>
-                            <div className="field">
-                                <label className="label" htmlFor={"title"}>
-                                    what’s your title?
-                                </label>
-                                <div className="control">
-                                    <input
-                                        className="input"
-                                        type={"text"}
-                                        name={"title"}
-                                        onChange={handleChange}
-                                        id={"title"}
-                                        required={true}
-                                    />
-                                </div>
-                            </div>
-                            <div className="field">
-                                <label className="label" htmlFor={"message"}>
-                                    what’s on your mind?
-                                </label>
-                                <div className="control">
-                                    <textarea
-                                        className="textarea"
-                                        name={"message"}
-                                        onChange={handleChange}
-                                        id={"message"}
-                                        required={true}
-                                    />
-                                </div>
-                            </div>
-                            <div className="field">
-                                <button
-                                    className="button is-link"
-                                    type="submit"
-                                >
-                                    Send
-                                </button>
-                            </div>
-                        </form>
-*/
