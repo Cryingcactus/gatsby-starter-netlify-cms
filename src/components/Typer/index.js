@@ -16,7 +16,7 @@ const Typer = ({ section }) => {
                     color: textColor,
                 }}
             >
-                <TitledCopy titleSize="6.875em" copySize="3.125em">
+                <TitledCopy titleSize="5.75em">
                     <span className={styles.title}>
                         {title}{" "}
                         <span className={styles.lettersContainer}>

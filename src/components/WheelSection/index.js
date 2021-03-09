@@ -76,7 +76,7 @@ const WheelSection = ({ section }) => {
                         <PreviewCompatibleImage
                             imageInfo={image}
                             style={{
-                                transform: `translate(-50%, 50%) rotate(${
+                                transform: `translate(-45%, 45%) rotate(${
                                     (360 / carousel.length) *
                                     currentCarouselSection
                                 }deg)`,

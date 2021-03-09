@@ -6,6 +6,8 @@
     flex: 3;
     display: flex;
     padding-right: 2vw;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 .servicesContent {

@@ -21,7 +21,7 @@
 }
 
 .wheelScrollArea:hover + .wheel {
-    width: 103%;
+    width: 1600px;
 }
 
 .wheelScrollArea {

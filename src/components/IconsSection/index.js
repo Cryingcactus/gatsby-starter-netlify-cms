@@ -25,8 +25,8 @@ const IconsSection = ({ section }) => {
                                         <PreviewCompatibleImage
                                             imageInfo={iconsObject.icon}
                                             style={{
-                                                width: "150px",
-                                                height: "150px",
+                                                width: "100px",
+                                                height: "100px",
                                             }}
                                         />
                                         <span className={styles.iconText}>
