@@ -12,7 +12,7 @@ import { Link } from "gatsby";
 
 const Footer = ({ ...props }) => {
     return (
-        <footer>
+        <footer className="section">
             <div className={styles.container}>
                 <div className={styles.centered}>
                     <div className={styles.row}>

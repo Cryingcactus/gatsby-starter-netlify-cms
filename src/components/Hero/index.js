@@ -18,7 +18,7 @@ const Hero = ({ section }) => {
         );
     });
     return (
-        <section className={styles.hero}>
+        <section className="section">
             <Background
                 image={image}
                 styles={`full-width-image-container ${styles.container}`}

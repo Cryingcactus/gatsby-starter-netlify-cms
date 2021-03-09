@@ -1,21 +1,22 @@
-.hero {
-    display: flex;
-}
-
 .container {
-    height: 980px;
+    height: 90vh;
     justify-content: unset;
 }
 
 .titleContainer {
     display: flex;
-    padding: 0 9vw;
     max-width: 70%;
 }
 
 .title {
     position: relative;
     color: #000000;
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-size: 6.25rem;
+    line-height: 1em;
+    letter-spacing: 0.05em;
+    word-spacing: -0.2em;
 }
 
 .title > span {
@@ -26,16 +27,4 @@
     background-repeat: no-repeat;
     background-position: 0px 0.28em;
     background-size: auto 0.57em;
-
-    font-family: "Source Serif Pro";
-    font-style: normal;
-    /* font-weight: 900; */
-    font-size: 110px;
-    line-height: 1.05em;
-    letter-spacing: 0.05em;
-    word-spacing: -0.2em;
-}
-
-.title > span ~ span {
-    /* background-color: aliceblue; */
 }

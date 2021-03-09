@@ -39,7 +39,7 @@ const WheelSection = ({ section }) => {
         </div>
     ));
     return (
-        <section className={styles.wheelSection}>
+        <section>
             <div
                 className={styles.container}
                 style={{
@@ -47,7 +47,10 @@ const WheelSection = ({ section }) => {
                     color: textColor,
                 }}
             >
-                <TitledCopy title={title} copy={copy} />
+                <div className="screen-padding">
+                    <TitledCopy title={title} copy={copy} />
+                </div>
+
                 <div className={styles.wheelContainer}>
                     <div
                         className={styles.wheelScrollArea}

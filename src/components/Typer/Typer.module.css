@@ -1,9 +1,3 @@
-.container {
-    display: flex;
-    justify-content: unset;
-    padding: 5em 0 10em 0;
-}
-
 .letterContainer {
     display: inline-flex;
 }

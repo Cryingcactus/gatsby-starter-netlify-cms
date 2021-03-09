@@ -7,9 +7,23 @@ body {
     margin: 0;
 }
 
+.section > * {
+    display: flex;
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
+
+.section.left-padding > * {
+    padding-right: 0;
+}
+
+.screen-padding {
+    padding-right: 5vw;
+    padding-left: 5vw;
+}
+
 // Helper Classes
 .full-width-image-container {
-    width: 100vw;
     height: 400px;
     position: relative;
     background-size: cover;

@@ -15,7 +15,7 @@ const Services = ({ section }) => {
         button,
     } = section;
     return (
-        <section className={styles.servicesSection}>
+        <section className="section left-padding">
             <div
                 className={styles.container}
                 style={{

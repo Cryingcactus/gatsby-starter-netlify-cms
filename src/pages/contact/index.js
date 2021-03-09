@@ -40,7 +40,7 @@ const Index = () => {
     };
     return (
         <Layout>
-            <section className="contact">
+            <section className="section">
                 <div className={styles.container}>
                     <div className={styles.headerContainer}>
                         <h1 className={styles.header}>let's get tgthr.</h1>

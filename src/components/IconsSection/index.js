@@ -7,7 +7,7 @@ import PreviewCompatibleImage from "../PreviewCompatibleImage";
 const IconsSection = ({ section }) => {
     const { backgroundColor, textColor, title, copy, icons } = section;
     return (
-        <section className={styles.iconsSection}>
+        <section className="section">
             <div
                 className={styles.container}
                 style={{

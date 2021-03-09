@@ -8,7 +8,7 @@ import Letters from "./Letters";
 const Typer = ({ section }) => {
     const { backgroundColor, textColor, title, typedWords, copy } = section;
     return (
-        <section className={styles.typer}>
+        <section className="section">
             <div
                 className={styles.container}
                 style={{

@@ -1,14 +1,11 @@
-.services {
-}
-
 .container {
     display: flex;
 }
 
 .servicesContentContainer {
     flex: 3;
-    padding: 0 3em;
     display: flex;
+    padding-right: 2vw;
 }
 
 .servicesContent {

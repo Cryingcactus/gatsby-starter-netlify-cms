@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: 3em 0 0 0;
+    padding-top: 3em;
 }
 
 .wheelContainer {

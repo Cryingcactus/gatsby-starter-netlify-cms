@@ -5,7 +5,7 @@ import styles from "./Navbar.module.css";
 const Navbar = ({ ...props }) => {
     return (
         <nav>
-            <div className={styles.container}>
+            <div className={[styles.container, "section"].join(" ")}>
                 <div id="navMenu" className={styles.menu}>
                     <div>
                         <Link to="/" className={styles.item} title="Logo">
