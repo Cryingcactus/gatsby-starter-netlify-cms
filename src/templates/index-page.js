@@ -17,12 +17,18 @@ export const IndexPageTemplate = ({ sections }) => {
         iconsSection,
     } = sections;
     return (
-        <div>
-            <Hero section={heroSection} />
-            <Typer section={typingSection} />
-            <WheelSection section={wheelSection} />
-            <Services section={servicesSection} />
-            <IconsSection section={iconsSection} />
+        <div style={{ position: "relative" }}>
+            {/* <div className="paralax-placeholder header-placeholder" />
+            <div className="paralax-section hero">
+                
+            </div> */}
+            <div className="paralax-normal">
+                <Hero section={heroSection} />
+                <Typer section={typingSection} />
+                <WheelSection section={wheelSection} />
+                <Services section={servicesSection} />
+                <IconsSection section={iconsSection} />
+            </div>
         </div>
     );
 };

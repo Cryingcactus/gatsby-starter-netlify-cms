@@ -12,7 +12,7 @@ import { Link } from "gatsby";
 
 const Footer = ({ ...props }) => {
     return (
-        <footer className="section">
+        <footer className="section paralax-section">
             <div className={styles.container}>
                 <div className={styles.centered}>
                     <div className={styles.row}>

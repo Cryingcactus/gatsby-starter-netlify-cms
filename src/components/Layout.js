@@ -49,7 +49,8 @@ const TemplateWrapper = ({ children }) => {
                 />
             </Helmet>
             <Navbar />
-            <div>{children}</div>
+            <main>{children}</main>
+            <div className="paralax-placeholder footer-placeholder" />
             <Footer />
         </div>
     );
