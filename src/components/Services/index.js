@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Services.module.css";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
 import ServicesWrapper from "./ServicesWrapper";
 import Background from "../Background";
 
@@ -12,7 +11,7 @@ const Services = ({ section }) => {
         title,
         image,
         services,
-        button,
+        // button,
     } = section;
     return (
         <section className="section left-padding">
@@ -51,7 +50,7 @@ Services.propTypes = {
         backgroundColor: PropTypes.string,
         textColor: PropTypes.string,
         title: PropTypes.string,
-        image: PropTypes.array,
+        image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     }),
 };
 

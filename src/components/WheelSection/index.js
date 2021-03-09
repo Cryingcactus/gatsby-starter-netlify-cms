@@ -53,11 +53,21 @@ const WheelSection = ({ section }) => {
 
                 <div className={styles.wheelContainer}>
                     <div
+                        onKeyPress={() => {}}
+                        tabIndex={0}
+                        aria-label="Next Item"
+                        role="button"
                         className={styles.wheelScrollArea}
                         onMouseOver={() => {
                             setMouseOn(true);
                         }}
+                        onFocus={() => {
+                            setMouseOn(true);
+                        }}
                         onMouseOut={() => {
+                            setMouseOn(false);
+                        }}
+                        onBlur={() => {
                             setMouseOn(false);
                         }}
                         onClick={() => {
@@ -100,6 +110,10 @@ const WheelSection = ({ section }) => {
                         <div className={styles.arrowContainer}>
                             <div
                                 className={styles.arrowButton}
+                                tabIndex={0}
+                                aria-label="Previous Item"
+                                role="button"
+                                onKeyPress={() => {}}
                                 onClick={() => {
                                     setCurrentCarouselSection(
                                         currentCarouselSection - 1 >= 0
@@ -117,6 +131,10 @@ const WheelSection = ({ section }) => {
                             </div>
                             <div
                                 className={styles.arrowButton}
+                                tabIndex={0}
+                                aria-label="Next Item"
+                                role="button"
+                                onKeyPress={() => {}}
                                 onClick={() => {
                                     setCurrentCarouselSection(
                                         currentCarouselSection + 1
@@ -143,7 +161,7 @@ WheelSection.propTypes = {
         backgroundColor: PropTypes.string,
         textColor: PropTypes.string,
         title: PropTypes.string,
-        image: PropTypes.array,
+        image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
     }),
 };
 

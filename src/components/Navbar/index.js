@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "gatsby";
 import styles from "./Navbar.module.css";
 
-const Navbar = ({ ...props }) => {
+const Navbar = ({ uri }) => {
+    const onContactPage = uri ? uri.includes("/contact") : false;
     return (
         <nav>
             <div className={[styles.container, "section"].join(" ")}>
@@ -22,12 +23,16 @@ const Navbar = ({ ...props }) => {
                         <Link className={styles.item} to="/blog">
                             <span>blog</span>
 						</Link>*/}
-                        <Link
-                            className={`${styles.item} ${styles.contact}`}
-                            to="/contact"
-                        >
-                            <span>contact</span>
-                        </Link>
+                        {!onContactPage ? (
+                            <Link
+                                className={`${styles.item} ${styles.contact}`}
+                                to="/contact"
+                            >
+                                <span>contact</span>
+                            </Link>
+                        ) : (
+                            ""
+                        )}
                     </div>
                 </div>
             </div>

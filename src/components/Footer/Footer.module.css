@@ -8,6 +8,17 @@
     font-weight: normal;
 }
 
+.footerContainer {
+    display: flex;
+    flex: 1;
+}
+
+.container.contactPage {
+    height: unset;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
 .centered {
     flex: 1;
     display: flex;
@@ -138,7 +149,7 @@ footer h3.logo {
 
 .label {
     color: #ebd4d1;
-    padding: 5px 15px;
+    padding: 5px 2px;
 }
 
 .control {

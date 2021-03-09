@@ -6,7 +6,7 @@ import "./all.scss";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ children, uri }) => {
     const { title, description } = useSiteMetadata();
     return (
         <div>
@@ -48,10 +48,9 @@ const TemplateWrapper = ({ children }) => {
                     content={`${withPrefix("/")}img/og-image.jpg`}
                 />
             </Helmet>
-            <Navbar />
+            <Navbar uri={uri} />
             <main>{children}</main>
-            <div className="paralax-placeholder footer-placeholder" />
-            <Footer />
+            <Footer parallax={!(uri && uri.includes("/contact"))} />
         </div>
     );
 };

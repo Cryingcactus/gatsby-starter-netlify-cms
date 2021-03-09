@@ -18,9 +18,12 @@ const IconsSection = ({ section }) => {
                 <div className={styles.iconsContentContainer}>
                     <TitledCopy title={title} copy={copy} />
                     <div className={styles.iconsContainer}>
-                        {icons.map((iconsObject) => {
+                        {icons.map((iconsObject, i) => {
                             return (
-                                <div className={styles.iconsGrounp}>
+                                <div
+                                    key={iconsObject.text + i}
+                                    className={styles.iconsGrounp}
+                                >
                                     <div className={styles.iconContainer}>
                                         <PreviewCompatibleImage
                                             imageInfo={iconsObject.icon}

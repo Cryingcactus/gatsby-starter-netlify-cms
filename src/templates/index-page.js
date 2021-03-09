@@ -18,10 +18,6 @@ export const IndexPageTemplate = ({ sections }) => {
     } = sections;
     return (
         <div style={{ position: "relative" }}>
-            {/* <div className="paralax-placeholder header-placeholder" />
-            <div className="paralax-section hero">
-                
-            </div> */}
             <div className="paralax-normal">
                 <Hero section={heroSection} />
                 <Typer section={typingSection} />

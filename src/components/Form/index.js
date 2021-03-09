@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const Form = ({ children, button, ...props }) => {
-    const [isValidated, setIsValidated] = useState(false);
+    // const [isValidated, setIsValidated] = useState(false);
     const [state, setState] = useState({});
     const [fieldFocused, setFieldFocused] = useState();
     const handleChange = (e) => {
@@ -14,23 +14,22 @@ const Form = ({ children, button, ...props }) => {
     const handleUnfocus = (e) => {
         setFieldFocused();
     };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({
-                "form-name": form.getAttribute("name"),
-                ...state,
-            }),
-        })
-            .then((response) => {
-                console.log("success");
-                console.log(response);
-            })
-            .catch((error) => alert(error));
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const form = e.target;
+    //     fetch("/", {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //         body: encode({
+    //             "form-name": form.getAttribute("name"),
+    //             ...state,
+    //         }),
+    //     })
+    //         .then((response) => {
+    //             console.log("success");
+    //         })
+    //         .catch((error) => alert(error));
+    // };
 
     const styles = props.styles !== undefined ? props.styles : {};
     return (
@@ -39,7 +38,6 @@ const Form = ({ children, button, ...props }) => {
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
         >
             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
             <input type="hidden" name="form-name" value={props.name} />
@@ -55,10 +53,6 @@ const Form = ({ children, button, ...props }) => {
                     name: child.props.name,
                     type: child.props.type,
                     styles: styles,
-                    fieldFocused:
-                        (state[child.props.name] !== undefined &&
-                            state[child.props.name] !== "") ||
-                        fieldFocused === child.props.name,
                     handleChange: handleChange,
                     handleFocus: handleFocus,
                     handleUnfocus: handleUnfocus,
@@ -82,13 +76,13 @@ const Form = ({ children, button, ...props }) => {
     );
 };
 
-function encode(data) {
-    return Object.keys(data)
-        .map(
-            (key) =>
-                encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&");
-}
+// function encode(data) {
+//     return Object.keys(data)
+//         .map(
+//             (key) =>
+//                 encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+//         )
+//         .join("&");
+// }
 
 export default Form;

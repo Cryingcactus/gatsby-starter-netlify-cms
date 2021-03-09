@@ -24,16 +24,20 @@ const Letters = ({ typedWords }) => {
                                 : 0
                         );
                         setLetterIndex(0);
-                    }, 5000);
+                    }, 2000);
                 }
-            }, 100);
+            }, 50);
         }
     }, [letterIndex]);
 
     let letters = [];
     for (let i = 0; i < curentWord.length; i++) {
         const currentChar = letterIndex >= i ? curentWord.charAt(i) : " ";
-        letters.push(<span className={styles.letter}>{currentChar}</span>);
+        letters.push(
+            <span key={i + currentChar} className={styles.letter}>
+                {currentChar}
+            </span>
+        );
     }
     return letters;
 };

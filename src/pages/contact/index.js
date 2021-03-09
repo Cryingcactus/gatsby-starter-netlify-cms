@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import styles from "./Contact.module.css";
 
-const Index = () => {
-    const [isValidated, setIsValidated] = useState(false);
+const Index = ({ uri }) => {
+    // const [isValidated, setIsValidated] = useState(false);
     const [state, setState] = useState({});
     const [fieldFocused, setFieldFocused] = useState();
     const handleChange = (e) => {
@@ -15,31 +15,31 @@ const Index = () => {
     const handleUnfocus = (e) => {
         setFieldFocused();
     };
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const form = e.target;
-        console.log(
-            encode({
-                "form-name": form.getAttribute("name"),
-                ...state,
-            })
-        );
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({
-                "form-name": form.getAttribute("name"),
-                ...state,
-            }),
-        })
-            .then((response) => {
-                console.log("success");
-                console.log(response);
-            })
-            .catch((error) => alert(error));
-    };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     const form = e.target;
+    //     console.log(
+    //         encode({
+    //             "form-name": form.getAttribute("name"),
+    //             ...state,
+    //         })
+    //     );
+    //     fetch("/", {
+    //         method: "POST",
+    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //         body: encode({
+    //             "form-name": form.getAttribute("name"),
+    //             ...state,
+    //         }),
+    //     })
+    //         .then((response) => {
+    //             console.log("success");
+    //             console.log(response);
+    //         })
+    //         .catch((error) => alert(error));
+    // };
     return (
-        <Layout>
+        <Layout uri={uri}>
             <section className="section">
                 <div className={styles.container}>
                     <div className={styles.headerContainer}>
@@ -52,7 +52,6 @@ const Index = () => {
                             method="post"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
-                            onSubmit={handleSubmit}
                         >
                             {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                             <input
@@ -90,6 +89,8 @@ const Index = () => {
                                         id={"name"}
                                         required={true}
                                         onChange={handleChange}
+                                        onFocus={handleFocus}
+                                        onBlur={handleUnfocus}
                                     />
                                 </div>
                             </div>
@@ -196,46 +197,13 @@ const Index = () => {
     );
 };
 
-function encode(data) {
-    return Object.keys(data)
-        .map(
-            (key) =>
-                encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-        )
-        .join("&");
-}
+// function encode(data) {
+//     return Object.keys(data)
+//         .map(
+//             (key) =>
+//                 encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+//         )
+//         .join("&");
+// }
 
 export default Index;
-
-/*
-<Form>
-                            <Field
-                                name={"name"}
-                                label={"what should we call you?"}
-                            />
-                            <Field
-                                name={"company"}
-                                label={"where do you work?"}
-                            />
-                            <Field
-                                name={"title"}
-                                label={"what’s your title?"}
-                            />
-                            <Field
-                                name={"message"}
-                                label={"what’s on your mind?"}
-                                textArea
-                            />
-                        </Form>
-<form
-                    name="contact"
-                    netlify
-                    netlify-honeypot="bot-field"
-                    hidden
-                >
-                    <input type={"text"} name={"name"} />
-                    <input type={"text"} name={"company"} />
-                    <input type={"text"} name={"title"} />
-                    <textarea name={"message"} />
-                </form>
-*/
