@@ -19,8 +19,36 @@
     font-family: "Source Serif Pro";
     font-style: normal;
     font-weight: 900;
-    font-size: 12.5em;
-    line-height: 251px;
+    font-size: 11em;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        font-size: 9em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .headerContainer {
+        margin-top: 100px;
+    }
+
+    .headerContainer h1 {
+        margin: 0;
+    }
+
+    .header {
+        font-size: 9em;
+    }
+
+    .container .formContainer {
+        flex: 2;
+        padding: unset;
+    }
 }
 
 .formContainer {
@@ -117,6 +145,7 @@
     background-color: #f2e3e1;
     border-bottom: none;
     padding: 8px 15px;
+    resize: none;
 }
 
 .reversedColors {

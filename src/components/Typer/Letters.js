@@ -24,7 +24,7 @@ const Letters = ({ typedWords }) => {
                                 : 0
                         );
                         setLetterIndex(0);
-                    }, 2000);
+                    }, 1500);
                 }
             }, 50);
         }

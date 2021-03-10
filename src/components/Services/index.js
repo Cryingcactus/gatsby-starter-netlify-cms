@@ -14,7 +14,7 @@ const Services = ({ section }) => {
         // button,
     } = section;
     return (
-        <section className="section left-padding">
+        <section>
             <div
                 className={styles.container}
                 style={{
@@ -22,7 +22,12 @@ const Services = ({ section }) => {
                     color: textColor,
                 }}
             >
-                <div className={styles.servicesContentContainer}>
+                <div
+                    className={[
+                        styles.servicesContentContainer,
+                        "section left-padding",
+                    ].join(" ")}
+                >
                     <div className={styles.servicesContent}>
                         <h2>{title}</h2>
                         <ServicesWrapper services={services} />

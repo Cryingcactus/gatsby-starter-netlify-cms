@@ -2,6 +2,26 @@
     display: flex;
 }
 
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container .imageContainer {
+        display: none;
+    }
+
+    .container .servicesContent,
+    .container .services {
+        align-items: center;
+    }
+
+    .container .servicesContent h2 {
+        text-align: center;
+    }
+}
+
 .servicesContentContainer {
     flex: 3;
     display: flex;

@@ -12,6 +12,26 @@
     overflow: hidden;
 }
 
+@media (max-width: 1000px) {
+    .container .wheelContainer {
+        min-height: unset;
+    }
+
+    .wheelContainer > * {
+        display: none;
+    }
+
+    .wheelContainer > *:last-of-type {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .wheelContainer .carouselContainer {
+        flex: 1;
+        padding: 5em 5vw;
+    }
+}
+
 .wheel {
     position: absolute;
     width: 1500px;

@@ -38,7 +38,7 @@
 
 footer .container h2 {
     font-family: "Source Serif Pro";
-    font-size: 80px;
+    font-size: 5em;
     line-height: 100px;
     text-align: center;
     margin: 0;
@@ -46,11 +46,19 @@ footer .container h2 {
 
 footer .container h3 {
     font-family: "Source Sans Pro";
-    font-size: 60px;
+    font-size: 3.75em;
     line-height: 75px;
     text-align: center;
     margin: 0;
 }
+
+/* footer .container h3 {
+    font-family: "Source Sans Pro";
+    font-size: 60px;
+    line-height: 75px;
+    text-align: center;
+    margin: 0;
+} */
 
 .row.lineContainer {
     flex: 1;
@@ -65,6 +73,24 @@ footer .container h3 {
 .bottomRowContainer {
     flex-direction: row;
     justify-content: space-between;
+}
+
+@media (max-width: 600px) {
+    .bottomRowContainer {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    .bottomRowContainer .verticalColumn {
+        width: 100%;
+    }
+
+    .socialBar .social {
+        justify-content: space-evenly;
+        font-size: 6em;
+        margin-bottom: 35px;
+        margin-top: 50px;
+    }
 }
 
 .verticalColumn {
@@ -93,7 +119,6 @@ footer h3.logo {
 }
 
 .socialBar {
-    width: 500px;
     justify-content: center;
 }
 

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "../../context/ThemeContext";
 import { Link } from "gatsby";
 import styles from "./Navbar.module.css";
 
 const Navbar = ({ uri }) => {
+    const { state, dispatch } = useContext(ThemeContext);
     const onContactPage = uri ? uri.includes("/contact") : false;
     return (
         <nav>
@@ -10,7 +12,12 @@ const Navbar = ({ uri }) => {
                 <div id="navMenu" className={styles.menu}>
                     <div>
                         <Link to="/" className={styles.item} title="Logo">
-                            <span className={styles.logo}>tgthr</span>
+                            <span
+                                className={styles.logo}
+                                style={{ color: state.theme.logoColor }}
+                            >
+                                tgthr
+                            </span>
                         </Link>
                     </div>
                     <div className={styles.items}>
@@ -28,7 +35,9 @@ const Navbar = ({ uri }) => {
                                 className={`${styles.item} ${styles.contact}`}
                                 to="/contact"
                             >
-                                <span>contact</span>
+                                <button>
+                                    <span>contact</span>
+                                </button>
                             </Link>
                         ) : (
                             ""

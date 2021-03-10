@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import styles from "../styles/404.module.css";
 
 const NotFoundPage = () => (
-    <Layout>
+    <Layout theme={"dark"}>
         <section className="section">
             <div className={styles.container}>
                 <h1 className={styles.header}>whoops.</h1>

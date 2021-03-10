@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import styles from "./Footer.module.css";
 import Footer from "./Footer";
 
@@ -12,7 +13,10 @@ const Index = ({ parallax }) => {
                         <Footer>
                             <div className={styles.row}>
                                 <h2>let’s do something great, tgthr.</h2>
-                                <h3>ready to get started? let’s talk.</h3>
+                                <h3>
+                                    ready to get started?{" "}
+                                    <Link to="/contact">let’s talk.</Link>
+                                </h3>
                             </div>
                             <div
                                 className={[

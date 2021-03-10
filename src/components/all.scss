@@ -7,6 +7,53 @@ body {
     margin: 0;
 }
 
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 6px;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+button:hover::before {
+    content: "";
+    background-color: #ffffff;
+    border: inset 2px #181924;
+    color: #181924;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 10%;
+}
+
 header,
 main {
     z-index: 10;
