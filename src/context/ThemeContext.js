@@ -3,11 +3,8 @@ import React, { createContext, useReducer } from "react";
 export const ThemeContext = createContext();
 
 const reducer = (state, action) => {
-    console.log(action.type);
-    console.log(action.theme);
     switch (action.type) {
         case "theme":
-            console.log("here i am");
             if (action.theme) {
                 return {
                     ...state,
@@ -15,7 +12,6 @@ const reducer = (state, action) => {
                 };
             }
         default:
-            console.log();
             return {
                 ...state,
                 theme: state.default,

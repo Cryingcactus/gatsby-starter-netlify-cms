@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import styles from "./Navbar.module.css";
 
 const Navbar = ({ uri }) => {
-    const { state, dispatch } = useContext(ThemeContext);
+    const { state } = useContext(ThemeContext);
     const onContactPage = uri ? uri.includes("/contact") : false;
     return (
         <nav>
