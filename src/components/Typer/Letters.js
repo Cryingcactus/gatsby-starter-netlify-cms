@@ -24,21 +24,30 @@ const Letters = ({ typedWords }) => {
                                 : 0
                         );
                         setLetterIndex(0);
-                    }, 1500);
+                    }, 2500);
                 }
-            }, 50);
+            }, 60);
         }
     }, [letterIndex]);
 
     let letters = [];
-    for (let i = 0; i < curentWord.length; i++) {
+    for (let i = 0; i < curentWord.length + 1; i++) {
         const currentChar = letterIndex >= i ? curentWord.charAt(i) : " ";
-        letters.push(
-            <span key={i + currentChar} className={styles.letter}>
-                {currentChar}
-            </span>
-        );
+        if (i < curentWord.length) {
+            letters.push(
+                <span key={i + currentChar} className={styles.letter}>
+                    {currentChar}
+                </span>
+            );
+        } else {
+            letters.push(
+                <span key={i + "cursor"} className={styles.letter}>
+                    <span className={styles.cursor}></span>
+                </span>
+            );
+        }
     }
+
     return letters;
 };
 

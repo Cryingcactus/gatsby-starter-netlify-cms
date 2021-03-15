@@ -20,7 +20,7 @@ const Typer = ({ section }) => {
                     <span className={styles.title}>
                         {title}{" "}
                         <span className={styles.lettersContainer}>
-                            <Letters typedWords={typedWords} />.
+                            <Letters typedWords={typedWords} />
                         </span>
                     </span>
                     <ReactMarkdown>{copy}</ReactMarkdown>

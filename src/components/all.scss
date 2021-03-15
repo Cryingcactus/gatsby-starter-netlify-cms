@@ -78,17 +78,11 @@ button {
     cursor: pointer;
 }
 
-button:hover::before {
+button:hover {
     content: "";
-    background-color: #ffffff;
+    background-color: transparent;
     border: inset 2px #181924;
     color: #181924;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 10%;
 }
 
 header,
