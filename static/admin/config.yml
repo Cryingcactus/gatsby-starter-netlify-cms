@@ -393,18 +393,23 @@ collections:
                                   widget: list,
                                   fields:
                                       [
-                                          { label: Title, name: title, widget: string },
-                                          { label: Copy, name: copy, widget: markdown },
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Copy,
+                                              name: copy,
+                                              widget: markdown,
+                                          },
                                       ],
                               },
                           ],
                   }
-                  - {
+                - {
                       label: Title Section,
                       name: titleSection,
                       widget: object,
-                      fields:
-                          [
-                              { label: Title, name: title, widget: string },
-                          ],
+                      fields: [{ label: Title, name: title, widget: string }],
                   }
