@@ -5,6 +5,7 @@ $primary: #ffffff;
 $black: #181924;
 body {
     margin: 0;
+    color: #181925;
 }
 html {
     font-size: 16px;
@@ -20,59 +21,86 @@ html {
     }
 }
 
-// h1 {
-//     font-size: 3em !important;
-// }
+body a {
+    text-decoration: underline;
+    color: inherit;
+    transition: all 0.2s ease;
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 50%,
+        #f85a3e 50%
+    );
+    background-position: -0% 0;
+    background-size: 200% auto;
+}
 
-// h2 {
-//     font-size: 2.6em !important;
-// }
+body a:hover {
+    transition: all 0.5s ease;
+    background-position: -99.99% 0;
+}
 
-// h3 {
-//     font-size: 2.2em !important;
-// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
 
-// h4 {
-//     font-size: 1.8em !important;
-// }
+h1,
+h5 {
+    font-size: 5rem;
+    line-height: 6.25rem;
+}
 
-// h5 {
-//     font-size: 1.4em !important;
-// }
+h2 {
+    font-size: 3.75rem;
+    line-height: 4.6875rem;
+}
 
-// h6 {
-//     font-size: 1em !important;
-// }
+h3 {
+    font-size: 2.1875rem;
+    line-height: 2.75rem;
+}
 
-// @media (max-width: 1200px) {
-//     body {
-//         font-size: 14px;
-//     }
-// }
+h4 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+}
 
-// @media (max-width: 1000px) {
-//     body {
-//         font-size: 12px;
-//     }
-// }
+h6 {
+    font-size: 10rem;
+    line-height: 12.5rem;
+}
 
-// @media (max-width: 800px) {
-//     body {
-//         font-size: 10px;
-//     }
-// }
+.p1,
+.p2,
+.p3 {
+    font-family: "Source Sans Pro";
+    font-style: normal;
+    font-weight: normal;
+    margin: 1rem 0;
+}
 
-// @media (max-width: 600px) {
-//     body {
-//         font-size: 8px;
-//     }
-// }
+.p1 {
+    font-size: 2.1875rem;
+    line-height: 2.75rem;
+}
 
-// @media (max-width: 400px) {
-//     body {
-//         font-size: 6px;
-//     }
-// }
+.p2 {
+    font-size: 1.875rem;
+    line-height: 2.375rem;
+}
+
+.p3 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+}
 
 button {
     cursor: pointer;

@@ -13,6 +13,11 @@
 
 .menu a {
     text-decoration: none;
+    background-image: unset;
+}
+
+.menu a:hover {
+    background-position: unset;
 }
 
 .logo {
@@ -20,13 +25,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-family: "Source Serif Pro";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 80px;
-    line-height: 100px;
-    text-align: center;
 }
 
 .items {

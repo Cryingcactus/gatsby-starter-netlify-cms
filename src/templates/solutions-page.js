@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import HeroSection from "../components/Hero/HeroNormalImage";
+import KeywordSection from "../components/KeywordSection";
+import TitleCopySection from "../components/TitleCopySection";
 
 export const SolutionsPageTemplate = ({ sections }) => {
     const {
@@ -16,6 +18,8 @@ export const SolutionsPageTemplate = ({ sections }) => {
         <div style={{ position: "relative" }}>
             <div className="paralax-normal">
                 <HeroSection section={heroSection} />
+                <KeywordSection section={keywordSection} />
+                <TitleCopySection section={titleCopySection} />
             </div>
         </div>
     );

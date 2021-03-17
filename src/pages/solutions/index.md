@@ -26,7 +26,7 @@ keywordSection:
               - value: E-commerce + DTC Strategy
               - value: Digital Roadmapping
               - value: Digital Innovation
-    - phrase: "design data-driven "
+    - phrase: design data-driven
       keyword: solutions.
       active:
           copy:

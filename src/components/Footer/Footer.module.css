@@ -52,14 +52,6 @@ footer .container h3 {
     margin: 0;
 }
 
-/* footer .container h3 {
-    font-family: "Source Sans Pro";
-    font-size: 60px;
-    line-height: 75px;
-    text-align: center;
-    margin: 0;
-} */
-
 .row.lineContainer {
     flex: 1;
 }
@@ -136,6 +128,11 @@ footer h3.logo {
 
 .social a {
     color: inherit;
+    background-image: unset;
+}
+
+.social a:hover {
+    background-position: unset;
 }
 
 .emailInput {
