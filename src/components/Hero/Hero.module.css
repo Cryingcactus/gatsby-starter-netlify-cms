@@ -1,6 +1,9 @@
 .container {
     height: 90vh;
     justify-content: unset;
+    display: flex;
+    background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 .titleContainer {
@@ -17,9 +20,18 @@
     line-height: 1em;
     letter-spacing: 0.05em;
     word-spacing: -0.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.title > span {
+.titleAndHighlight {
+    padding: 0 2vw;
+    animation: floatRight 1s;
+    animation-timing-function: cubic-bezier(0, 0, 0.27, 1);
+}
+
+.title > div > .highlighted > span {
     display: inline;
 
     padding-left: 0.2em;
@@ -27,4 +39,42 @@
     background-repeat: no-repeat;
     background-position: 0px 0.28em;
     background-size: auto 0.57em;
+}
+
+.nonHighlighted {
+    font-size: 2.1875rem;
+    word-spacing: normal;
+    letter-spacing: normal;
+}
+
+.rightAligned {
+    text-align: right;
+}
+
+.imageContainer {
+    flex: 1;
+    animation: floatLeft 1s;
+    animation-timing-function: cubic-bezier(0, 0, 0.27, 1);
+}
+
+@keyframes floatLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes floatRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
 }

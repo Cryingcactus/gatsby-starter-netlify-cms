@@ -1,23 +1,12 @@
 import React from "react";
 import styles from "./Hero.module.css";
 import Background from "../Background";
+import HighlightedText from "./HighlightedText";
 const Hero = ({ section }) => {
     const { titleOptions, backgroundImage } = section;
     const { title, highlightTitle, textColor, highlightColor } = titleOptions;
     const { image } = backgroundImage;
-    let highlightedWords = highlightTitle.split(" ");
-    let highlightedTitle = highlightedWords.map((word, i) => {
-        return (
-            <span
-                key={i}
-                style={{
-                    backgroundImage: `linear-gradient(${highlightColor}, ${highlightColor})`,
-                }}
-            >
-                {word}{" "}
-            </span>
-        );
-    });
+
     return (
         <section className="section">
             <Background
@@ -32,8 +21,11 @@ const Hero = ({ section }) => {
                             color: textColor,
                         }}
                     >
-                        <span>{title}</span>
-                        <span>{highlightedTitle}</span>
+                        <div className={styles.nonHighlighted}>{title}</div>
+                        <HighlightedText
+                            highlightTitle={highlightTitle}
+                            highlightColor={highlightColor}
+                        />
                     </h1>
                 </div>
             </Background>

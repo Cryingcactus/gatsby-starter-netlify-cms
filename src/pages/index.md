@@ -2,10 +2,9 @@
 templateKey: "index-page"
 heroSection:
     titleOptions:
-		title: ""
         highlightTitle: we solve digital  challenges for mission-driven organizations.
         textColor: "#ffffff"
-        titleHighlightColor: "#d66042"
+        highlightColor: "#d66042"
     backgroundImage:
         image: /img/hero.png
         alt: " "

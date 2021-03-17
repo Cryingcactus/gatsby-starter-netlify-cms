@@ -59,7 +59,6 @@ export const IndexPageQuery = graphql`
             frontmatter {
                 heroSection {
                     titleOptions {
-                        title
                         highlightTitle
                         textColor
                         highlightColor

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import HeroSection from "../components/Hero";
+import HeroSection from "../components/Hero/HeroNormalImage";
 
 export const SolutionsPageTemplate = ({ sections }) => {
     const {
@@ -60,7 +60,7 @@ export const SolutionsPageQuery = graphql`
                         alt
                         image {
                             childImageSharp {
-                                fluid(maxWidth: 2048, quality: 90) {
+                                fluid(maxWidth: 920, quality: 90) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
