@@ -27,7 +27,7 @@ sections:
                               { label: Title, name: title, widget: string },
                               {
                                   label: Highlighted Title,
-                                  name: highlightColor,
+                                  name: highlightTitle,
                                   widget: string,
                               },
                               {
@@ -37,7 +37,7 @@ sections:
                               },
                               {
                                   label: Highlight Color,
-                                  name: HighlightColor,
+                                  name: highlightColor,
                                   widget: color,
                               },
                           ],

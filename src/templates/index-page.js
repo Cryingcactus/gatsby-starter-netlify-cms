@@ -60,8 +60,9 @@ export const IndexPageQuery = graphql`
                 heroSection {
                     titleOptions {
                         title
-                        titleColor
-                        titleHighlightColor
+                        highlightTitle
+                        textColor
+                        highlightColor
                     }
                     backgroundImage {
                         alt

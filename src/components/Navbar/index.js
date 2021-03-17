@@ -21,27 +21,23 @@ const Navbar = ({ uri }) => {
                         </Link>
                     </div>
                     <div className={styles.items}>
-                        {/*<Link className={styles.item} to="/about">
-                            <span>about</span>
+                        <Link className={styles.item} to="/values">
+                            <span>values</span>
                         </Link>
-                        <Link className={styles.item} to="/services">
-                            <span>services</span>
+                        <Link className={styles.item} to="/solutions">
+                            <span>solutions</span>
                         </Link>
-                        <Link className={styles.item} to="/blog">
-                            <span>blog</span>
-						</Link>*/}
-                        {!onContactPage ? (
-                            <Link
-                                className={`${styles.item} ${styles.contact}`}
-                                to="/contact"
-                            >
-                                <button>
-                                    <span>contact</span>
-                                </button>
-                            </Link>
-                        ) : (
-                            ""
-                        )}
+                        <Link className={styles.item} to="/beliefs">
+                            <span>beliefs</span>
+                        </Link>
+                        <Link
+                            className={`${styles.item} ${styles.contact}`}
+                            to="/contact"
+                        >
+                            <button>
+                                <span>contact</span>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

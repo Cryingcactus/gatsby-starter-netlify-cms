@@ -3,14 +3,15 @@ import styles from "./Hero.module.css";
 import Background from "../Background";
 const Hero = ({ section }) => {
     const { titleOptions, backgroundImage } = section;
+    const { title, highlightTitle, textColor, highlightColor } = titleOptions;
     const { image } = backgroundImage;
-    let words = titleOptions.title.split(" ");
-    let titleRend = words.map((word, i) => {
+    let highlightedWords = highlightTitle.split(" ");
+    let highlightedTitle = highlightedWords.map((word, i) => {
         return (
             <span
                 key={i}
                 style={{
-                    backgroundImage: `linear-gradient(${titleOptions.titleHighlightColor}, ${titleOptions.titleHighlightColor})`,
+                    backgroundImage: `linear-gradient(${highlightColor}, ${highlightColor})`,
                 }}
             >
                 {word}{" "}
@@ -28,10 +29,11 @@ const Hero = ({ section }) => {
                     <h1
                         className={styles.title}
                         style={{
-                            color: titleOptions.titleColor,
+                            color: textColor,
                         }}
                     >
-                        {titleRend}
+                        <span>{title}</span>
+                        <span>{highlightedTitle}</span>
                     </h1>
                 </div>
             </Background>
