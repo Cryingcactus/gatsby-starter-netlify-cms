@@ -571,8 +571,13 @@ collections:
                                               widget: string,
                                           },
                                           {
-                                              label: Name and Title,
-                                              name: nameTitle,
+                                              label: Name,
+                                              name: name,
+                                              widget: markdown,
+                                          },
+                                          {
+                                              label: Title,
+                                              name: title,
                                               widget: markdown,
                                           },
                                       ],
