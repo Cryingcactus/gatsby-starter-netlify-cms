@@ -75,12 +75,14 @@ export const SolutionsPageQuery = graphql`
                     }
                 }
                 keywordSection {
-                    phrase
-                    keyword
-                    active {
-                        copy
-                        values {
-                            value
+                    keywords {
+                        phrase
+                        keyword
+                        active {
+                            copy
+                            values {
+                                value
+                            }
                         }
                     }
                     primaryColor

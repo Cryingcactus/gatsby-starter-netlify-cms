@@ -3,11 +3,12 @@ import Card from "./Card";
 import styles from "./KeywordSection.module.css";
 
 const KeywordSection = ({ section }) => {
+    const { keywords } = section;
     const [active, setActive] = useState(-1);
     return (
         <section className="nonPaddingSection">
             <div className={styles.container}>
-                {section.map((card, i) => (
+                {keywords.map((card, i) => (
                     <div
                         className={
                             active === i
