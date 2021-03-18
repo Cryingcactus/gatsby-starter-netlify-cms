@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Copy.module.css";
+
 const Copy = ({ copy, size, children }) => (
-    <h3 className={styles.copy} style={size ? { fontSize: size } : {}}>
+    <p className={"p2"} style={size ? { fontSize: size } : {}}>
         {children && children ? children : copy}
-    </h3>
+    </p>
 );
 
 Copy.propTypes = {

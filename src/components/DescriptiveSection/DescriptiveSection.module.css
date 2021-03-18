@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #f0ddf8;
+    color: #af4d98;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+}
+
+.titleContainer > div {
+    padding-bottom: 0;
+}
+
+.pContainer > p {
+    margin-top: 0;
+}
+
+.itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+}
+
+.itemsContainer > * {
+    flex-basis: 40%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}

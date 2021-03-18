@@ -336,36 +336,62 @@ collections:
                 - {
                       label: Keyword Section,
                       name: keywordSection,
-                      widget: list,
+                      widget: object,
                       fields:
                           [
-                              { label: Phrase, name: phrase, widget: string },
-                              { label: Keyword, name: keyword, widget: string },
                               {
-                                  label: Active,
-                                  name: active,
-                                  widget: object,
+                                  label: Keywords,
+                                  name: keywords,
+                                  widget: list,
                                   fields:
                                       [
                                           {
-                                              label: Copy,
-                                              name: copy,
+                                              label: Phrase,
+                                              name: phrase,
                                               widget: string,
                                           },
                                           {
-                                              label: Values,
-                                              name: values,
-                                              widget: list,
+                                              label: Keyword,
+                                              name: keyword,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Active,
+                                              name: active,
+                                              widget: object,
                                               fields:
                                                   [
                                                       {
-                                                          label: Value,
-                                                          name: value,
+                                                          label: Copy,
+                                                          name: copy,
                                                           widget: string,
+                                                      },
+                                                      {
+                                                          label: Values,
+                                                          name: values,
+                                                          widget: list,
+                                                          fields:
+                                                              [
+                                                                  {
+                                                                      label: Value,
+                                                                      name: value,
+                                                                      widget: string,
+                                                                  },
+                                                              ],
                                                       },
                                                   ],
                                           },
                                       ],
+                              },
+                              {
+                                  label: Primary Color,
+                                  name: primaryColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Secondary Color,
+                                  name: secondaryColor,
+                                  widget: color,
                               },
                           ],
                   }
@@ -404,6 +430,16 @@ collections:
                                               widget: markdown,
                                           },
                                       ],
+                              },
+                              {
+                                  label: Primary Color,
+                                  name: primaryColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Secondary Color,
+                                  name: secondaryColor,
+                                  widget: color,
                               },
                           ],
                   }

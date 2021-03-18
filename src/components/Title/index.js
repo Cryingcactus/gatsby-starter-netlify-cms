@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./Title.module.css";
 
 const TitledCopy = ({ title, size, children }) => (
-    <h2 className={styles.title} style={size ? { fontSize: size } : {}}>
+    <h2 style={size ? { fontSize: size } : {}}>
         {children ? children : title}
     </h2>
 );

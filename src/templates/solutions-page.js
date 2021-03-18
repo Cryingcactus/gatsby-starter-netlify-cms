@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/Hero/HeroNormalImage";
 import KeywordSection from "../components/KeywordSection";
 import TitleCopySection from "../components/TitleCopySection";
+import DescriptiveSection from "../components/DescriptiveSection";
 
 export const SolutionsPageTemplate = ({ sections }) => {
     const {
@@ -20,6 +21,8 @@ export const SolutionsPageTemplate = ({ sections }) => {
                 <HeroSection section={heroSection} />
                 <KeywordSection section={keywordSection} />
                 <TitleCopySection section={titleCopySection} />
+                <DescriptiveSection section={descriptiveSection} />
+                <TitleCopySection section={titleSection} />
             </div>
         </div>
     );
@@ -80,6 +83,8 @@ export const SolutionsPageQuery = graphql`
                             value
                         }
                     }
+                    primaryColor
+                    secondaryColor
                 }
                 titleCopySection {
                     title
@@ -92,6 +97,8 @@ export const SolutionsPageQuery = graphql`
                         title
                         copy
                     }
+                    primaryColor
+                    secondaryColor
                 }
                 titleSection {
                     title

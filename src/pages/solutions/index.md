@@ -45,8 +45,8 @@ keywordSection:
 			values:
 				- value: Value
 				- value: Value 2
-	primaryColor: "#af4d98"
-    secondaryColor: "#f0ddf8"
+	primaryColor: "#004f2d"
+    secondaryColor: "#e2f3e9"
 titleCopySection:
     title: not sure where to start?
     copy: let’s schedule a [discovery call](/).
