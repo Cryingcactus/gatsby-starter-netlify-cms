@@ -16,7 +16,7 @@ const Card = ({ cardInfo, clicked, primaryColor, secondaryColor }) => {
         <div className={styles.cardContainer} ref={ref}>
             <div className={styles.col}>
                 <div className={styles.titleContainer}>
-                    <h4>{phrase}</h4>
+                    <p className="p3">{phrase}</p>
                     <h2>{keyword}</h2>
                 </div>
                 <div className={styles.copyContainer}>

@@ -74,6 +74,10 @@
     flex: 1;
 }
 
+.titleContainer p {
+    margin: 0;
+}
+
 .controlsContainer {
     display: flex;
     flex-direction: column;
