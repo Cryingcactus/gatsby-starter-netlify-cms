@@ -63,6 +63,8 @@ meetMe:
     nameTitle: |-
       **Samantha Ruiz (she/her)**
       Managing Director, Founder
+    name: "**Samantha Ruiz (she/her)**"
+    title: Managing Director, Founder
   primaryColor: "#af4d98"
   secondaryColor: "#f0ddf8"
 titleSection:
