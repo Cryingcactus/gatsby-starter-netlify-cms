@@ -117,7 +117,8 @@ export const ValuesPageQuery = graphql`
                                 }
                             }
                         }
-                        nameTitle
+                        name
+                        title
                     }
                     primaryColor
                     secondaryColor

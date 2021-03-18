@@ -29,7 +29,11 @@ const MeetMeSection = ({ section }) => {
                             imageInfo={signature}
                             style={{ height: "104px", width: "245px" }}
                         />
-                        <div className={styles.signatureContainer}>
+                        <div
+                            className={[styles.signatureContainer, "p3"].join(
+                                " "
+                            )}
+                        >
                             <ReactMarkdown>{signature.name}</ReactMarkdown>
                             <ReactMarkdown>{signature.title}</ReactMarkdown>
                         </div>
