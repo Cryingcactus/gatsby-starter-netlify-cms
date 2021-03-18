@@ -4,10 +4,13 @@ import ReactMarkdown from "react-markdown";
 import styles from "./DescriptiveSection.module.css";
 
 const DescriptiveSection = ({ section }) => {
-    const { title, copy, items } = section;
+    const { title, copy, items, primaryColor, secondaryColor } = section;
     return (
         <section className="section">
-            <div className={styles.container}>
+            <div
+                className={styles.container}
+                style={{ backgroundColor: secondaryColor, color: primaryColor }}
+            >
                 <div className={styles.titleContainer}>
                     <TitledCopy
                         title={title}

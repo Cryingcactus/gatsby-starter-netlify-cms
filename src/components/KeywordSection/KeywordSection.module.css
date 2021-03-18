@@ -43,16 +43,16 @@
     display: flex;
     justify-content: center;
     padding: 130px 5vw 80px 5vw;
-    background-color: #e2f3e9;
-    color: #09814a;
+    background-color: var(--secondary);
+    color: var(--primary);
     min-height: calc(100% - 210px);
     transition: all 0.3s ease;
 }
 
 .active .cardContainer,
 .cardContainer:hover {
-    background-color: #09814a;
-    color: #e2f3e9;
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
 .active .cardContainer {

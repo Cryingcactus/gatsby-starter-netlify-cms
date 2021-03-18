@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: #f0ddf8;
-    color: #af4d98;
     padding-top: 5vw;
     padding-bottom: 5vw;
 }
