@@ -43,8 +43,8 @@
     display: flex;
     justify-content: center;
     padding: 130px 5vw 80px 5vw;
-    background-color: var(--secondary);
-    color: var(--primary);
+    background-color: var(--secondary, #ffffff);
+    color: var(--primary, inherit);
     min-height: calc(100% - 210px);
     transition: all 0.3s ease;
 }
