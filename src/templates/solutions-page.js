@@ -29,7 +29,13 @@ export const SolutionsPageTemplate = ({ sections }) => {
 };
 
 SolutionsPageTemplate.propTypes = {
-    sections: PropTypes.object.isRequired,
+    sections: PropTypes.objectOf({
+        heroSection: PropTypes.objectOf({}),
+        keywordSection: PropTypes.objectOf({}),
+        titleCopySection: PropTypes.objectOf({}),
+        descriptiveSection: PropTypes.objectOf({}),
+        titleSection: PropTypes.objectOf({}),
+    }).isRequired,
 };
 
 const SolutionsPage = ({ data }) => {
@@ -43,10 +49,10 @@ const SolutionsPage = ({ data }) => {
 
 SolutionsPage.propTypes = {
     data: PropTypes.shape({
-        markdownRemark: PropTypes.shape({
-            frontmatter: PropTypes.object,
+        markdownRemark: PropTypes.objectOf({
+            frontmatter: PropTypes.objectOf({}),
         }),
-    }),
+    }).isRequired,
 };
 
 export default SolutionsPage;

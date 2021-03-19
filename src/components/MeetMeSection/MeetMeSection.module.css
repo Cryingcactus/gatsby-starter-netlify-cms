@@ -13,6 +13,9 @@
 
 .leftCol {
     flex: 1;
+}
+
+.paddingContainer {
     padding: 5vw 5vw 5vw 10vw;
     display: flex;
     flex-direction: column;

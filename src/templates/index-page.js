@@ -1,3 +1,4 @@
+/* eslint-disable react/forbid-prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
@@ -30,7 +31,14 @@ export const IndexPageTemplate = ({ sections }) => {
 };
 
 IndexPageTemplate.propTypes = {
-    sections: PropTypes.object.isRequired,
+    sections: PropTypes.objectOf({
+        heroSection: PropTypes.object,
+        typingSection: PropTypes.object,
+        wheelSection: PropTypes.object,
+        servicesSection: PropTypes.object,
+        iconsSection: PropTypes.object,
+        blogSection: PropTypes.object,
+    }).isRequired,
 };
 
 const IndexPage = ({ data }) => {
@@ -43,11 +51,18 @@ const IndexPage = ({ data }) => {
 };
 
 IndexPage.propTypes = {
-    data: PropTypes.shape({
-        markdownRemark: PropTypes.shape({
-            frontmatter: PropTypes.object,
+    data: PropTypes.objectOf({
+        markdownRemark: PropTypes.objectOf({
+            frontmatter: PropTypes.objectOf({
+                heroSection: PropTypes.objectOf({}),
+                typingSection: PropTypes.objectOf({}),
+                wheelSection: PropTypes.objectOf({}),
+                servicesSection: PropTypes.objectOf({}),
+                iconsSection: PropTypes.objectOf({}),
+                blogSection: PropTypes.objectOf({}),
+            }),
         }),
-    }),
+    }).isRequired,
 };
 
 export default IndexPage;

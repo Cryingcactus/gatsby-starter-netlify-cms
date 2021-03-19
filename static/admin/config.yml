@@ -600,3 +600,18 @@ collections:
                       widget: object,
                       fields: [{ label: Title, name: title, widget: string }],
                   }
+          - file: "src/pages/privacy-policy/index.md"
+            label: "Privacy Policy"
+            name: "privacyPolicy"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "privacy-policy-page",
+                  }
+                - {
+                      label: Privacy Policy,
+                      name: privacyPolicy,
+                      widget: markdown,
+                  }

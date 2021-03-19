@@ -81,7 +81,7 @@ const WheelSection = ({ section }) => {
                                 }, 300);
                             }
                         }}
-                    ></div>
+                    />
                     <div className={styles.wheel}>
                         <PreviewCompatibleImage
                             imageInfo={image}
