@@ -24,7 +24,7 @@ export const ValuesPageTemplate = ({ sections }) => {
                 <DescriptiveSection section={descriptiveSection} />
                 <TitleCopySection
                     section={titleCopySection}
-                    alignment={"start"}
+                    alignment="start"
                 />
                 <MeetMeSection section={meetMe} />
                 <TitleCopySection section={titleSection} />
@@ -34,7 +34,7 @@ export const ValuesPageTemplate = ({ sections }) => {
 };
 
 ValuesPageTemplate.propTypes = {
-    sections: PropTypes.object.isRequired,
+    sections: PropTypes.objectOf.isRequired,
 };
 
 const ValuesPage = ({ data }) => {
@@ -47,11 +47,11 @@ const ValuesPage = ({ data }) => {
 };
 
 ValuesPage.propTypes = {
-    data: PropTypes.shape({
-        markdownRemark: PropTypes.shape({
+    data: PropTypes.objectOf({
+        markdownRemark: PropTypes.objectOf({
             frontmatter: PropTypes.object,
         }),
-    }),
+    }).isRequired,
 };
 
 export default ValuesPage;

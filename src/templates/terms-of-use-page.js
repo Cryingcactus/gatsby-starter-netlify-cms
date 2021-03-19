@@ -2,32 +2,32 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PrivacyPolicy from "../components/PrivacyPolicy";
+import TermsOfUse from "../components/TermsOfUse";
 
-export const PrivacyPolicyPageTemplate = ({ sections }) => (
+export const TermsOfUsePageTemplate = ({ sections }) => (
     <div style={{ position: "relative" }}>
         <div className="paralax-normal">
-            <PrivacyPolicy section={sections} />
+            <TermsOfUse section={sections} />
         </div>
     </div>
 );
 
-PrivacyPolicyPageTemplate.propTypes = {
+TermsOfUsePageTemplate.propTypes = {
     sections: PropTypes.shape({
-        privacyPolicy: PropTypes.string,
+        termsOfUse: PropTypes.string,
     }).isRequired,
 };
 
-const PrivacyPolicyPage = ({ data }) => {
+const TermsOfUsePage = ({ data }) => {
     const { frontmatter } = data.markdownRemark;
     return (
         <Layout>
-            <PrivacyPolicyPageTemplate sections={frontmatter} />
+            <TermsOfUsePageTemplate sections={frontmatter} />
         </Layout>
     );
 };
 
-PrivacyPolicyPage.propTypes = {
+TermsOfUsePage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.shape({
             frontmatter: PropTypes.shape({}),
@@ -35,14 +35,14 @@ PrivacyPolicyPage.propTypes = {
     }).isRequired,
 };
 
-export default PrivacyPolicyPage;
+export default TermsOfUsePage;
 
-export const PrivacyPolicyPageQuery = graphql`
-    query PrivacyPolicyPage($id: String!) {
+export const TermsOfUsePageQuery = graphql`
+    query TermsOfUsePage($id: String!) {
         markdownRemark(id: { eq: $id }) {
             rawMarkdownBody
             frontmatter {
-                privacyPolicy
+                termsOfUse
             }
         }
     }

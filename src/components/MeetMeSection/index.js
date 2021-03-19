@@ -55,11 +55,11 @@ const MeetMeSection = ({ section }) => {
 };
 
 MeetMeSection.propTypes = {
-    section: PropTypes.object.shape({
+    section: PropTypes.objectOf({
         title: PropTypes.string,
         copy: PropTypes.string,
-        picture: PropTypes.object.shape({}),
-        signature: PropTypes.object.shape({
+        picture: PropTypes.objectOf({}),
+        signature: PropTypes.objectOf({
             name: PropTypes.string,
             title: PropTypes.string,
         }),
