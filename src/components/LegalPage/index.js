@@ -1,16 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReactMarkdown from "react-markdown";
-import styles from "./TermsOfUse.module.css";
+import styles from "./LegalPage.module.css";
 
-const TermsOfUse = ({ section }) => {
-    const { termsOfUse } = section;
+const LegalPage = ({ section }) => {
+    const { legalPage } = section;
     return (
         <section className="section">
             <div className={styles.container}>
                 <div className={styles.copyContainer}>
                     <div className="p4">
-                        <ReactMarkdown>{termsOfUse}</ReactMarkdown>
+                        <ReactMarkdown>{legalPage}</ReactMarkdown>
                     </div>
                 </div>
             </div>
@@ -18,10 +18,10 @@ const TermsOfUse = ({ section }) => {
     );
 };
 
-TermsOfUse.propTypes = {
+LegalPage.propTypes = {
     section: PropTypes.shape({
-        termsOfUse: PropTypes.string,
+        legalPage: PropTypes.string,
     }).isRequired,
 };
 
-export default TermsOfUse;
+export default LegalPage;

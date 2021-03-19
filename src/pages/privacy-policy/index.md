@@ -1,6 +1,6 @@
 ---
 templateKey: "privacy-policy-page"
-privacyPolicy: >-
+legalPage: >-
     Privacy Policy
 
     Effective Date: March 19, 2021

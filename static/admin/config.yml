@@ -610,11 +610,7 @@ collections:
                       widget: "hidden",
                       default: "privacy-policy-page",
                   }
-                - {
-                      label: Privacy Policy,
-                      name: privacyPolicy,
-                      widget: markdown,
-                  }
+                - { label: Privacy Policy, name: legalPage, widget: markdown }
           - file: "src/pages/terms-of-use/index.md"
             label: "Terms of Use"
             name: "termsOfUse"
@@ -625,4 +621,4 @@ collections:
                       widget: "hidden",
                       default: "terms-of-use-page",
                   }
-                - { label: Terms of Use, name: termsOfUse, widget: markdown }
+                - { label: Terms of Use, name: legalPage, widget: markdown }

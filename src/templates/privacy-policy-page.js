@@ -2,19 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import PrivacyPolicy from "../components/PrivacyPolicy";
+import LegalPage from "../components/LegalPage";
 
 export const PrivacyPolicyPageTemplate = ({ sections }) => (
     <div style={{ position: "relative" }}>
         <div className="paralax-normal">
-            <PrivacyPolicy section={sections} />
+            <LegalPage section={sections} />
         </div>
     </div>
 );
 
 PrivacyPolicyPageTemplate.propTypes = {
     sections: PropTypes.shape({
-        privacyPolicy: PropTypes.string,
+        legalPage: PropTypes.string,
     }).isRequired,
 };
 
@@ -42,7 +42,7 @@ export const PrivacyPolicyPageQuery = graphql`
         markdownRemark(id: { eq: $id }) {
             rawMarkdownBody
             frontmatter {
-                privacyPolicy
+                legalPage
             }
         }
     }

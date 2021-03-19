@@ -2,19 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import TermsOfUse from "../components/TermsOfUse";
+import LegalPage from "../components/LegalPage";
 
 export const TermsOfUsePageTemplate = ({ sections }) => (
     <div style={{ position: "relative" }}>
         <div className="paralax-normal">
-            <TermsOfUse section={sections} />
+            <LegalPage section={sections} />
         </div>
     </div>
 );
 
 TermsOfUsePageTemplate.propTypes = {
     sections: PropTypes.shape({
-        termsOfUse: PropTypes.string,
+        legalPage: PropTypes.string,
     }).isRequired,
 };
 
@@ -42,7 +42,7 @@ export const TermsOfUsePageQuery = graphql`
         markdownRemark(id: { eq: $id }) {
             rawMarkdownBody
             frontmatter {
-                termsOfUse
+                legalPage
             }
         }
     }
