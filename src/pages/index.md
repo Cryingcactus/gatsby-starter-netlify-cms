@@ -13,9 +13,9 @@ typingSection:
   copy: we’re a **digital consultancy**  passionate about building a **radically
     better future**.
   typedWords:
-    - word: test 1
-    - word: test 2
-    - word: test 3
+    - word: create human-first experiences.
+    - word: achieve meaningful growth.
+    - word: build a more habitable world for all.
   backgroundColor: "#1e3468"
   textColor: "#bdddf4"
 wheelSection:
