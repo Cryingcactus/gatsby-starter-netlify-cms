@@ -9,6 +9,7 @@
 .titleContainer {
     display: flex;
     max-width: 60%;
+    flex: 1;
 }
 
 @media screen and (max-width: 1300px) {
@@ -30,6 +31,7 @@
     padding: 0 2vw;
     animation: floatRight 1s;
     animation-timing-function: cubic-bezier(0, 0, 0.27, 1);
+    flex: 1;
 }
 
 .title > .highlighted > span,

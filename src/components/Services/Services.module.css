@@ -23,7 +23,7 @@
 }
 
 .servicesContentContainer {
-    flex: 3;
+    flex: 1;
     display: flex;
     padding-right: 2vw;
     padding-top: 3em;
@@ -38,13 +38,8 @@
 }
 
 .servicesContent h2 {
-    font-family: "Source Serif Pro";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 5em;
-    line-height: 100px;
     text-align: right;
-    margin: 0.5em 0;
+    margin: 0 0 0.5em 0;
 }
 
 .servicesWrapper {
@@ -60,14 +55,7 @@
 }
 
 .service {
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 2.5em;
-    line-height: 50px;
     text-align: right;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.7em;
 }
 
 .ctaContainer {
@@ -92,8 +80,13 @@
 }
 
 .imageContainer {
-    flex: 2;
+    flex: 1;
+    display: flex;
+}
+
+.image {
     overflow: hidden;
     position: relative;
     background-size: cover;
+    flex: 1;
 }

@@ -1,22 +1,49 @@
-import React, { useContext, useEffect } from "react";
-import { ThemeContext, ThemeContextProvider } from "../context/ThemeContext";
+import React, { useContext, useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
-import Footer from "./Footer";
-import Navbar from "../components/Navbar";
-import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
+import { ThemeContext, ThemeContextProvider } from "../context/ThemeContext";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
+import useSiteMetadata from "./SiteMetadata";
 import "./all.scss";
 
-const TemplateWrapper = ({ children, uri, theme }) => {
+const TemplateWrapper = ({ children, uri, backgroundColor }) => {
     const { title, description } = useSiteMetadata();
-    const { dispatch } = useContext(ThemeContext);
+    // const { dispatch } = useContext(ThemeContext);
 
+    // useEffect(() => {
+    //     dispatch({
+    //         type: "logoColor",
+    //         backgroundColor: backgroundColor.toLowerCase(),
+    //     });
+    // }, [backgroundColor]);
+
+    const primaryColorMap = {
+        "#ffffff": "#181925",
+        "#f0ddf8": "#af4d98",
+        "#f5e0e4": "#f85a3e",
+        "#e2f3e9": "#09814a",
+        "#d8fafe": "#1d4087",
+        "#181925": "#ffffff",
+        "#af4d98": "#f0ddf8",
+        "#f85a3e": "#f5e0e4",
+        "#09814a": "#e2f3e9",
+        "#1d4087": "#d8fafe",
+    };
+
+    const ref = useRef(false);
     useEffect(() => {
-        dispatch({ type: "theme", theme: theme });
-    }, [theme]);
+        if (ref.current) {
+            ref.current.style = `--logoColor: ${
+                backgroundColor
+                    ? primaryColorMap[backgroundColor.toLowerCase()]
+                    : "#181925"
+            }`;
+        }
+    }, [ref]);
 
     return (
-        <div>
+        <div ref={ref}>
             <Helmet>
                 <html lang="en" />
                 <title>{title}</title>
@@ -55,7 +82,7 @@ const TemplateWrapper = ({ children, uri, theme }) => {
                     content={`${withPrefix("/")}img/og-image.jpg`}
                 />
             </Helmet>
-            <Navbar uri={uri} />
+            <Navbar />
             <main>{children}</main>
             <Footer parallax={!(uri && uri.includes("/contact"))} />
         </div>

@@ -31,20 +31,11 @@ const Services = ({ section }) => {
                     <div className={styles.servicesContent}>
                         <h2>{title}</h2>
                         <ServicesWrapper services={services} />
-                        {/*<div className={styles.ctaContainer}>
-                            <button
-                                className={styles.cta}
-                                style={{
-                                    backgroundColor: button.backgroundColor,
-                                    color: button.textColor,
-                                }}
-                            >
-                                {button.title}
-                            </button>
-                        </div>*/}
                     </div>
                 </div>
-                <Background image={image} styles={styles.imageContainer} />
+                <div className={styles.imageContainer}>
+                    <Background image={image} styles={styles.image} />
+                </div>
             </div>
         </section>
     );

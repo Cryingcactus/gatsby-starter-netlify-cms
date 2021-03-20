@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../../components/Layout";
 import styles from "./Contact.module.css";
 
-const Index = ({ uri }) => {
+const Index = () => {
     // const [isValidated, setIsValidated] = useState(false);
     const [state, setState] = useState({});
     const [fieldFocused, setFieldFocused] = useState();
@@ -12,34 +12,11 @@ const Index = ({ uri }) => {
     const handleFocus = (e) => {
         setFieldFocused(e.target.name);
     };
-    const handleUnfocus = (e) => {
+    const handleUnfocus = () => {
         setFieldFocused();
     };
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     const form = e.target;
-    //     console.log(
-    //         encode({
-    //             "form-name": form.getAttribute("name"),
-    //             ...state,
-    //         })
-    //     );
-    //     fetch("/", {
-    //         method: "POST",
-    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //         body: encode({
-    //             "form-name": form.getAttribute("name"),
-    //             ...state,
-    //         }),
-    //     })
-    //         .then((response) => {
-    //             console.log("success");
-    //             console.log(response);
-    //         })
-    //         .catch((error) => alert(error));
-    // };
     return (
-        <Layout uri={uri}>
+        <Layout backgroundColor="#F85A3E">
             <section className="section">
                 <div className={styles.container}>
                     <div className={styles.headerContainer}>
@@ -196,14 +173,5 @@ const Index = ({ uri }) => {
         </Layout>
     );
 };
-
-// function encode(data) {
-//     return Object.keys(data)
-//         .map(
-//             (key) =>
-//                 encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-//         )
-//         .join("&");
-// }
 
 export default Index;

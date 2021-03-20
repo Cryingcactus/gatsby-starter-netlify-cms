@@ -16,18 +16,17 @@ const HeroNormalImage = ({ section }) => {
                         className={[
                             styles.title,
                             styles.titleAndHighlight,
+                            styles.rightAligned,
                         ].join(" ")}
                         style={{
                             color: textColor,
                         }}
                     >
                         <div className={styles.nonHighlighted}>{title}</div>
-                        <div className={styles.rightAligned}>
-                            <HighlightedText
-                                highlightTitle={highlightTitle}
-                                highlightColor={highlightColor}
-                            />
-                        </div>
+                        <HighlightedText
+                            highlightTitle={highlightTitle}
+                            highlightColor={highlightColor}
+                        />
                     </h1>
                 </div>
                 <div className={styles.imageContainer}>

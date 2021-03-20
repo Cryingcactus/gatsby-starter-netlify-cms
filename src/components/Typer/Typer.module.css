@@ -1,3 +1,7 @@
+.container {
+    min-height: 600px;
+}
+
 .cursor {
     display: inline-block;
     width: 10px;

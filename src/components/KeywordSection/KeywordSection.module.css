@@ -85,17 +85,13 @@
     width: 100%;
     padding-top: 30px;
     cursor: pointer;
+    outline: none;
 }
 
 .controlsContainer > p {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.3s linear;
-}
-
-.controlsContainer:hover > p {
-    visibility: visible;
-    opacity: 100%;
+    transition: visibility 0.3s, opacity 0.3s linear;
 }
 
 .expand,
@@ -106,10 +102,11 @@
     width: 24px;
     height: 4px;
     transition: width 0.5s ease, height 0.5s ease, transform 0.5s ease,
-        visibility 0s, opacity 0.3s linear;
+        visibility 0.3s, opacity 0.3s linear;
     visibility: hidden;
     opacity: 0;
 }
+
 .expand::before {
     transform: rotate(90deg);
 }
@@ -117,7 +114,9 @@
 .active .cardContainer .expand,
 .active .cardContainer .expand::before,
 .cardContainer:hover .expand,
-.cardContainer:hover .expand::before {
+.cardContainer:hover .expand::before,
+.active .cardContainer .controlsContainer > p,
+.cardContainer:hover .controlsContainer > p {
     visibility: visible;
     opacity: 100%;
 }
@@ -152,7 +151,7 @@
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.3s linear 0.4s;
+    transition: visibility 0.3s, opacity 0.3s linear 0.4s;
 }
 
 .active .copyContainer,

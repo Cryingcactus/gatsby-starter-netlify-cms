@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReactMarkdown from "react-markdown";
 import styles from "./Typer.module.css";
 import TitledCopy from "../TitledCopy";
-import ReactMarkdown from "react-markdown";
 import Letters from "./Letters";
 
 const Typer = ({ section }) => {
@@ -12,7 +12,7 @@ const Typer = ({ section }) => {
             <div
                 className={styles.container}
                 style={{
-                    backgroundColor: backgroundColor,
+                    backgroundColor,
                     color: textColor,
                 }}
             >
@@ -35,9 +35,11 @@ Typer.propTypes = {
         backgroundColor: PropTypes.string,
         textColor: PropTypes.string,
         title: PropTypes.string,
-        typedWords: PropTypes.array,
+        typedWords: PropTypes.arrayOf({
+            word: PropTypes.string,
+        }),
         copy: PropTypes.string,
-    }),
+    }).isRequired,
 };
 
 export default Typer;
