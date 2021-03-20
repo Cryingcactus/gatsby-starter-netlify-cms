@@ -622,3 +622,14 @@ collections:
                       default: "terms-of-use-page",
                   }
                 - { label: Terms of Use, name: legalPage, widget: markdown }
+          - file: "src/pages/beliefs/index.md"
+            label: "Beliefs"
+            name: "beliefs"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "beliefs-page",
+                  }
+                - *HERO
