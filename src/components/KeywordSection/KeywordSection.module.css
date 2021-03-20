@@ -118,7 +118,7 @@
 .active .cardContainer .controlsContainer > p,
 .cardContainer:hover .controlsContainer > p {
     visibility: visible;
-    opacity: 100%;
+    opacity: 1;
 }
 
 .active .expand {
@@ -157,5 +157,5 @@
 .active .copyContainer,
 .active .keywordsCol {
     visibility: visible;
-    opacity: 100%;
+    opacity: 1;
 }

@@ -64,21 +64,21 @@
 @keyframes floatLeft {
     0% {
         transform: translateX(100px);
-        opacity: 0%;
+        opacity: 0;
     }
     100% {
         transform: translateX(0);
-        opacity: 100%;
+        opacity: 1;
     }
 }
 
 @keyframes floatRight {
     0% {
         transform: translateX(-100px);
-        opacity: 0%;
+        opacity: 0;
     }
     100% {
         transform: translateX(0);
-        opacity: 100%;
+        opacity: 1;
     }
 }
