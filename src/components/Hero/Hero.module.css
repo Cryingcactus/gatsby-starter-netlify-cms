@@ -1,5 +1,5 @@
 .container {
-    height: 90vh;
+    min-height: 90vh;
     justify-content: unset;
     display: flex;
     background-color: #ffffff;
@@ -8,16 +8,17 @@
 
 .titleContainer {
     display: flex;
-    max-width: 70%;
+    max-width: 60%;
+}
+
+@media screen and (max-width: 1300px) {
+    .titleContainer {
+        max-width: 100%;
+    }
 }
 
 .title {
     position: relative;
-    color: #000000;
-    font-family: "Source Serif Pro";
-    font-style: normal;
-    font-size: 6.25em;
-    line-height: 1em;
     letter-spacing: 0.05em;
     word-spacing: -0.2em;
     display: flex;

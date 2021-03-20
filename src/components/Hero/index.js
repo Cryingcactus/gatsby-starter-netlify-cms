@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Hero.module.css";
 import Background from "../Background";
 import HighlightedText from "./HighlightedText";
+
 const Hero = ({ section }) => {
     const { titleOptions, backgroundImage } = section;
     const { title, highlightTitle, textColor, highlightColor } = titleOptions;

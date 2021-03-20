@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Copy = ({ copy, size, children }) => (
-    <p className={"p2"} style={size ? { fontSize: size } : {}}>
+    <div className="p2" style={size ? { fontSize: size } : {}}>
         {children && children ? children : copy}
-    </p>
+    </div>
 );
 
 Copy.propTypes = {

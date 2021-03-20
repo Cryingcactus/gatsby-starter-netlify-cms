@@ -1,11 +1,32 @@
 .container {
     display: flex;
     height: 90vh;
-    background-color: #d66042;
-    color: #f2e3e1;
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
 
     font-style: normal;
     font-weight: normal;
+}
+
+.container a {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 50%,
+        var(--secondaryColor) 50%
+    );
+}
+
+.container a:hover {
+    color: var(--primaryColor);
+}
+
+.container .social > a {
+    color: inherit;
+    background-image: unset;
+}
+
+.container .social > a:hover {
+    background-position: unset;
 }
 
 .footerContainer {
@@ -59,7 +80,7 @@ footer .container h3 {
 .line {
     height: 2px;
     width: 70vw;
-    background-color: #f2e3e1;
+    background-color: var(--secondaryColor);
 }
 
 .bottomRowContainer {
@@ -126,15 +147,6 @@ footer h3.logo {
     margin-right: 0.5vw;
 }
 
-.social a {
-    color: inherit;
-    background-image: unset;
-}
-
-.social a:hover {
-    background-position: unset;
-}
-
 .emailInput {
     display: flex;
     height: 44px;
@@ -169,22 +181,16 @@ footer h3.logo {
     flex: 1;
 }
 
-.label {
-    color: #ebd4d1;
-    padding: 5px 2px;
-}
-
 .control {
     width: 100%;
     display: flex;
 }
 
 .input {
-    background-color: #f2e3e1;
+    background-color: var(--secondaryColor);
     width: 100%;
-    border: 1px solid #8f3220;
-    color: #d66042;
-
+    border: 1px solid #004f2d;
+    color: var(--primaryColor);
     font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: normal;
@@ -195,7 +201,7 @@ footer h3.logo {
 }
 
 .input::placeholder {
-    color: #d66042;
+    color: var(--primaryColor);
 }
 
 .submit {
@@ -203,8 +209,14 @@ footer h3.logo {
     width: 65px;
     height: 44px;
     position: relative;
-    background-color: #8f3220;
+    background-color: #004f2d;
     border: none;
+}
+
+.submit:hover {
+    background-color: #ffffff;
+    border: inset 2px #004f2d;
+    color: #004f2d;
 }
 
 .arrow {
@@ -217,6 +229,10 @@ footer h3.logo {
     height: 4px;
     border-radius: 3px;
     background-color: #ffffff;
+}
+
+.submit:hover .arrow {
+    background-color: #004f2d;
 }
 
 .arrow::after,

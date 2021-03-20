@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
+import PropTypes from "prop-types";
 import { Link } from "gatsby";
+import { ThemeContext } from "../../context/ThemeContext";
 import styles from "./Navbar.module.css";
 
-const Navbar = ({ uri }) => {
+const Navbar = () => {
     const { state } = useContext(ThemeContext);
     return (
         <nav>
@@ -33,7 +34,7 @@ const Navbar = ({ uri }) => {
                             className={`${styles.item} ${styles.contact}`}
                             to="/contact"
                         >
-                            <button>
+                            <button type="button">
                                 <h4>contact</h4>
                             </button>
                         </Link>
@@ -42,6 +43,10 @@ const Navbar = ({ uri }) => {
             </div>
         </nav>
     );
+};
+
+Navbar.propTypes = {
+    props: PropTypes.shape({}).isRequired,
 };
 
 export default Navbar;
