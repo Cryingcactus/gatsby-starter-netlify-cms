@@ -48,6 +48,7 @@ const Index = () => {
                             <div className={[styles.field].join(" ")}>
                                 <label
                                     className={[
+                                        "p4",
                                         styles.label,
                                         fieldFocused === "name" ||
                                         (state.name !== undefined &&
@@ -74,6 +75,7 @@ const Index = () => {
                             <div className={[styles.field].join(" ")}>
                                 <label
                                     className={[
+                                        "p4",
                                         styles.label,
                                         fieldFocused === "company" ||
                                         (state.company !== undefined &&
@@ -100,6 +102,7 @@ const Index = () => {
                             <div className={[styles.field].join(" ")}>
                                 <label
                                     className={[
+                                        "p4",
                                         styles.label,
                                         fieldFocused === "title" ||
                                         (state.title !== undefined &&
@@ -131,6 +134,7 @@ const Index = () => {
                             >
                                 <label
                                     className={[
+                                        "p4",
                                         styles.label,
                                         fieldFocused === "message" ||
                                         (state.message !== undefined &&
@@ -160,6 +164,7 @@ const Index = () => {
                                     className={[
                                         styles.button,
                                         styles.reversedColors,
+                                        "h3",
                                     ].join(" ")}
                                     type="submit"
                                 >

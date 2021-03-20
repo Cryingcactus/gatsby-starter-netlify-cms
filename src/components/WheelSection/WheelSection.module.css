@@ -7,7 +7,7 @@
 .wheelContainer {
     display: flex;
     justify-content: space-between;
-    min-height: 700px;
+    min-height: 620px;
     position: relative;
     overflow: hidden;
 }
@@ -34,14 +34,14 @@
 
 .wheel {
     position: absolute;
-    width: 1300px;
+    width: 1100px;
     bottom: 0;
     left: 0;
     transition: all 0.5s ease;
 }
 
 .wheelScrollArea:hover + .wheel {
-    width: 1320px;
+    width: 1120px;
 }
 
 .wheelScrollArea {

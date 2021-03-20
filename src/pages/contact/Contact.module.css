@@ -16,10 +16,8 @@
 }
 
 .header {
-    font-family: "Source Serif Pro";
-    font-style: normal;
-    font-weight: 900;
     font-size: 11em;
+    line-height: 11rem;
 }
 
 @media (max-width: 1200px) {
@@ -72,12 +70,6 @@
 .field {
     position: relative;
     margin: 0 0 2em 0;
-
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.25em;
-    line-height: 25px;
     width: 100%;
     flex: 1;
 }
@@ -90,6 +82,8 @@
     position: absolute;
     transition: all ease 0.4s;
     padding: 0 15px;
+    font-size: 1.25em;
+    line-height: 25px;
 }
 
 .textareaField .label {
@@ -98,11 +92,11 @@
 }
 
 .fieldTitle {
-    top: -1.75em;
+    top: -1.25em;
 }
 
 .placeholder {
-    top: 0;
+    top: -8px;
     pointer-events: none;
 }
 
@@ -130,11 +124,6 @@
     border: none;
     width: 100%;
 
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.25em;
-    line-height: 25px;
     color: inherit;
     padding: 0 15px;
     flex: 1;
@@ -157,12 +146,6 @@
     background-color: #f2e3e1;
     color: #d66042;
     padding: 9px 35px;
-    border: none;
-    font-family: "Source Serif Pro";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 30px;
-    line-height: 38px;
     text-align: center;
     cursor: pointer;
 }
