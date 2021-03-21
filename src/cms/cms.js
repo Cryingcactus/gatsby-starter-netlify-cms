@@ -32,26 +32,19 @@ CMS.registerEditorComponent({
         },
     ],
     // Pattern to identify a block as being an instance of this component
-    pattern: /^quote (\S+)$/,
+    pattern: /^quote (quote:)(.*)(textColor:)(.*)(backgroundColor:)(.*)$/,
     // Function to extract data elements from the regexp match
     fromBlock: (match) => {
         console.log(match);
         return {
-            quote: match[1],
-            textColor: match[1],
-            backgroundColor: match[1],
+            quote: match[2],
+            textColor: match[4],
+            backgroundColor: match[6],
         };
     },
     // Function to create a text block from an instance of this component
-    toBlock: (obj) => (
-        <TitleCopySection
-            section={{
-                quote: obj.quote,
-                textColor: obj.textColor,
-                backgroundColor: obj.backgroundColor,
-            }}
-        />
-    ),
+    toBlock: (obj) =>
+        `quote: ${obj.quote}, textColor: ${obj.textColor}, backgroundColor: ${obj.backgroundColor}`,
     // Preview output for this component. Can either be a string or a React component
     // (component gives better render performance)
     toPreview: (obj) => (
