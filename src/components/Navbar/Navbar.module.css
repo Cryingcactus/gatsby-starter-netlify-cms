@@ -33,10 +33,10 @@
 }
 
 .logo path {
-    fill: var(--logoColor);
+    fill: var(--mobileNavLogoColor, --logoColor);
 }
 
-.items {
+.desktop {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,4 +69,121 @@
     padding: 7px 14px;
     background-color: #d66042;
     color: #f2e3e1;
+}
+
+/* @media (max-width: 950px) {
+    .mobile {
+        visibility: visible;
+    }
+    .desktop {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (min-width: 951px) {
+    .mobile {
+        visibility: hidden;
+        display: none;
+    }
+    .desktop {
+        visibility: visible;
+    }
+} */
+
+.mobile {
+    visibility: hidden;
+    display: none;
+}
+.desktop {
+    visibility: visible;
+}
+
+.mobile {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.bar {
+    width: 34px;
+    height: 3px;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.bar::before,
+.bar::after {
+    content: "";
+    width: 34px;
+    height: 3px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.bar::before {
+    top: -18px;
+}
+
+.bar::after {
+    top: 18px;
+}
+
+.mobileMenu {
+    pointer-events: none;
+    opacity: 0%;
+}
+
+.mobileMenu.closed {
+    animation: closedMenuPanel 0.5s forwards;
+    -webkit-animation: closedMenuPanel 0.5s forwards;
+}
+
+.mobileMenu.open {
+    pointer-events: all;
+    animation: openMenuPanel 0.5s forwards;
+    -webkit-animation: openMenuPanel 0.5s forwards;
+}
+
+@keyframes openMenuPanel {
+    from {
+        left: 100%;
+        opacity: 0%;
+    }
+    to {
+        left: 0;
+        opacity: 100%;
+    }
+}
+
+@keyframes closedMenuPanel {
+    from {
+        left: 0;
+        opacity: 100%;
+    }
+    to {
+        left: 100%;
+        opacity: 0%;
+    }
+}
+
+.mobile .mobileMenu {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    padding-top: 104px;
 }

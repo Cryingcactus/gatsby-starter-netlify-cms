@@ -1,9 +1,12 @@
+/* eslint-disable no-fallthrough */
+/* eslint-disable indent */
 import React, { createContext, useReducer } from "react";
 
 export const ThemeContext = createContext();
 
 const reducer = (state, action) => {
     const primaryColorMap = {
+        "#000000": "#ffffff",
         "#ffffff": "#181925",
         "#f0ddf8": "#af4d98",
         "#f5e0e4": "#f85a3e",
@@ -15,7 +18,6 @@ const reducer = (state, action) => {
         "#09814a": "#e2f3e9",
         "#1d4087": "#d8fafe",
     };
-    console.log(action.backgroundColor);
 
     switch (action.type) {
         case "logoColor":
@@ -25,6 +27,18 @@ const reducer = (state, action) => {
                     logoColor: primaryColorMap[action.backgroundColor],
                 };
             }
+        case "mobileNav":
+            if (action.open) {
+                console.log(action.backgroundColor);
+                return {
+                    ...state,
+                    mobileNavLogoColor: primaryColorMap[action.backgroundColor],
+                };
+            }
+            return {
+                ...state,
+                mobileNavLogoColor: state.logoColor,
+            };
         default:
             return {
                 ...state,

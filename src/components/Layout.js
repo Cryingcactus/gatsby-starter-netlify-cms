@@ -9,38 +9,23 @@ import "./all.scss";
 
 const TemplateWrapper = ({ children, uri, backgroundColor }) => {
     const { title, description } = useSiteMetadata();
-    // const { dispatch } = useContext(ThemeContext);
+    const { state, dispatch } = useContext(ThemeContext);
 
-    // useEffect(() => {
-    //     dispatch({
-    //         type: "logoColor",
-    //         backgroundColor: backgroundColor.toLowerCase(),
-    //     });
-    // }, [backgroundColor]);
-
-    const primaryColorMap = {
-        "#ffffff": "#181925",
-        "#f0ddf8": "#af4d98",
-        "#f5e0e4": "#f85a3e",
-        "#e2f3e9": "#09814a",
-        "#d8fafe": "#1d4087",
-        "#181925": "#ffffff",
-        "#af4d98": "#f0ddf8",
-        "#f85a3e": "#f5e0e4",
-        "#09814a": "#e2f3e9",
-        "#1d4087": "#d8fafe",
-    };
+    useEffect(() => {
+        dispatch({
+            type: "logoColor",
+            backgroundColor: backgroundColor
+                ? backgroundColor.toLowerCase()
+                : "#ffffff",
+        });
+    }, [backgroundColor]);
 
     const ref = useRef(false);
     useEffect(() => {
         if (ref.current) {
-            ref.current.style = `--logoColor: ${
-                backgroundColor
-                    ? primaryColorMap[backgroundColor.toLowerCase()]
-                    : "#181925"
-            }`;
+            ref.current.style = `--logoColor: ${state.logoColor}; --mobileNavLogoColor: ${state.mobileNavLogoColor}`;
         }
-    }, [ref]);
+    }, [ref, state.logoColor, state.mobileNavLogoColor]);
 
     return (
         <div ref={ref}>

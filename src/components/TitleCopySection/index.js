@@ -3,7 +3,7 @@ import styles from "./TitleCopySection.module.css";
 import ReactMarkdown from "react-markdown";
 
 const TitleCopySection = ({ section, alignment, invserse }) => {
-    const { title, copy } = section;
+    const { title, copy, textColor, backgroundColor } = section;
     let style;
     if (invserse) {
         style = { ...style, flexDirection: "column-reverse" };
@@ -11,6 +11,11 @@ const TitleCopySection = ({ section, alignment, invserse }) => {
     if (alignment) {
         style = { ...style, textAlign: alignment };
     }
+    style = {
+        ...style,
+        textColor,
+        backgroundColor,
+    };
     return (
         <section className="section">
             <div className={styles.titleContainer} style={style}>
