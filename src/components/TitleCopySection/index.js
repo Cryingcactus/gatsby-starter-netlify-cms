@@ -13,7 +13,7 @@ const TitleCopySection = ({ section, alignment, invserse }) => {
     }
     style = {
         ...style,
-        textColor,
+        color: textColor,
         backgroundColor,
     };
     return (
