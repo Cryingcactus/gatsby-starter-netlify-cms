@@ -18,7 +18,7 @@ CMS.registerPreviewTemplate("privacyPolicy", PrivacyPolicyPagePreview);
 
 CMS.registerEditorComponent({
     // Internal id of the component
-    id: "quotey",
+    id: "quote",
     // Visible label
     label: "Quote",
     // Fields the user need to fill out when adding an instance of the component
@@ -32,31 +32,27 @@ CMS.registerEditorComponent({
         },
     ],
     // Pattern to identify a block as being an instance of this component
-    pattern: /^quotey quote: (.*), textColor: (.*), backgroundColor: (.*)$/,
+    pattern: /^quote <TitleCopySection section={{title: (.*), textColor: (.*), backgroundColor: (.*)$/,
     // Function to extract data elements from the regexp match
-    fromBlock: (match) => {
-        console.log(match);
-        return {
-            quote: match[1],
-            textColor: match[2],
-            backgroundColor: match[3],
-        };
-    },
+    fromBlock: (match) => ({
+        quote: match[1],
+        textColor: match[2],
+        backgroundColor: match[3],
+    }),
     // Function to create a text block from an instance of this component
     toBlock: (obj) =>
-        `quotey quote: ${obj.quote}, textColor: ${obj.textColor}, backgroundColor: ${obj.backgroundColor}`,
+        `quote <TitleCopySection section={{title: "${obj.quote}", textColor: "${obj.textColor}", backgroundColor: "${obj.backgroundColor}"}}/>`,
+    // `quotey quote: ${obj.quote}, textColor: ${obj.textColor},
+    // backgroundColor: ${obj.backgroundColor}`,
     // Preview output for this component. Can either be a string or a React component
     // (component gives better render performance)
-    toPreview: (obj) => {
-        console.log(obj);
-        return (
-            <TitleCopySection
-                section={{
-                    title: obj.quote,
-                    textColor: obj.textColor,
-                    backgroundColor: obj.backgroundColor,
-                }}
-            />
-        );
-    },
+    toPreview: (obj) => (
+        <TitleCopySection
+            section={{
+                title: obj.quote,
+                textColor: obj.textColor,
+                backgroundColor: obj.backgroundColor,
+            }}
+        />
+    ),
 });
