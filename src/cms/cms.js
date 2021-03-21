@@ -18,7 +18,7 @@ CMS.registerPreviewTemplate("privacyPolicy", PrivacyPolicyPagePreview);
 
 CMS.registerEditorComponent({
     // Internal id of the component
-    id: "quote",
+    id: "quotey",
     // Visible label
     label: "Quote",
     // Fields the user need to fill out when adding an instance of the component
@@ -32,7 +32,7 @@ CMS.registerEditorComponent({
         },
     ],
     // Pattern to identify a block as being an instance of this component
-    pattern: /^!\[quote\] quote: (.*), textColor: (.*), backgroundColor: (.*)$/,
+    pattern: /^quotey quote: (.*), textColor: (.*), backgroundColor: (.*)$/,
     // Function to extract data elements from the regexp match
     fromBlock: (match) => {
         console.log(match);
@@ -44,7 +44,7 @@ CMS.registerEditorComponent({
     },
     // Function to create a text block from an instance of this component
     toBlock: (obj) =>
-        `![quote] quote: ${obj.quote}, textColor: ${obj.textColor}, backgroundColor: ${obj.backgroundColor}`,
+        `quotey quote: ${obj.quote}, textColor: ${obj.textColor}, backgroundColor: ${obj.backgroundColor}`,
     // Preview output for this component. Can either be a string or a React component
     // (component gives better render performance)
     toPreview: (obj) => {
