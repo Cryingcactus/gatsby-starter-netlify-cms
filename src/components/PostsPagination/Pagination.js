@@ -14,7 +14,18 @@ const Pagination = ({
 
     const previous =
         currentPage > 0 ? (
-            <span className={[styles.arrow, styles.prev].join(" ")} />
+            <div
+                className={styles.arrowButton}
+                tabIndex={0}
+                aria-label="Previous Page"
+                role="button"
+                onKeyPress={() => {}}
+                onClick={() => {
+                    setCurrentPage(currentPage - 1);
+                }}
+            >
+                <span className={[styles.arrow, styles.prev].join(" ")} />
+            </div>
         ) : (
             ""
         );
@@ -57,7 +68,18 @@ const Pagination = ({
 
     const next =
         currentPage < lastPage ? (
-            <span className={[styles.arrow, styles.next].join(" ")} />
+            <div
+                className={styles.arrowButton}
+                tabIndex={0}
+                aria-label="Next Page"
+                role="button"
+                onKeyPress={() => {}}
+                onClick={() => {
+                    setCurrentPage(currentPage + 1);
+                }}
+            >
+                <span className={[styles.arrow, styles.next].join(" ")} />
+            </div>
         ) : (
             ""
         );
