@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.searchAreaContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 250px;
+}
+
+.item {
+}
+
+.postsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.post {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    height: 250px;
+}
+
+.paginationContainer span {
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 4px;
+    border-radius: 3px;
+    background-color: #181925;
+}
+
+.arrow::after,
+.arrow::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 4px;
+    right: -4px;
+    background-color: inherit;
+    border-radius: 3px;
+}
+
+.arrow::after {
+    top: -100%;
+    transform: rotate(45deg);
+}
+
+.arrow::before {
+    top: 100%;
+    transform: rotate(-45deg);
+}
+
+.prev,
+.next {
+    width: 50px;
+}
+
+.prev {
+    transform: rotate(180deg);
+}
