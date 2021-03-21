@@ -12,7 +12,7 @@ tags:
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 
-![quote] quote: quote here, textColor: #9f7767, backgroundColor: #ffffff
+![quote] quote: quote here, textColor: #F85A3E, backgroundColor: #F2E3E1
 
 The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
 
