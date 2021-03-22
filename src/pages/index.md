@@ -4,20 +4,20 @@ heroSection:
   titleOptions:
     highlightTitle: we solve digital  challenges for mission-driven organizations.
     textColor: "#ffffff"
-    highlightColor: "#d66042"
+    highlightColor: "#f85a3e"
   backgroundImage:
     image: /img/hero.png
     alt: " "
 typingSection:
-  title: tgthr we can
+  title: tgthr we
   copy: we’re a **digital consultancy**  passionate about building a **radically
     better future**.
   typedWords:
-    - word: create human-first experiences.
-    - word: achieve meaningful growth.
-    - word: build a more habitable world for all.
-  backgroundColor: "#1e3468"
-  textColor: "#bdddf4"
+    - word: can build a more habitable world for all.
+    - word: can achieve meaningful growth.
+    - word: can drive lasting change.
+  backgroundColor: "#1d4087"
+  textColor: "#d8fafe"
 wheelSection:
   title: we believe in empathy.
   copy: our process is rooted in understanding. we believe in asking why, asking
@@ -25,20 +25,22 @@ wheelSection:
     transformation. our philosophy is that marketing should be human first and
     technology second.
   carousel:
-    - title: understand
-      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. "
-    - title: learn
-      copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. "
+    - title: 01. why
+      copy: "Why? Why? Why? Why do you do what you do? Why will consumers buy from
+        you? We take time to understand your true north so we craft an authentic
+        connection between you and your consumers. "
+    - title: 02. how
+      copy: We develop a strategic approach to solve your biggest challenges while
+        aligning with your True North. Our strategies are steeped in research
+        and consumer understanding.
+    - title: 03. what
+      copy: We bring our strategies to life. Our activations are built with your
+        consumers at the heart- and integrate testing & learning. We believe in
+        continuous improvement and always going back to why.
   textColor: "#181924"
   backgroundColor: "#ffffff"
   image: /img/cycle-3-01.png
-  carouselColor: "#17346c"
+  carouselColor: "#181925"
 servicesSection:
   title: "our team has deep expertise in:"
   services:
@@ -50,31 +52,31 @@ servicesSection:
     - service: marking + media
   button:
     title: our services
-    backgroundColor: "#f2e3e1"
-    backgroundColorHover: "#f2e3e1"
-    textColor: "#d66042"
-    textColorHover: "#d66042"
+    backgroundColor: "#f5e0e4"
+    backgroundColorHover: "#f5e0e4"
+    textColor: "#f85a3e"
+    textColorHover: "#f85a3e"
   image: /img/robin-benzrihem-mfhetsgqm6a-unsplash.png
-  backgroundColor: "#d66042"
-  textColor: "#f2e3e1"
+  backgroundColor: "#f85a3e"
+  textColor: "#f5e0e4"
 iconsSection:
   title: "who we love to work with:"
-  copy: we’re passionate about partnering with organizations that are
+  copy: we’re passionate about partnering with brands and organizations that are
     working         towards a more diverse, equitable and habitable world for
     all.
   icons:
-    - icon: /img/noun_campaign_1697845.png
+    - icon: /img/puzzle.svg
       text: campaigns + initiatives
-    - icon: /img/noun_charity_2727773.png
+    - icon: /img/lightbulb-01.svg
       text: non-profits + NGOs
-    - icon: /img/vector.png
+    - icon: /img/plant-03.svg
       text: brands + cause marketers
-    - icon: /img/group.png
+    - icon: /img/rocket-01.svg
       text: government agencies
-    - icon: /img/rocket.png
+    - icon: /img/icons.svg
       text: startups + investors
-  backgroundColor: "#ede3d4"
-  textColor: "#9f7767"
+  backgroundColor: "#f0ddf8"
+  textColor: "#af4d98"
 blogSection:
   title: what’s on our mind
   numberOfPosts: 0
