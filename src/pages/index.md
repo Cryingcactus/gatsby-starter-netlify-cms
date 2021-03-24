@@ -39,7 +39,7 @@ wheelSection:
         continuous improvement and always going back to why.
   textColor: "#181924"
   backgroundColor: "#ffffff"
-  image: /img/cycle-3-01.png
+  image: /img/cycle-3-02.png
   carouselColor: "#181925"
 servicesSection:
   title: "our team has deep expertise in:"
