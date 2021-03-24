@@ -59,12 +59,21 @@ module.exports = {
                 ],
             },
         },
-        {
-            resolve: "gatsby-plugin-netlify-cms",
-            options: {
-                modulePath: `${__dirname}/src/cms/cms.js`,
-            },
-        },
+        // `gatsby-plugin-mdx`,
+        // {
+        //     resolve: `gatsby-plugin-mdx`,
+        //     options: {
+        //         extensions: [".mdx", ".md"],
+        //         // defaultLayouts: {
+        //         //     // This entry template will switch the page template based on
+        //         //     // a frontmatter value provided in the CMS, allowing users to
+        //         //     // choose different template layouts.
+        //         //     default: require.resolve(
+        //         //         `./src/templates/cms-entry.template.js`,
+        //         //     ),
+        //         // },
+        //     },
+        // },
         {
             resolve: "gatsby-plugin-purgecss", // purges all unused/unreferenced css rules
             options: {
@@ -73,5 +82,20 @@ module.exports = {
             },
         }, // must be after other CSS plugins
         "gatsby-plugin-netlify", // make sure to keep it last in the array
+        {
+            resolve: "gatsby-plugin-netlify-cms",
+            options: {
+                modulePath: `${__dirname}/src/cms/cms.js`,
+                customizeWebpackConfig: (config) => {
+                    config.node = {
+                        ...config.node,
+                        fs: "empty",
+                        child_process: "empty",
+                        module: "empty",
+                    };
+                    return config;
+                },
+            },
+        },
     ],
 };
