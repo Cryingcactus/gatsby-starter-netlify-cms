@@ -25,6 +25,7 @@
 .servicesContentContainer {
     flex: 1;
     display: flex;
+    flex-direction: column;
     padding-right: 2vw;
     padding-top: 3em;
     padding-bottom: 3em;
@@ -89,4 +90,21 @@
     position: relative;
     background-size: cover;
     flex: 1;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+}
+
+.button button {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+.button > button:hover {
+    background-color: var(--textColor);
+    color: var(--backgroundColor);
 }

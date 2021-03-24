@@ -22,7 +22,8 @@ html {
     }
 }
 
-body a {
+body a,
+body .a {
     text-decoration: underline;
     color: inherit;
     transition: all 0.2s ease;
@@ -35,7 +36,8 @@ body a {
     background-size: 200% auto;
 }
 
-body a:hover {
+body a:hover,
+body .a:hover {
     transition: all 0.5s ease;
     color: #f5e0e4;
     background-position: -99.99% 0;
@@ -130,7 +132,6 @@ button {
 button:hover {
     content: "";
     background-color: transparent;
-    border: inset 2px #181924;
     color: #181924;
 }
 

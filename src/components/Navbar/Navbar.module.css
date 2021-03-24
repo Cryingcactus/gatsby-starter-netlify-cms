@@ -17,12 +17,7 @@
 
 .menu a {
     text-decoration: none;
-    background-image: unset;
-}
-
-.menu a:hover {
-    background-position: unset;
-    color: inherit;
+    margin: 0.5rem;
 }
 
 .logo {
@@ -58,6 +53,12 @@
 
 .contact {
     padding: 0;
+}
+
+.contact:hover,
+.logo a:hover {
+    background-position: unset;
+    color: inherit;
 }
 
 .contact > button {

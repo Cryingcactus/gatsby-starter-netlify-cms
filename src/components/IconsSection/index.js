@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./IconsSection.module.css";
 import TitledCopy from "../TitledCopy";
-import PreviewCompatibleImage from "../PreviewCompatibleImage";
 
 const IconsSection = ({ section }) => {
     const { backgroundColor, textColor, title, copy, icons } = section;
@@ -18,27 +17,31 @@ const IconsSection = ({ section }) => {
                 <div className={styles.iconsContentContainer}>
                     <TitledCopy title={title} copy={copy} />
                     <div className={styles.iconsContainer}>
-                        {icons.map((iconsObject, i) => {
-                            return (
-                                <div
-                                    key={iconsObject.text + i}
-                                    className={styles.iconsGrounp}
-                                >
-                                    <div className={styles.iconContainer}>
-                                        <PreviewCompatibleImage
-                                            imageInfo={iconsObject.icon}
-                                            style={{
-                                                width: "100px",
-                                                height: "100px",
-                                            }}
-                                        />
-                                        <span className={styles.iconText}>
-                                            {iconsObject.text}
-                                        </span>
-                                    </div>
+                        {icons.map((iconsObject, i) => (
+                            <div
+                                key={iconsObject.text + i}
+                                className={styles.iconsGrounp}
+                            >
+                                <div className={styles.iconContainer}>
+                                    <img
+                                        style={{
+                                            width: "100px",
+                                            height: "100px",
+                                            fill: textColor,
+                                        }}
+                                        src={iconsObject.icon.publicURL}
+                                        alt={iconsObject.icon.text}
+                                    />
+                                    <span
+                                        className={[styles.iconText, "p1"].join(
+                                            " ",
+                                        )}
+                                    >
+                                        {iconsObject.text}
+                                    </span>
                                 </div>
-                            );
-                        })}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -16,7 +16,14 @@ const Footer = ({ children }) => (
         <div className={[styles.row, styles.bottomRowContainer].join(" ")}>
             <div className={styles.verticalColumn}>
                 <h3 className={styles.logo}>tgthr</h3>
-                <span className={styles.email}>hello@tgthrco.com</span>
+                <span
+                    className={[styles.email, "a"].join(" ")}
+                    onClick={() => {
+                        window.open("mailto:hello@tgthrco.com");
+                    }}
+                >
+                    hello@tgthrco.com
+                </span>
                 <span className={styles.legal}>
                     <div>© 2021 tgthr llc</div>
                     <div>

@@ -16,31 +16,38 @@ const Card = ({ cardInfo, clicked, primaryColor, secondaryColor }) => {
     return (
         <div className={styles.cardContainer} ref={ref}>
             <div className={styles.col}>
-                <div className={styles.titleContainer}>
-                    <p className="p3">{phrase}</p>
-                    <h2>{keyword}</h2>
+                <div className={styles.rowContainer}>
+                    <div className={styles.innerContainer}>
+                        <div className={styles.left}>
+                            <div className={styles.titleContainer}>
+                                <p className="p3">{phrase}</p>
+                                <h2>{keyword}</h2>
+                            </div>
+                            <div className={styles.copyContainer}>
+                                <p className="p3">{copy}</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.keywordsCol}>
+                            {values.map((value) => (
+                                <p key={value.value} className="p3">
+                                    {value.value}
+                                </p>
+                            ))}
+                        </div>
+                    </div>
+                    <div
+                        className={styles.controlsContainer}
+                        onClick={clicked}
+                        role="button"
+                        onKeyPress={() => {}}
+                        tabIndex={0}
+                        aria-label="Expand section"
+                    >
+                        <span className={styles.expand} />
+                        <p className="p3">expand</p>
+                    </div>
                 </div>
-                <div className={styles.copyContainer}>
-                    <p className="p3">{copy}</p>
-                </div>
-                <div
-                    className={styles.controlsContainer}
-                    onClick={clicked}
-                    role="button"
-                    onKeyPress={() => {}}
-                    tabIndex={0}
-                    aria-label="Expand section"
-                >
-                    <span className={styles.expand} />
-                    <p className="p3">expand</p>
-                </div>
-            </div>
-            <div className={styles.keywordsCol}>
-                {values.map((value) => (
-                    <p key={value.value} className="p3">
-                        {value.value}
-                    </p>
-                ))}
             </div>
         </div>
     );

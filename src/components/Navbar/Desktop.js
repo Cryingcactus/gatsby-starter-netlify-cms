@@ -11,9 +11,9 @@ const Desktop = ({ ...props }) => (
         <Link className={styles.item} to="/solutions">
             <h4>solutions</h4>
         </Link>
-        <Link className={styles.item} to="/beliefs">
+        {/* <Link className={styles.item} to="/beliefs">
             <h4>beliefs</h4>
-        </Link>
+        </Link> */}
         <Link className={`${styles.item} ${styles.contact}`} to="/contact">
             <button type="button">
                 <h4>contact</h4>

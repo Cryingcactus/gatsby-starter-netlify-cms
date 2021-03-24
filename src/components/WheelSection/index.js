@@ -33,7 +33,6 @@ const WheelSection = ({ section }) => {
                     : styles.fadeLeft,
             ].join(" ")}
         >
-            <div className={styles.carouselTitle}>{i + 1}</div>
             <div className={styles.carouselTitle}>{item.title}</div>
             <div className={styles.carouselContent}>{item.copy}</div>
         </div>
@@ -74,7 +73,7 @@ const WheelSection = ({ section }) => {
                             if (mouseOn && !rotating.current) {
                                 rotating.current = true;
                                 setCurrentCarouselSection(
-                                    currentCarouselSection + 1
+                                    currentCarouselSection + 1,
                                 );
                                 setTimeout(() => {
                                     rotating.current = false;
@@ -96,7 +95,7 @@ const WheelSection = ({ section }) => {
                         />
                     </div>
 
-                    <div className={styles.space}></div>
+                    <div className={styles.space} />
                     <div
                         className={styles.carouselContainer}
                         style={{ color: carouselColor }}
@@ -118,13 +117,13 @@ const WheelSection = ({ section }) => {
                                     setCurrentCarouselSection(
                                         currentCarouselSection - 1 >= 0
                                             ? currentCarouselSection - 1
-                                            : carousel.length - 1
+                                            : carousel.length - 1,
                                     );
                                 }}
                             >
                                 <span
                                     className={[styles.arrow, styles.prev].join(
-                                        " "
+                                        " ",
                                     )}
                                     style={{ backgroundColor: carouselColor }}
                                 />
@@ -137,13 +136,13 @@ const WheelSection = ({ section }) => {
                                 onKeyPress={() => {}}
                                 onClick={() => {
                                     setCurrentCarouselSection(
-                                        currentCarouselSection + 1
+                                        currentCarouselSection + 1,
                                     );
                                 }}
                             >
                                 <span
                                     className={[styles.arrow, styles.next].join(
-                                        " "
+                                        " ",
                                     )}
                                     style={{ backgroundColor: carouselColor }}
                                 />

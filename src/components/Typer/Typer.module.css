@@ -1,5 +1,6 @@
 .container {
-    min-height: 600px;
+    min-height: 500px;
+    padding: 3vw 10vw;
 }
 
 .cursor {

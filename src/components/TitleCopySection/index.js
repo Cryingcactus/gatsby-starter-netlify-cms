@@ -6,7 +6,11 @@ const TitleCopySection = ({ section, alignment, invserse }) => {
     const { title, copy, textColor, backgroundColor } = section;
     let style;
     if (invserse) {
-        style = { ...style, flexDirection: "column-reverse" };
+        style = {
+            ...style,
+            flexDirection: "column-reverse",
+            paddingTop: "90px",
+        };
     }
     if (alignment) {
         style = { ...style, textAlign: alignment };
@@ -20,9 +24,9 @@ const TitleCopySection = ({ section, alignment, invserse }) => {
         <section className="section">
             <div className={styles.titleContainer} style={style}>
                 <h1>{title}</h1>
-                <p className="p1">
+                <div className="p1">
                     <ReactMarkdown>{copy}</ReactMarkdown>
-                </p>
+                </div>
             </div>
         </section>
     );

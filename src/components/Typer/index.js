@@ -16,15 +16,17 @@ const Typer = ({ section }) => {
                     color: textColor,
                 }}
             >
-                <TitledCopy titleSize="5.75em">
-                    <span className={styles.title}>
-                        {title}{" "}
-                        <span className={styles.lettersContainer}>
-                            <Letters typedWords={typedWords} />
+                <TitledCopy
+                    title={
+                        <span className={styles.title}>
+                            {title}{" "}
+                            <span className={styles.lettersContainer}>
+                                <Letters typedWords={typedWords} />
+                            </span>
                         </span>
-                    </span>
-                    <ReactMarkdown>{copy}</ReactMarkdown>
-                </TitledCopy>
+                    }
+                    copy={<ReactMarkdown>{copy}</ReactMarkdown>}
+                />
             </div>
         </section>
     );
