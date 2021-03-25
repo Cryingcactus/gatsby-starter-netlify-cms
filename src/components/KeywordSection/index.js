@@ -20,6 +20,7 @@ const KeywordSection = ({ section }) => {
                                 clicked={() => {
                                     setActive(active !== i ? i : -1);
                                 }}
+                                active={active}
                                 primaryColor={primaryColor}
                                 secondaryColor={secondaryColor}
                             />

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import styles from "./KeywordSection.module.css";
 
-const Card = ({ cardInfo, clicked, primaryColor, secondaryColor }) => {
+const Card = ({ cardInfo, clicked, primaryColor, secondaryColor, active }) => {
     const { phrase, keyword, active: moreInfo } = cardInfo;
     const { copy, values } = moreInfo;
 
@@ -45,7 +45,7 @@ const Card = ({ cardInfo, clicked, primaryColor, secondaryColor }) => {
                         aria-label="Expand section"
                     >
                         <span className={styles.expand} />
-                        <p className="p3">expand</p>
+                        <p className="p3">{active ? "expand" : "collapse"}</p>
                     </div>
                 </div>
             </div>
