@@ -29,6 +29,14 @@ module.exports = {
                 name: "images",
             },
         },
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /src[/]img/, // See below to configure properly
+                },
+            },
+        },
         "gatsby-plugin-sharp",
         "gatsby-transformer-sharp",
         {

@@ -145,11 +145,7 @@ export const IndexPageQuery = graphql`
                     copy
                     icons {
                         icon {
-                            childImageSharp {
-                                fluid(maxWidth: 150, quality: 70) {
-                                    ...GatsbyImageSharpFluid
-                                }
-                            }
+                            publicURL
                         }
                         text
                     }

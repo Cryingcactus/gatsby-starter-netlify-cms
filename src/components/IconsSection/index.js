@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./IconsSection.module.css";
 import TitledCopy from "../TitledCopy";
+import Icon from "./Icon";
 
 const IconsSection = ({ section }) => {
     const { backgroundColor, textColor, title, copy, icons } = section;
@@ -23,15 +24,19 @@ const IconsSection = ({ section }) => {
                                 className={styles.iconsGrounp}
                             >
                                 <div className={styles.iconContainer}>
-                                    <img
+                                    <div
                                         style={{
                                             width: "100px",
                                             height: "100px",
                                             fill: textColor,
                                         }}
-                                        src={iconsObject.icon.publicURL}
-                                        alt={iconsObject.icon.text}
-                                    />
+                                    >
+                                        <Icon
+                                            url={iconsObject.icon.publicURL}
+                                            alt={iconsObject.icon.text}
+                                        />
+                                    </div>
+
                                     <span
                                         className={[styles.iconText, "p1"].join(
                                             " ",
@@ -59,3 +64,15 @@ IconsSection.propTypes = {
 };
 
 export default IconsSection;
+
+/*
+<img
+                                        style={{
+                                            width: "100px",
+                                            height: "100px",
+                                            fill: textColor,
+                                        }}
+                                        src={iconsObject.icon.publicURL}
+                                        alt={iconsObject.icon.text}
+                                    />
+*/
