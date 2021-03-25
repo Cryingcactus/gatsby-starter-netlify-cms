@@ -1,6 +1,12 @@
 .container {
     min-height: 500px;
     padding: 3vw 10vw;
+    display: flex;
+    align-items: center;
+}
+
+.container > div {
+    flex: unset;
 }
 
 .cursor {
