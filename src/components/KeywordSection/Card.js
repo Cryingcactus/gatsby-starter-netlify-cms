@@ -45,7 +45,7 @@ const Card = ({ cardInfo, clicked, primaryColor, secondaryColor, active }) => {
                         aria-label="Expand section"
                     >
                         <span className={styles.expand} />
-                        <p className="p3">{active ? "expand" : "collapse"}</p>
+                        <p className="p3">{active ? "collapse" : "expand"}</p>
                     </div>
                 </div>
             </div>

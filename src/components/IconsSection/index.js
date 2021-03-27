@@ -32,7 +32,10 @@ const IconsSection = ({ section }) => {
                                         }}
                                     >
                                         <Icon
-                                            url={iconsObject.icon.publicURL}
+                                            url={
+                                                iconsObject.icon.publicURL ??
+                                                iconsObject.icon
+                                            }
                                             alt={iconsObject.icon.text}
                                         />
                                     </div>
@@ -64,15 +67,3 @@ IconsSection.propTypes = {
 };
 
 export default IconsSection;
-
-/*
-<img
-                                        style={{
-                                            width: "100px",
-                                            height: "100px",
-                                            fill: textColor,
-                                        }}
-                                        src={iconsObject.icon.publicURL}
-                                        alt={iconsObject.icon.text}
-                                    />
-*/

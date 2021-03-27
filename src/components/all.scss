@@ -39,7 +39,7 @@ body .a {
 body a:hover,
 body .a:hover {
     transition: all 0.5s ease;
-    color: #f5e0e4;
+    color: var(--secondaryColor, #f5e0e4);
     background-position: -99.99% 0;
 }
 
@@ -127,12 +127,18 @@ h6,
 button {
     border: solid 2px transparent;
     cursor: pointer;
+
+    background-color: var(--primaryColor, #f85a3e);
+    color: var(--secondaryColor, #f5e0e4);
 }
 
 button:hover {
     content: "";
-    background-color: transparent;
-    color: #181924;
+    // background-color: transparent;
+    // color: #181924;
+
+    color: var(--primaryColor, #f85a3e);
+    background-color: var(--secondaryColor, #f5e0e4);
 }
 
 footer {
