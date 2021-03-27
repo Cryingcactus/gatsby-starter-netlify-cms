@@ -4,7 +4,9 @@ import { kebabCase } from "lodash";
 import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
+import Hero from "../components/Hero";
 import Content, { HTMLContent } from "../components/Content";
+import styles from "../styles/Blog.module.css";
 
 export const BlogPostTemplate = ({
     content,
@@ -13,40 +15,46 @@ export const BlogPostTemplate = ({
     tags,
     title,
     helmet,
+    heroSection,
 }) => {
     const PostContent = contentComponent || Content;
 
     return (
-        <section className="section">
-            {helmet || ""}
-            <div className="container content">
-                <div className="columns">
-                    <div className="column is-10 is-offset-1">
-                        <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-                            {title}
-                        </h1>
-                        <p>{description}</p>
-                        <PostContent content={content} />
-                        {tags && tags.length ? (
-                            <div style={{ marginTop: `4rem` }}>
-                                <h4>Tags</h4>
-                                <ul className="taglist">
-                                    {tags.map((tag) => (
-                                        <li key={tag + `tag`}>
-                                            <Link
-                                                to={`/tags/${kebabCase(tag)}/`}
-                                            >
-                                                {tag}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
+        <div style={{ position: "relative" }}>
+            <div className="paralax-normal">
+                <section className="section">
+                    {helmet || ""}
+                    {heroSection ? <Hero section={heroSection} /> : ""}
+                    <div className={styles.container}>
+                        <div>
+                            <div>
+                                <h1>{title}</h1>
+                                <p>{description}</p>
+                                <PostContent content={content} />
+                                {tags && tags.length ? (
+                                    <div style={{ marginTop: `4rem` }}>
+                                        <h4>Tags</h4>
+                                        <ul className="taglist">
+                                            {tags.map((tag) => (
+                                                <li key={tag + `tag`}>
+                                                    <Link
+                                                        to={`/tags/${kebabCase(
+                                                            tag,
+                                                        )}/`}
+                                                    >
+                                                        {tag}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ) : null}
                             </div>
-                        ) : null}
+                        </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </section>
+        </div>
     );
 };
 
@@ -67,6 +75,7 @@ const BlogPost = ({ data }) => {
                 content={post.html}
                 contentComponent={HTMLContent}
                 description={post.frontmatter.description}
+                heroSection={post.frontmatter.heroSection}
                 helmet={
                     <Helmet titleTemplate="%s | Blog">
                         <title>{`${post.frontmatter.title}`}</title>
@@ -97,6 +106,23 @@ export const pageQuery = graphql`
             id
             html
             frontmatter {
+                heroSection {
+                    titleOptions {
+                        highlightTitle
+                        textColor
+                        highlightColor
+                    }
+                    backgroundImage {
+                        alt
+                        image {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 90) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                }
                 date(formatString: "MMMM DD, YYYY")
                 title
                 description
