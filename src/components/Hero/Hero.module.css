@@ -4,6 +4,8 @@
     display: flex;
     background-color: #ffffff;
     overflow-x: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .titleContainer {

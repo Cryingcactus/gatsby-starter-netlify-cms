@@ -8,7 +8,7 @@ import Mobile from "./Mobile";
 
 const Navbar = ({ ref }) => (
     <nav ref={ref}>
-        <div className={[styles.container, "section"].join(" ")}>
+        <div className={[styles.container, "global-padding"].join(" ")}>
             <div id="navMenu" className={styles.menu}>
                 <div className={[styles.item, styles.logo].join(" ")}>
                     <Link to="/" title="Logo">

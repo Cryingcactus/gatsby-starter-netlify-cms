@@ -1,8 +1,13 @@
 .container {
     background-color: #ffffff;
-    padding-top: 10vw;
 }
 
 .container img {
-    width: 100%;
+    display: flex;
+    max-height: 500px;
+    margin: auto;
+}
+
+.date {
+    margin-bottom: 2rem;
 }

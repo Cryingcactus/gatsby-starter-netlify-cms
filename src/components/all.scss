@@ -189,7 +189,12 @@ main,
     z-index: 10;
 }
 
-.section > * {
+.section {
+    background-color: #ffffff;
+}
+
+.section > *,
+.global-padding > * {
     display: flex;
     padding-right: 10vw;
     padding-left: 10vw;
@@ -197,7 +202,8 @@ main,
     padding-bottom: 5vw;
 }
 
-.section.left-padding > * {
+.section.left-padding > *,
+.global-padding.left-padding > * {
     padding-right: 0;
 }
 

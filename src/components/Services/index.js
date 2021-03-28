@@ -32,7 +32,7 @@ const Services = ({ section }) => {
                 <div
                     className={[
                         styles.servicesContentContainer,
-                        "section left-padding",
+                        "global-padding left-padding",
                     ].join(" ")}
                 >
                     <div className={styles.servicesContent}>

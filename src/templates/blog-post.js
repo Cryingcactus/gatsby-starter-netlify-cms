@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import Content, { HTMLContent } from "../components/Content";
 import styles from "../styles/Blog.module.css";
+import RelatedPosts from "../components/RelatedPosts";
 
 export const BlogPostTemplate = ({
     content,
@@ -16,20 +17,21 @@ export const BlogPostTemplate = ({
     title,
     helmet,
     heroSection,
+    date,
+    posts,
 }) => {
     const PostContent = contentComponent || Content;
 
     return (
         <div style={{ position: "relative" }}>
             <div className="paralax-normal">
+                {heroSection ? <Hero section={heroSection} /> : ""}
                 <section className="section">
                     {helmet || ""}
-                    {heroSection ? <Hero section={heroSection} /> : ""}
                     <div className={styles.container}>
                         <div>
                             <div>
-                                <h1>{title}</h1>
-                                <p>{description}</p>
+                                <p className={styles.date}>{date}</p>
                                 <PostContent content={content} />
                                 {tags && tags.length ? (
                                     <div style={{ marginTop: `4rem` }}>
@@ -53,6 +55,7 @@ export const BlogPostTemplate = ({
                         </div>
                     </div>
                 </section>
+                <RelatedPosts posts={posts} />
             </div>
         </div>
     );
@@ -68,7 +71,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
     const { markdownRemark: post } = data;
-
     return (
         <Layout>
             <BlogPostTemplate
@@ -87,6 +89,8 @@ const BlogPost = ({ data }) => {
                 }
                 tags={post.frontmatter.tags}
                 title={post.frontmatter.title}
+                date={post.frontmatter.date}
+                posts={data.allMarkdownRemark.edges}
             />
         </Layout>
     );
@@ -127,6 +131,35 @@ export const pageQuery = graphql`
                 title
                 description
                 tags
+            }
+        }
+        allMarkdownRemark(
+            filter: { fileAbsolutePath: { regex: "/(blog)/" } }
+            sort: { order: DESC, fields: frontmatter___date }
+        ) {
+            edges {
+                node {
+                    excerpt(pruneLength: 200)
+                    id
+                    frontmatter {
+                        title
+                        description
+                        date(formatString: "MMMM DD, YYYY")
+                        tags
+                        featuredpost
+                        featuredimage {
+                            childImageSharp {
+                                fluid(maxWidth: 2048, quality: 90) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
+                    }
+                    timeToRead
+                    fields {
+                        slug
+                    }
+                }
             }
         }
     }

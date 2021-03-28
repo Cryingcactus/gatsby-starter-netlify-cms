@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleContainer {
+    padding: 0 0 3rem 0;
+}
+
+.cardsContainer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 400px;
+    gap: 50px;
+}
+
+.cardsContainer > a {
+    flex-basis: 400px;
+    display: flex;
+    text-decoration: none;
+}
+
+.card {
+    padding: 1vw 2vw;
+    flex: 1;
+    display: flex;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+.cardsContainer > a:nth-of-type(1) {
+    --primaryColor: #1d4087;
+    --secondaryColor: #d8fafe;
+}
+
+.cardsContainer > a:nth-of-type(2) {
+    --primaryColor: #f85a3e;
+    --secondaryColor: #f5e0e4;
+}
+
+.cardsContainer > a:nth-of-type(3) {
+    --primaryColor: #004f2d;
+    --secondaryColor: #e2f3e9;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.postTitleContainer {
+    flex: 1;
+    padding: 15% 0;
+}
+
+.buttonContainer {
+    padding: 5vw 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+.readMore {
+    --primaryColor: #181925;
+    --secondaryColor: #ffffff;
+}
