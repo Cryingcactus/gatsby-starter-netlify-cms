@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { ThemeContext } from "../../context/ThemeContext";
 import styles from "./Navbar.module.css";
 import Desktop from "./Desktop";
 import Mobile from "./Mobile";

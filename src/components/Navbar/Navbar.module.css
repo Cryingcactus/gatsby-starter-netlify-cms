@@ -30,7 +30,7 @@
 }
 
 .logo path {
-    fill: var(--mobileNavLogoColor, --logoColor);
+    fill: var(--logoColor);
 }
 
 .desktop {
@@ -72,7 +72,7 @@
     color: var(--secondaryColor);
 }
 
-/* @media (max-width: 950px) {
+@media (max-width: 1000px) {
     .mobile {
         visibility: visible;
     }
@@ -82,7 +82,7 @@
     }
 }
 
-@media (min-width: 951px) {
+@media (min-width: 1001px) {
     .mobile {
         visibility: hidden;
         display: none;
@@ -90,14 +90,6 @@
     .desktop {
         visibility: visible;
     }
-} */
-
-.mobile {
-    visibility: hidden;
-    display: none;
-}
-.desktop {
-    visibility: visible;
 }
 
 .mobile {
@@ -112,7 +104,7 @@
 .bar {
     width: 34px;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--barsColor, #181925);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -126,7 +118,7 @@
     content: "";
     width: 34px;
     height: 3px;
-    background-color: #000000;
+    background-color: var(--barsColor, #181925);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -181,10 +173,25 @@
 }
 
 .mobile .mobileMenu {
-    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    background-color: #f5e0e4;
+    color: #f85a3e;
     position: fixed;
     width: 100%;
     top: 0;
     bottom: 0;
-    padding-top: 104px;
+}
+
+.mobileContainer {
+    padding: 150px 10vw 150px 10vw;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mobileContainer a {
+    width: min-content;
+    color: var(--barsColor, #181925);
 }

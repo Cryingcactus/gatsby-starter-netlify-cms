@@ -1,11 +1,20 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import { Link } from "gatsby";
 import styles from "./Navbar.module.css";
-import { ThemeContext } from "../../context/ThemeContext";
 
 const Mobile = ({ ...props }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const { dispatch } = useContext(ThemeContext);
+
+    const ref = useRef(false);
+    useEffect(() => {
+        if (ref.current) {
+            ref.current.style = `--barsColor: ${
+                menuOpen ? "#f85a3e" : "#181925"
+            };`;
+        }
+    }, [ref, menuOpen]);
+
     return (
         <div
             className={styles.mobile}
@@ -14,13 +23,9 @@ const Mobile = ({ ...props }) => {
             role="button"
             onKeyPress={() => {}}
             onClick={() => {
-                dispatch({
-                    type: "mobileNav",
-                    open: !menuOpen,
-                    backgroundColor: "#000000",
-                });
                 setMenuOpen(!menuOpen);
             }}
+            ref={ref}
         >
             <div
                 className={[
@@ -28,7 +33,25 @@ const Mobile = ({ ...props }) => {
                     menuOpen ? styles.open : styles.closed,
                 ].join(" ")}
             >
-                menu
+                <div className={styles.mobileContainer}>
+                    <Link className={styles.item} to="/values">
+                        <h4>values</h4>
+                    </Link>
+                    <Link className={styles.item} to="/solutions">
+                        <h4>solutions</h4>
+                    </Link>
+                    <Link className={styles.item} to="/beliefs">
+                        <h4>beliefs</h4>
+                    </Link>
+                    <Link
+                        className={`${styles.item} ${styles.contact}`}
+                        to="/contact"
+                    >
+                        <button type="button">
+                            <h4>contact</h4>
+                        </button>
+                    </Link>
+                </div>
             </div>
             <span className={styles.menu}>
                 <span className={styles.bar} />

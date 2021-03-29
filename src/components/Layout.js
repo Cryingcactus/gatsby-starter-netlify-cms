@@ -23,7 +23,7 @@ const TemplateWrapper = ({ children, uri, backgroundColor }) => {
     const ref = useRef(false);
     useEffect(() => {
         if (ref.current) {
-            ref.current.style = `--logoColor: ${state.logoColor}; --mobileNavLogoColor: ${state.mobileNavLogoColor}`;
+            ref.current.style = `--logoColor: ${state.logoColor};`;
         }
     }, [ref, state.logoColor, state.mobileNavLogoColor]);
 
