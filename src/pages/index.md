@@ -2,7 +2,7 @@
 templateKey: index-page
 heroSection:
   titleOptions:
-    highlightTitle: we solve digital  challenges for mission-driven organizations.
+    highlightTitle: we drive growth + impact for purpose-driven companies.
     textColor: "#ffffff"
     highlightColor: "#f85a3e"
   backgroundImage:
