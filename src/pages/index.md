@@ -13,9 +13,10 @@ typingSection:
   copy: we’re a **digital consultancy**  passionate about building a **radically
     better future**.
   typedWords:
-    - word: can build a more habitable world for all.
+    - word: can build a more habitable world.
     - word: can achieve meaningful growth.
     - word: can drive lasting change.
+    - word: can promote justice for all.
   backgroundColor: "#1d4087"
   textColor: "#d8fafe"
 wheelSection:
