@@ -1,8 +1,10 @@
 .container {
+    --primaryColor: #f85a3e;
+    --secondaryColor: #f5e0e4;
     flex: 1;
     height: 100vh;
-    background-color: #d66042;
-    color: #f2e3e1;
+    background-color: var(--primaryColor, #181925);
+    color: var(--secondaryColor, #ffffff);
     display: flex;
     justify-content: center;
     padding-top: 50px;
@@ -87,7 +89,7 @@
 }
 
 .textareaField .label {
-    color: #d66042;
+    color: var(--primaryColor, #181925);
     z-index: 11;
 }
 
@@ -105,7 +107,7 @@
 }
 
 .textareaField .fieldTitle {
-    color: #f2e3e1;
+    color: var(--secondaryColor, #ffffff);
 }
 
 .control {
@@ -131,20 +133,21 @@
 }
 
 .textareaField textarea {
-    background-color: #f2e3e1;
+    background-color: var(--secondaryColor, #ffffff);
     border-bottom: none;
     padding: 8px 15px;
     resize: none;
+    margin: 0;
 }
 
 .reversedColors {
-    background-color: #f2e3e1;
-    color: #d66042;
+    background-color: var(--secondaryColor, #ffffff);
+    color: var(--primaryColor, #181925);
 }
 
 .button {
-    background-color: #f2e3e1;
-    color: #d66042;
+    background-color: var(--secondaryColor, #ffffff);
+    color: var(--primaryColor, #181925);
     padding: 9px 35px;
     text-align: center;
     cursor: pointer;
