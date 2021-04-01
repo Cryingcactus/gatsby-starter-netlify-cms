@@ -35,4 +35,8 @@ const RelatedPosts = ({ posts, readMore }) => {
 
 RelatedPosts.propTypes = {};
 
+RelatedPosts.defaultProps = {
+    posts: [],
+};
+
 export default RelatedPosts;
