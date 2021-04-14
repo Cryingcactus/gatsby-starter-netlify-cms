@@ -11,21 +11,13 @@ const PostsContainer = ({ posts }) => (
             return (
                 <Link to={item.node.fields.slug}>
                     <div className={styles.post}>
-                        <div
-                            style={{
-                                height: "280px",
-                                width: "444px",
-                                border: post.featuredimage
-                                    ? "none"
-                                    : "solid #000000 1px",
-                            }}
-                        >
+                        <div>
                             <PreviewCompatibleImage
                                 imageInfo={{
                                     image: post.featuredimage,
                                     alt: "Featured Image",
                                 }}
-                                style={{ height: "280px", width: "444px" }}
+                                style={{ height: "280px", flex: "1" }}
                             />
                         </div>
                         <p>{post.date}</p>

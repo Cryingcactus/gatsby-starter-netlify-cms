@@ -111,11 +111,16 @@ footer .container h3 {
     flex-direction: column;
     justify-content: space-between;
     height: 174px;
+    margin-bottom: 15px;
 }
 
 footer h3.logo {
     font-family: "Source Serif Pro";
     text-align: start;
+}
+
+footer h3.logo svg path {
+    fill: currentColor;
 }
 
 .email {
@@ -130,10 +135,6 @@ footer h3.logo {
     font-family: "Source Sans Pro";
     font-size: 20px;
     line-height: 25px;
-}
-
-.socialBar {
-    justify-content: center;
 }
 
 .social {

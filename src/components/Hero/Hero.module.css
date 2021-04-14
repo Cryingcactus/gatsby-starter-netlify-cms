@@ -17,6 +17,10 @@
 @media screen and (max-width: 1300px) {
     .titleContainer {
         max-width: 100%;
+        font-size: 12px;
+    }
+    .titleContainer h1 {
+        font-size: 5em;
     }
 }
 

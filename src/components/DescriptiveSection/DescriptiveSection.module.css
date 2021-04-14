@@ -19,8 +19,10 @@
     justify-content: space-between;
 }
 
-.itemsContainer > * {
+.item {
     flex: unset;
     flex-basis: 35%;
     flex-shrink: 1;
+    flex-grow: 1;
+    min-width: 300px;
 }

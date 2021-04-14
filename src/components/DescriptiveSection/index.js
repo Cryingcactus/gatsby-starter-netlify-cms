@@ -23,14 +23,18 @@ const DescriptiveSection = ({ section }) => {
                 </div>
                 <div className={styles.itemsContainer}>
                     {items.map((item) => (
-                        <TitledCopy>
-                            <h3>{item.title}</h3>
-                            <div
-                                className={[styles.pContainer, "p3"].join(" ")}
-                            >
-                                <ReactMarkdown>{item.copy}</ReactMarkdown>
-                            </div>
-                        </TitledCopy>
+                        <div className={styles.item}>
+                            <TitledCopy>
+                                <h3>{item.title}</h3>
+                                <div
+                                    className={[styles.pContainer, "p3"].join(
+                                        " ",
+                                    )}
+                                >
+                                    <ReactMarkdown>{item.copy}</ReactMarkdown>
+                                </div>
+                            </TitledCopy>
+                        </div>
                     ))}
                 </div>
             </div>
