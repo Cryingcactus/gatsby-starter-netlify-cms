@@ -32,16 +32,28 @@ keywordSection:
         copy: Consumers expect brands to add value to their lives and the world. We
           leverage design-thinking to connect with consumers and drive results.
         values:
-          - value: value
-          - value: another
+          - value: Digital Strategy
+          - value: Customer Experience
+          - value: Marketing + Communications
+          - value: Media Strategy
+          - value: Campaign Design
+          - value: Platform + Messaging
+          - value: Measurement Planning
+          - value: Corporate Citizenship
     - phrase: achieve meaningful
-      keyword: impact.
+      keyword: growth.
       active:
         copy: Consumers expect brands to add value to their lives and the world. We
           leverage design-thinking to connect with consumers and drive results.
         values:
-          - value: value
-          - value: another value
+          - value: Project Management
+          - value: Campaign Activation
+          - value: Media Execution
+          - value: Influencer Management
+          - value: Community Engagement
+          - value: Social Media
+          - value: Growth Marketing
+          - value: Testing + Optimization
   primaryColor: "#004f2d"
   secondaryColor: "#e2f3e9"
 titleCopySection:
