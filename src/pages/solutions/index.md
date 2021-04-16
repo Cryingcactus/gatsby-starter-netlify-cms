@@ -82,5 +82,5 @@ descriptiveSection:
   primaryColor: "#af4d98"
   secondaryColor: "#f0ddf8"
 titleSection:
-  title: now, let's get to work.
+  title: let's get started.
 ---
