@@ -14,9 +14,9 @@ typingSection:
     better future**.
   typedWords:
     - word: we'll build a more habitable world.
-    - word: we can achieve meaningful growth.
-    - word: we can drive lasting change.
-    - word: we can promote justice for all.
+    - word: we'll achieve meaningful growth.
+    - word: we'll drive lasting change.
+    - word: we'll promote justice for all.
   backgroundColor: "#1d4087"
   textColor: "#d8fafe"
 wheelSection:
