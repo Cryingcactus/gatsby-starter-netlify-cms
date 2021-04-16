@@ -43,8 +43,8 @@ keywordSection:
     - phrase: achieve meaningful
       keyword: growth.
       active:
-        copy: Consumers expect brands to add value to their lives and the world. We
-          leverage design-thinking to connect with consumers and drive results.
+        copy: "We’re your partners in growth. We build experiences that inspire action
+          and turn your customers into  life-long advocates. "
         values:
           - value: Project Management
           - value: Campaign Activation
