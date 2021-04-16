@@ -9,11 +9,11 @@ heroSection:
     image: /img/hero.png
     alt: " "
 typingSection:
-  title: tgthr we
+  title: tgthr
   copy: we’re a **digital consultancy**  passionate about building a **radically
     better future**.
   typedWords:
-    - word: can build a more habitable world.
+    - word: we'll build a more habitable world.
     - word: can achieve meaningful growth.
     - word: can drive lasting change.
     - word: can promote justice for all.
