@@ -10,8 +10,7 @@ heroSection:
     alt: " "
 typingSection:
   title: tgthr
-  copy: we’re a **digital consultancy**  passionate about building a **radically
-    better future**.
+  copy: we’re a consultancy passionate about building a radically better future.
   typedWords:
     - word: we'll build a more habitable world.
     - word: we'll achieve meaningful growth.
