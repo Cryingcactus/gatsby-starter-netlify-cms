@@ -12,7 +12,6 @@ typingSection:
   title: tgthr
   copy: we’re a consultancy passionate about building a radically better future.
   typedWords:
-    - word: we'll build a more habitable world.
     - word: we'll achieve meaningful growth.
     - word: we'll drive lasting change.
     - word: we'll promote justice for all.
@@ -72,8 +71,6 @@ iconsSection:
     - icon: /img/plant-03.svg
       text: brands + cause marketers
     - icon: /img/rocket-01.svg
-      text: government agencies
-    - icon: /img/icons.svg
       text: startups + investors
   backgroundColor: "#f0ddf8"
   textColor: "#af4d98"
