@@ -6,7 +6,7 @@ heroSection:
     textColor: "#ffffff"
     highlightColor: "#f85a3e"
   backgroundImage:
-    image: /img/hero.png
+    image: /img/hello-i-m-nik-vbfc9bco95m-unsplash.jpg
     alt: " "
 typingSection:
   title: tgthr
