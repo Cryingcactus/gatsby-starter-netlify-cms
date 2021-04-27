@@ -10,7 +10,9 @@ heroSection:
     alt: " "
 typingSection:
   title: tgthr
-  copy: we’re a consultancy passionate about building a radically better future.
+  copy: We’re a consultancy passionate about building a radically better future.
+    We partner with purpose-driven brands to drive meaningful growth while
+    maximizing impact.
   typedWords:
     - word: we'll achieve meaningful growth.
     - word: we'll drive lasting change.
