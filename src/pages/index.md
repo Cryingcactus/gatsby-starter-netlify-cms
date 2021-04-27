@@ -2,21 +2,22 @@
 templateKey: index-page
 heroSection:
   titleOptions:
-    highlightTitle: big  growth. big impact. tghtr we can do both.
+    highlightTitle: Big growth. Big impact. Tghtr we can achieve both.
     textColor: "#f85a3e"
     highlightColor: "#f5e0e4"
   backgroundImage:
-    image: /img/hello-i-m-nik-vbfc9bco95m-unsplash.jpg
+    image: /img/samisfierce-.jpg
     alt: " "
 typingSection:
-  title: tgthr
+  title: tgthr we'll
   copy: We’re a consultancy passionate about building a radically better future.
-    We partner with purpose-driven brands to drive meaningful growth while
+    We partner with purpose-driven businesses to acceelrate their growth while
     maximizing impact.
   typedWords:
-    - word: we'll achieve meaningful growth.
-    - word: we'll drive lasting change.
-    - word: we'll promote justice for all.
+    - word: achieve lasting growth.
+    - word: drive meaningful change.
+    - word: promote justice for all.
+    - word: maximize your impact.
   backgroundColor: "#1d4087"
   textColor: "#d8fafe"
 wheelSection:
