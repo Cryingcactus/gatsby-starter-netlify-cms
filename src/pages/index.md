@@ -2,9 +2,9 @@
 templateKey: index-page
 heroSection:
   titleOptions:
-    highlightTitle: we drive growth + impact for purpose-driven companies.
-    textColor: "#ffffff"
-    highlightColor: "#f85a3e"
+    highlightTitle: big  growth. big impact. tghtr we can do both.
+    textColor: "#f85a3e"
+    highlightColor: "#f5e0e4"
   backgroundImage:
     image: /img/hello-i-m-nik-vbfc9bco95m-unsplash.jpg
     alt: " "
