@@ -2,21 +2,21 @@
 templateKey: index-page
 heroSection:
   titleOptions:
-    highlightTitle: we drive growth + impact for purpose-driven companies.
-    textColor: "#ffffff"
-    highlightColor: "#f85a3e"
+    highlightTitle: big  growth. big impact. tghtr we can do both.
+    textColor: "#f85a3e"
+    highlightColor: "#f5e0e4"
   backgroundImage:
-    image: /img/hero.png
+    image: /img/hello-i-m-nik-vbfc9bco95m-unsplash.jpg
     alt: " "
 typingSection:
-  title: tgthr we
-  copy: we’re a **digital consultancy**  passionate about building a **radically
-    better future**.
+  title: tgthr
+  copy: We’re a consultancy passionate about building a radically better future.
+    We partner with purpose-driven brands to drive meaningful growth while
+    maximizing impact.
   typedWords:
-    - word: can build a more habitable world.
-    - word: can achieve meaningful growth.
-    - word: can drive lasting change.
-    - word: can promote justice for all.
+    - word: we'll achieve meaningful growth.
+    - word: we'll drive lasting change.
+    - word: we'll promote justice for all.
   backgroundColor: "#1d4087"
   textColor: "#d8fafe"
 wheelSection:
@@ -73,8 +73,6 @@ iconsSection:
     - icon: /img/plant-03.svg
       text: brands + cause marketers
     - icon: /img/rocket-01.svg
-      text: government agencies
-    - icon: /img/icons.svg
       text: startups + investors
   backgroundColor: "#f0ddf8"
   textColor: "#af4d98"
