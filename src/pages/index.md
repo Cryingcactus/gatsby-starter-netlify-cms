@@ -11,7 +11,7 @@ heroSection:
 typingSection:
   title: tgthr we'll
   copy: We’re a consultancy passionate about building a radically better future.
-    We partner with purpose-driven businesses to acceelrate their growth while
+    We partner with purpose-driven businesses to accelerate their growth while
     maximizing impact.
   typedWords:
     - word: achieve lasting growth.
