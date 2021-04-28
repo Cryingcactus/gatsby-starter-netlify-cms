@@ -56,7 +56,7 @@ meetMe:
 
     The time for business as usual is over. Let’s do something great, together.
   picture:
-    image: /img/screen-shot-2021-03-12-at-8.18-1.png
+    image: /img/samruiz-highres.png
     alt: Photo of Sam
   signature:
     image: /img/signature-01-1.png
