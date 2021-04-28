@@ -14,7 +14,7 @@ copyTitleSection:
 descriptiveSection:
   secondaryColor: "#f5e0e4"
   primaryColor: "#f85a3e"
-  title: "our guiding principles:"
+  title: "Our guiding principles:"
   items:
     - title: empathy
       copy: Empathy for consumers, our clients, and our team members.  We believe in
@@ -34,6 +34,9 @@ descriptiveSection:
     - title: inclusivity
       copy: We embrace diverse perspectives and ideas. We do not tolerate exclusivity
         in any way.
+  copy: At tgthr, we believe that good  practices are good for the world and great
+    for business. Our guiding prinicples are the cornerstones for how we operate
+    internally and with clients.
 titleCopySection:
   title: we practice what we preach.
   copy: >-
