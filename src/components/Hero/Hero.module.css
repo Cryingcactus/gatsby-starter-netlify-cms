@@ -26,11 +26,22 @@
 
 .title {
     position: relative;
-    letter-spacing: 0.05em;
-    word-spacing: -0.2em;
-    display: flex;
+    display: inline;
     flex-direction: column;
     justify-content: center;
+    white-space: pre-wrap;
+    margin: auto 0;
+}
+
+.highlighted {
+    background-image: linear-gradient(
+        to right,
+        var(--highlightColor) 0%,
+        var(--highlightColor) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 100% 40px;
+    background-position-y: 30px;
 }
 
 .titleAndHighlight {

@@ -10,11 +10,7 @@ const Hero = ({ section }) => {
 
     return (
         <section className="section">
-            <Background
-                image={image}
-                styles={`full-width-image-container ${styles.container}`}
-                parallax
-            >
+            <Background image={image} styles={`${styles.container}`} parallax>
                 <div className={styles.titleContainer}>
                     <h1
                         className={styles.title}
