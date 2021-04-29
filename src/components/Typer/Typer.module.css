@@ -29,3 +29,25 @@
         background-color: transparent;
     }
 }
+
+@media (min-width: 300px) {
+    .mobile {
+        visibility: visible;
+        display: inline-block;
+    }
+    .desktop {
+        visibility: hidden;
+        display: none;
+    }
+}
+
+@media (min-width: 1401px) {
+    .mobile {
+        visibility: hidden;
+        display: none;
+    }
+    .desktop {
+        visibility: visible;
+        display: inline-block;
+    }
+}

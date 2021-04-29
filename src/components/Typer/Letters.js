@@ -7,7 +7,6 @@ const Letters = ({ typedWords }) => {
     const [letterIndex, setLetterIndex] = useState(0);
     const notTimeout = useRef(true);
     const curentWord = typedWords[wordIndex].word;
-
     useEffect(() => {
         if (notTimeout.current) {
             notTimeout.current = false;
@@ -21,7 +20,7 @@ const Letters = ({ typedWords }) => {
                         setWordIndex(
                             wordIndex + 1 <= typedWords.length - 1
                                 ? wordIndex + 1
-                                : 0
+                                : 0,
                         );
                         setLetterIndex(0);
                     }, 2500);
@@ -37,18 +36,23 @@ const Letters = ({ typedWords }) => {
             letters.push(
                 <span key={i + currentChar} className={styles.letter}>
                     {currentChar}
-                </span>
+                </span>,
             );
         } else {
             letters.push(
                 <span key={i + "cursor"} className={styles.letter}>
                     <span className={styles.cursor}></span>
-                </span>
+                </span>,
             );
         }
     }
 
-    return letters;
+    return (
+        <>
+            <span className={styles.desktop}>{letters}</span>
+            <span className={styles.mobile}>{curentWord}</span>
+        </>
+    );
 };
 
 Letters.propTypes = {
