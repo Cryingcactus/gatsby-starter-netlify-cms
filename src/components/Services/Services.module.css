@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .container .imageContainer {
+        display: none;
+    }
+
+    .container .servicesContent,
+    .container .services {
+        align-items: center;
+    }
+
+    .container .servicesContent h2 {
+        text-align: center;
+    }
+}
+
+.servicesContentContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2vw;
+}
+
+.servicesContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 0;
+}
+
+.servicesContent h2 {
+    text-align: right;
+    margin: 0 0 0.5em 0;
+}
+
+.servicesWrapper {
+    flex: 1;
+    display: flex;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.service {
+    text-align: right;
+}
+
+.ctaContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta {
+    margin: 50px 0;
+    padding: 16px 38px;
+    font-family: "Source Serif Pro";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3em;
+    line-height: 60px;
+    text-align: right;
+    letter-spacing: 0.03em;
+    border: 2px transparent;
+    cursor: pointer;
+}
+
+.imageContainer {
+    flex: 1;
+    display: flex;
+}
+
+.image {
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    flex: 1;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+    padding-bottom: 5vw;
+}
+
+.button button {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+
+.button > button:hover {
+    background-color: var(--textColor);
+    color: var(--backgroundColor);
+}

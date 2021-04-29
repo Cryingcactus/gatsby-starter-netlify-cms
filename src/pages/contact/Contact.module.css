@@ -1,0 +1,154 @@
+.container {
+    --primaryColor: #f85a3e;
+    --secondaryColor: #f5e0e4;
+    flex: 1;
+    height: 100vh;
+    background-color: var(--primaryColor, #181925);
+    color: var(--secondaryColor, #ffffff);
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.headerContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    font-size: 11em;
+    line-height: 11rem;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        font-size: 9em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .headerContainer {
+        margin-top: 100px;
+    }
+
+    .headerContainer h1 {
+        margin: 0;
+    }
+
+    .header {
+        font-size: 9em;
+    }
+
+    .container .formContainer {
+        flex: 2;
+        padding: unset;
+    }
+}
+
+.formContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 0 130px 0;
+}
+
+.form {
+    width: 80%;
+    height: 85%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.field {
+    position: relative;
+    margin: 0 0 2em 0;
+    width: 100%;
+    flex: 1;
+}
+
+.textareaField {
+    flex: 3;
+}
+
+.label {
+    position: absolute;
+    transition: all ease 0.4s;
+    padding: 0 15px;
+    font-size: 1.25em;
+    line-height: 25px;
+}
+
+.textareaField .label {
+    color: var(--primaryColor, #181925);
+    z-index: 11;
+}
+
+.fieldTitle {
+    top: -1.25em;
+}
+
+.placeholder {
+    top: -8px;
+    pointer-events: none;
+}
+
+.textareaField .placeholder {
+    top: 8px;
+}
+
+.textareaField .fieldTitle {
+    color: var(--secondaryColor, #ffffff);
+}
+
+.control {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+}
+
+.textareaField .control {
+    height: 100%;
+}
+
+.control * {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+
+    color: inherit;
+    padding: 0 15px;
+    flex: 1;
+    border-bottom: solid 2px #ffffff;
+}
+
+.textareaField textarea {
+    background-color: var(--secondaryColor, #ffffff);
+    border-bottom: none;
+    padding: 8px 15px;
+    resize: none;
+    margin: 0;
+}
+
+.reversedColors {
+    background-color: var(--secondaryColor, #ffffff);
+    color: var(--primaryColor, #181925);
+}
+
+.button {
+    background-color: var(--secondaryColor, #ffffff);
+    color: var(--primaryColor, #181925);
+    padding: 9px 35px;
+    text-align: center;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+.titleContainer {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    padding-bottom: 130px;
+    text-align: center;
+    word-break: break-word;
+}
+
+.titleContainer > * {
+    width: 100%;
+}
+
+@media screen and (max-width: 1300px) {
+    .titleContainer {
+        max-width: 100%;
+        font-size: 12px;
+    }
+    .titleContainer h1 {
+        font-size: 5em;
+    }
+}

@@ -1,0 +1,638 @@
+publish_mode: editorial_workflow
+backend:
+    name: git-gateway
+    branch: master
+    commit_messages:
+        create: "Create {{collection}} “{{slug}}”"
+        update: "Update {{collection}} “{{slug}}”"
+        delete: "Delete {{collection}} “{{slug}}”"
+        uploadMedia: "[skip ci] Upload “{{path}}”"
+        deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: static/img
+public_folder: /img
+
+sections:
+    - &HERO {
+          label: Hero Section,
+          name: heroSection,
+          widget: object,
+          required: false,
+          fields:
+              [
+                  {
+                      label: Title Options,
+                      name: titleOptions,
+                      widget: object,
+                      fields:
+                          [
+                              {
+                                  label: Title,
+                                  name: title,
+                                  widget: string,
+                                  required: false,
+                              },
+                              {
+                                  label: Highlighted Title,
+                                  name: highlightTitle,
+                                  widget: string,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Highlight Color,
+                                  name: highlightColor,
+                                  widget: color,
+                              },
+                          ],
+                  },
+                  {
+                      label: BackgroundImage,
+                      name: backgroundImage,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Image, name: image, widget: image },
+                              { label: Alt, name: alt, widget: string },
+                          ],
+                  },
+              ],
+      }
+
+collections:
+    - name: "blog"
+      label: "Blog"
+      folder: "src/pages/blog"
+      create: true
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      fields:
+          - {
+                label: "Template Key",
+                name: "templateKey",
+                widget: "hidden",
+                default: "blog-post",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
+          - { label: "Featured Image", name: "featuredimage", widget: image }
+          - *HERO
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Tags", name: "tags", widget: "list" }
+
+    - name: "pages"
+      label: "Pages"
+      files:
+          - file: "src/pages/index.md"
+            label: "Index"
+            name: "index"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "index-page",
+                  }
+                - *HERO
+                - {
+                      label: Typing Section,
+                      name: typingSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                              {
+                                  label: Typed Words,
+                                  name: typedWords,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Word,
+                                              name: word,
+                                              widget: string,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Wheel Section,
+                      name: wheelSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                              {
+                                  label: Carousel,
+                                  name: carousel,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Copy,
+                                              name: copy,
+                                              widget: string,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Wheel Image,
+                                  name: image,
+                                  widget: image,
+                              },
+                              {
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Carousel Color,
+                                  name: carouselColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Services Section,
+                      name: servicesSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              {
+                                  label: Services,
+                                  name: services,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Service,
+                                              name: service,
+                                              widget: string,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Button,
+                                  name: button,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Background Color,
+                                              name: backgroundColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Background Color on Hover,
+                                              name: backgroundColorHover,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color,
+                                              name: textColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color on Hover,
+                                              name: textColorHover,
+                                              widget: color,
+                                          },
+                                      ],
+                              },
+                              { label: Image, name: image, widget: image },
+                              {
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Icons Section,
+                      name: iconsSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: string },
+                              {
+                                  label: Icons,
+                                  name: icons,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Icon,
+                                              name: icon,
+                                              widget: image,
+                                          },
+                                          {
+                                              label: Text,
+                                              name: text,
+                                              widget: string,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Background Color,
+                                  name: backgroundColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Text Color,
+                                  name: textColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Blog Section,
+                      name: blogSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              {
+                                  label: Number of Posts,
+                                  name: numberOfPosts,
+                                  widget: number,
+                              },
+                              {
+                                  label: Button,
+                                  name: button,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Background Color,
+                                              name: backgroundColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Background Color on Hover,
+                                              name: backgroundColorHover,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color,
+                                              name: textColor,
+                                              widget: color,
+                                          },
+                                          {
+                                              label: Text Color on Hover,
+                                              name: textColorHover,
+                                              widget: color,
+                                          },
+                                      ],
+                              },
+                          ],
+                  }
+          - file: "src/pages/solutions/index.md"
+            label: "Solutions"
+            name: "solutions"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "solutions-page",
+                  }
+                - *HERO
+                - {
+                      label: Keyword Section,
+                      name: keywordSection,
+                      widget: object,
+                      fields:
+                          [
+                              {
+                                  label: Keywords,
+                                  name: keywords,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Phrase,
+                                              name: phrase,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Keyword,
+                                              name: keyword,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Active,
+                                              name: active,
+                                              widget: object,
+                                              fields:
+                                                  [
+                                                      {
+                                                          label: Copy,
+                                                          name: copy,
+                                                          widget: string,
+                                                      },
+                                                      {
+                                                          label: Values,
+                                                          name: values,
+                                                          widget: list,
+                                                          fields:
+                                                              [
+                                                                  {
+                                                                      label: Value,
+                                                                      name: value,
+                                                                      widget: string,
+                                                                  },
+                                                              ],
+                                                      },
+                                                  ],
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Primary Color,
+                                  name: primaryColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Secondary Color,
+                                  name: secondaryColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Title and Copy Section,
+                      name: titleCopySection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                          ],
+                  }
+                - {
+                      label: Descriptive Section,
+                      name: descriptiveSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                              {
+                                  label: Items,
+                                  name: items,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Copy,
+                                              name: copy,
+                                              widget: markdown,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Primary Color,
+                                  name: primaryColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Secondary Color,
+                                  name: secondaryColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Title Section,
+                      name: titleSection,
+                      widget: object,
+                      fields: [{ label: Title, name: title, widget: string }],
+                  }
+          - file: "src/pages/values/index.md"
+            label: "Values"
+            name: "values"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "values-page",
+                  }
+                - *HERO
+                - {
+                      label: Copy and Title Section,
+                      name: copyTitleSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                          ],
+                  }
+                - {
+                      label: Descriptive Section,
+                      name: descriptiveSection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              {
+                                  label: Copy,
+                                  name: copy,
+                                  widget: markdown,
+                                  required: false,
+                              },
+                              {
+                                  label: Items,
+                                  name: items,
+                                  widget: list,
+                                  fields:
+                                      [
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Copy,
+                                              name: copy,
+                                              widget: markdown,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Primary Color,
+                                  name: primaryColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Secondary Color,
+                                  name: secondaryColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Title and Copy Section,
+                      name: titleCopySection,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                          ],
+                  }
+                - {
+                      label: Meet Me,
+                      name: meetMe,
+                      widget: object,
+                      fields:
+                          [
+                              { label: Title, name: title, widget: string },
+                              { label: Copy, name: copy, widget: markdown },
+                              {
+                                  label: Picture,
+                                  name: picture,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Image,
+                                              name: image,
+                                              widget: image,
+                                          },
+                                          {
+                                              label: Alt,
+                                              name: alt,
+                                              widget: string,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Signature,
+                                  name: signature,
+                                  widget: object,
+                                  fields:
+                                      [
+                                          {
+                                              label: Image,
+                                              name: image,
+                                              widget: image,
+                                          },
+                                          {
+                                              label: Alt,
+                                              name: alt,
+                                              widget: string,
+                                          },
+                                          {
+                                              label: Name,
+                                              name: name,
+                                              widget: markdown,
+                                          },
+                                          {
+                                              label: Title,
+                                              name: title,
+                                              widget: markdown,
+                                          },
+                                      ],
+                              },
+                              {
+                                  label: Primary Color,
+                                  name: primaryColor,
+                                  widget: color,
+                              },
+                              {
+                                  label: Secondary Color,
+                                  name: secondaryColor,
+                                  widget: color,
+                              },
+                          ],
+                  }
+                - {
+                      label: Title Section,
+                      name: titleSection,
+                      widget: object,
+                      fields: [{ label: Title, name: title, widget: string }],
+                  }
+          - file: "src/pages/privacy-policy/index.md"
+            label: "Privacy Policy"
+            name: "privacyPolicy"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "privacy-policy-page",
+                  }
+                - { label: Privacy Policy, name: legalPage, widget: markdown }
+          - file: "src/pages/terms-of-use/index.md"
+            label: "Terms of Use"
+            name: "termsOfUse"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "terms-of-use-page",
+                  }
+                - { label: Terms of Use, name: legalPage, widget: markdown }
+          - file: "src/pages/beliefs/index.md"
+            label: "Beliefs"
+            name: "beliefs"
+            fields:
+                - {
+                      label: "Template Key",
+                      name: "templateKey",
+                      widget: "hidden",
+                      default: "beliefs-page",
+                  }
+                - *HERO

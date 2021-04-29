@@ -1,0 +1,31 @@
+.container {
+    min-height: 500px;
+    padding: 3vw 10vw;
+    display: flex;
+    align-items: center;
+}
+
+.container > div {
+    flex: unset;
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 65%;
+    margin: 0 10px;
+    animation-name: blinking;
+    animation-timing-function: step-end;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes blinking {
+    from,
+    to {
+        background-color: currentColor;
+    }
+    50% {
+        background-color: transparent;
+    }
+}

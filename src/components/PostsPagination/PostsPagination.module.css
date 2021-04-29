@@ -1,0 +1,109 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+.searchAreaContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    height: 250px;
+}
+
+.item {
+    /* flex: 1; */
+}
+
+.filter {
+    border: none;
+    outline: none;
+    padding-right: 20px;
+}
+
+.item form {
+    display: flex;
+    /* justify-content: flex-end; */
+}
+
+.searchBar {
+    min-width: 200px;
+    margin: 0;
+    height: 50px;
+    padding: 5px;
+    width: 100%;
+}
+
+.searchButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    padding: 0 14px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: inherit;
+}
+
+.searchButton:hover {
+    outline: none;
+    border: none;
+}
+
+.postsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.postsContainer a {
+    flex-basis: 35%;
+    text-decoration: none;
+    background-image: unset;
+    background-position: unset;
+    background-size: unset;
+}
+
+.postsContainer a:hover {
+    transition: unset;
+    color: unset;
+    background-position: unset;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+}
+
+.postsContainer a {
+    width: 444px;
+}
+
+@media screen and (max-width: 1300px) {
+    .postsContainer a {
+        flex-grow: 1;
+    }
+}
+
+.post h3 {
+    margin-top: 0;
+}
+
+.paginationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    height: 250px;
+}
+
+.paginationContainer span {
+    cursor: pointer;
+    outline: none;
+}

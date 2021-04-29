@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.titleContainer > div {
+    padding-bottom: 0;
+}
+
+.pContainer > p {
+    margin-top: 0;
+}
+
+.itemsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    justify-content: space-between;
+}
+
+.item {
+    flex: unset;
+    flex-basis: 35%;
+    flex-shrink: 1;
+    flex-grow: 1;
+    min-width: 300px;
+}

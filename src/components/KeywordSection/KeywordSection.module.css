@@ -1,0 +1,183 @@
+.container {
+    height: 660px;
+    display: flex;
+    position: relative;
+}
+
+.container > div:not(.hide) {
+    flex: 1;
+    display: flex;
+}
+
+.container > div {
+    transition: all 0.6s ease;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+    position: relative;
+}
+
+.container > div::after {
+    content: "";
+    width: 2px;
+    position: absolute;
+    right: 0;
+    top: 220px;
+    bottom: 20px;
+    background-color: #181925;
+}
+
+.container > div:last-child::after,
+.container > div.active::after {
+    content: unset;
+}
+
+.hide {
+    flex-grow: unset;
+    flex-shrink: 0;
+    flex-basis: 0;
+}
+
+.cardContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 130px 5vw 80px 5vw;
+    background-color: var(--secondary, #ffffff);
+    color: var(--primary, inherit);
+    min-height: calc(100% - 210px);
+    transition: all 0.3s ease;
+}
+
+.active .cardContainer,
+.cardContainer:hover {
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+
+.active .cardContainer {
+    justify-content: space-between;
+    padding: 130px 10vw 80px 10vw;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rowContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+}
+
+.innerContainer {
+    flex: 1;
+    display: flex;
+    padding: 0 0 55px 0;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.active .col {
+    align-items: flex-start;
+}
+
+.titleContainer {
+    flex: 1;
+}
+
+.titleContainer p {
+    margin: 0;
+}
+
+.controlsContainer {
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    bottom: 10px;
+}
+
+.controlsContainer > p {
+    visibility: hidden;
+    height: 0px;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s linear;
+}
+
+.expand,
+.expand::before {
+    content: "";
+    display: block;
+    background-color: currentColor;
+    width: 24px;
+    height: 4px;
+    transition: width 0.5s ease, height 0.5s ease, transform 0.5s ease,
+        visibility 0.3s, opacity 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.expand::before {
+    transform: rotate(90deg);
+}
+
+.active .cardContainer .expand,
+.active .cardContainer .expand::before,
+.cardContainer:hover .expand,
+.cardContainer:hover .expand::before,
+.active .cardContainer .controlsContainer > p,
+.cardContainer:hover .controlsContainer > p {
+    visibility: visible;
+    opacity: 1;
+}
+
+.active .expand {
+    transform: rotate(135deg);
+}
+.active .expand::before {
+    transform: rotate(-90deg);
+}
+
+.controlsContainer:hover .expand,
+.controlsContainer:hover .expand::before {
+    width: 30px;
+    height: 5px;
+}
+
+.keywordsCol {
+    flex: 1;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.keywordsCol > p {
+    margin: 0;
+}
+
+.copyContainer,
+.keywordsCol {
+    overflow: hidden;
+    visibility: hidden;
+    height: 0px;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s linear 0.4s;
+}
+
+.active .copyContainer,
+.active .keywordsCol {
+    visibility: visible;
+    height: unset;
+    opacity: 1;
+}

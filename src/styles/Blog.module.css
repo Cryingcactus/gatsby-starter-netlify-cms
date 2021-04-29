@@ -1,0 +1,13 @@
+.container {
+    background-color: #ffffff;
+}
+
+.container img {
+    display: flex;
+    max-height: 500px;
+    margin: auto;
+}
+
+.date {
+    margin-bottom: 2rem;
+}
