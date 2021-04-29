@@ -85,6 +85,7 @@ export const ValuesPageQuery = graphql`
                 }
                 descriptiveSection {
                     title
+                    copy
                     items {
                         title
                         copy

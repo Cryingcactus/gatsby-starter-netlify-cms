@@ -330,15 +330,15 @@ collections:
                               },
                           ],
                   }
-          - file: "src/pages/solutions/index.md"
-            label: "Solutions"
-            name: "solutions"
+          - file: "src/pages/services/index.md"
+            label: "Services"
+            name: "services"
             fields:
                 - {
                       label: "Template Key",
                       name: "templateKey",
                       widget: "hidden",
-                      default: "solutions-page",
+                      default: "services-page",
                   }
                 - *HERO
                 - {
@@ -625,14 +625,14 @@ collections:
                       default: "terms-of-use-page",
                   }
                 - { label: Terms of Use, name: legalPage, widget: markdown }
-          - file: "src/pages/beliefs/index.md"
-            label: "Beliefs"
-            name: "beliefs"
+          - file: "src/pages/blog/index.md"
+            label: "Blog"
+            name: "blog"
             fields:
                 - {
                       label: "Template Key",
                       name: "templateKey",
                       widget: "hidden",
-                      default: "beliefs-page",
+                      default: "blog-page",
                   }
                 - *HERO

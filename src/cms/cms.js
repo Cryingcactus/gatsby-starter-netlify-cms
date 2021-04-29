@@ -2,9 +2,11 @@ import CMS from "netlify-cms-app";
 import uploadcare from "netlify-cms-media-library-uploadcare";
 import cloudinary from "netlify-cms-media-library-cloudinary";
 import IndexPagePreview from "./preview-templates/IndexPagePreview";
-import SolutionsPagePreview from "./preview-templates/SolutionsPagePreview";
+import ServicesPagePreview from "./preview-templates/ServicesPagePreview";
 import TermsOfUsePagePreview from "./preview-templates/TermsOfUsePreview";
 import PrivacyPolicyPagePreview from "./preview-templates/PrivacyPolicyPreview";
+import BlogPagePreview from "./preview-templates/BlogPagePreview";
+import ValuesPagePreview from "./preview-templates/ValuesPagePreview";
 
 export * from "./cms-components.constants";
 
@@ -12,9 +14,11 @@ CMS.registerMediaLibrary(uploadcare);
 CMS.registerMediaLibrary(cloudinary);
 
 CMS.registerPreviewTemplate("index", IndexPagePreview);
-CMS.registerPreviewTemplate("solutions", SolutionsPagePreview);
+CMS.registerPreviewTemplate("services", ServicesPagePreview);
 CMS.registerPreviewTemplate("termsOfUse", TermsOfUsePagePreview);
 CMS.registerPreviewTemplate("privacyPolicy", PrivacyPolicyPagePreview);
+CMS.registerPreviewTemplate("blog", BlogPagePreview);
+CMS.registerPreviewTemplate("values", ValuesPagePreview);
 
 const quoteComponent = (props) => {
     console.log(props);

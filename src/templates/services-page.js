@@ -7,7 +7,7 @@ import KeywordSection from "../components/KeywordSection";
 import TitleCopySection from "../components/TitleCopySection";
 import DescriptiveSection from "../components/DescriptiveSection";
 
-export const SolutionsPageTemplate = ({ sections }) => {
+export const ServicesPageTemplate = ({ sections }) => {
     const {
         heroSection,
         keywordSection,
@@ -28,7 +28,7 @@ export const SolutionsPageTemplate = ({ sections }) => {
     );
 };
 
-SolutionsPageTemplate.propTypes = {
+ServicesPageTemplate.propTypes = {
     sections: PropTypes.objectOf({
         heroSection: PropTypes.objectOf({}),
         keywordSection: PropTypes.objectOf({}),
@@ -38,16 +38,16 @@ SolutionsPageTemplate.propTypes = {
     }).isRequired,
 };
 
-const SolutionsPage = ({ data }) => {
+const ServicesPage = ({ data }) => {
     const { frontmatter } = data.markdownRemark;
     return (
         <Layout>
-            <SolutionsPageTemplate sections={frontmatter} />
+            <ServicesPageTemplate sections={frontmatter} />
         </Layout>
     );
 };
 
-SolutionsPage.propTypes = {
+ServicesPage.propTypes = {
     data: PropTypes.shape({
         markdownRemark: PropTypes.objectOf({
             frontmatter: PropTypes.objectOf({}),
@@ -55,10 +55,10 @@ SolutionsPage.propTypes = {
     }).isRequired,
 };
 
-export default SolutionsPage;
+export default ServicesPage;
 
-export const SolutionsPageQuery = graphql`
-    query SolutionsPage($id: String!) {
+export const ServicesPageQuery = graphql`
+    query ServicesPage($id: String!) {
         markdownRemark(id: { eq: $id }) {
             rawMarkdownBody
             frontmatter {

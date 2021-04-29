@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import Hero from "../components/Hero";
 import PostsPagination from "../components/PostsPagination";
 
-export const BeliefsPageTemplate = ({ sections, posts }) => {
+export const BlogPageTemplate = ({ sections, posts }) => {
     const { heroSection } = sections;
     return (
         <div style={{ position: "relative" }}>
@@ -17,18 +17,18 @@ export const BeliefsPageTemplate = ({ sections, posts }) => {
     );
 };
 
-BeliefsPageTemplate.propTypes = {
+BlogPageTemplate.propTypes = {
     sections: PropTypes.objectOf({
         heroSection: PropTypes.object,
     }).isRequired,
     posts: PropTypes.shape({}).isRequired,
 };
 
-const BeliefsPage = ({ data }) => {
+const BlogPage = ({ data }) => {
     const { frontmatter } = data.markdownRemark;
     return (
         <Layout>
-            <BeliefsPageTemplate
+            <BlogPageTemplate
                 sections={frontmatter}
                 posts={data.allMarkdownRemark.edges}
             />
@@ -36,7 +36,7 @@ const BeliefsPage = ({ data }) => {
     );
 };
 
-BeliefsPage.propTypes = {
+BlogPage.propTypes = {
     data: PropTypes.objectOf({
         markdownRemark: PropTypes.objectOf({
             frontmatter: PropTypes.objectOf({
@@ -46,10 +46,10 @@ BeliefsPage.propTypes = {
     }).isRequired,
 };
 
-export default BeliefsPage;
+export default BlogPage;
 
-export const BeliefsPageQuery = graphql`
-    query BeliefsPage($id: String!) {
+export const BlogPageQuery = graphql`
+    query BlogPage($id: String!) {
         markdownRemark(id: { eq: $id }) {
             rawMarkdownBody
             frontmatter {

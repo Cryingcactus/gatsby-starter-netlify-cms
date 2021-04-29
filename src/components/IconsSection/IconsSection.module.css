@@ -26,6 +26,7 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    gap: 2rem;
 }
 
 .iconsGrounp {
@@ -46,4 +47,16 @@
 
 .iconText {
     text-align: center;
+}
+
+@media (min-width: 300px) {
+    .iconsGrounp {
+        flex-basis: 40%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .iconsGrounp {
+        flex-basis: 20%;
+    }
 }

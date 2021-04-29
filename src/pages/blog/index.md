@@ -1,5 +1,5 @@
 ---
-templateKey: "beliefs-page"
+templateKey: "blog-page"
 heroSection:
     titleOptions:
         highlightTitle: this is a blog post title right here
