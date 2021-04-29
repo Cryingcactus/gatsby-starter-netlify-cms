@@ -14,19 +14,6 @@
     flex: 1;
 }
 
-/* @media screen and (min-width: 1300px) {
-    .titleContainer {
-        max-width: 100%;
-        font-size: 12px;
-    }
-} */
-
-@media screen and (min-width: 300px) {
-    .titleContainer h1 {
-        font-size: 3rem;
-    }
-}
-
 .title {
     position: relative;
     display: inline;
@@ -43,8 +30,8 @@
         var(--highlightColor) 100%
     );
     background-repeat: no-repeat;
-    background-size: 100% 1.5rem;
-    background-position-y: 1rem;
+    background-size: 100% 40%;
+    background-position-y: 50%;
 }
 
 .titleAndHighlight {
