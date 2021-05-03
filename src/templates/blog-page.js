@@ -10,7 +10,7 @@ export const BlogPageTemplate = ({ sections, posts }) => {
     return (
         <div style={{ position: "relative" }}>
             <div className="paralax-normal">
-                <Hero section={heroSection} />
+                {heroSection ? <Hero section={heroSection} /> : ""}
                 <PostsPagination posts={posts} />
             </div>
         </div>

@@ -1,17 +1,19 @@
 .container {
-    min-height: calc(90vh - 200px);
+    min-height: 90vh;
     justify-content: unset;
     display: flex;
     background-color: #ffffff;
     overflow-x: hidden;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .titleContainer {
     display: flex;
     max-width: 60%;
     flex: 1;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .title {

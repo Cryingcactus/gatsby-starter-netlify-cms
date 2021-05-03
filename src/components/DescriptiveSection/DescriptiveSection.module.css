@@ -15,7 +15,6 @@
 .itemsContainer {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 20rem;
     justify-content: space-between;
 }
 
@@ -25,4 +24,18 @@
     flex-shrink: 1;
     flex-grow: 1;
     min-width: 300px;
+}
+
+@media screen and (min-width: 300px) {
+    .itemsContainer > .item:nth-of-type(odd),
+    .itemsContainer > .item:nth-of-type(even) {
+        margin-right: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .itemsContainer > .item:nth-of-type(odd),
+    .itemsContainer > .item:nth-of-type(even) {
+        margin-right: 5rem;
+    }
 }

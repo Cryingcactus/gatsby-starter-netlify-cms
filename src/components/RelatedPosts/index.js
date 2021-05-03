@@ -19,7 +19,7 @@ const RelatedPosts = ({ posts, readMore }) => {
                 </div>
                 {readMore ? (
                     <div className={styles.buttonContainer}>
-                        <Link to="/beliefs">
+                        <Link to="/blog">
                             <button className={styles.readMore}>
                                 <h3>read more</h3>
                             </button>

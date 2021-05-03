@@ -2,26 +2,6 @@
     display: flex;
 }
 
-@media (max-width: 600px) {
-    .container {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .container .imageContainer {
-        display: none;
-    }
-
-    .container .servicesContent,
-    .container .services {
-        align-items: center;
-    }
-
-    .container .servicesContent h2 {
-        text-align: center;
-    }
-}
-
 .servicesContentContainer {
     flex: 1;
     display: flex;
@@ -107,4 +87,33 @@
 .button > button:hover {
     background-color: var(--textColor);
     color: var(--backgroundColor);
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .servicesContentContainer {
+        padding-right: unset;
+    }
+
+    .container .imageContainer {
+        display: none;
+    }
+
+    .container .servicesContent,
+    .container .services {
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .container .servicesContent h2 {
+        text-align: center;
+    }
+
+    .buttonContainer {
+        padding: 3vw 0 5vw 0;
+    }
 }

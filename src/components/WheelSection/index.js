@@ -33,8 +33,8 @@ const WheelSection = ({ section }) => {
                     : styles.fadeLeft,
             ].join(" ")}
         >
-            <div className={styles.carouselTitle}>{item.title}</div>
-            <div className={styles.carouselContent}>{item.copy}</div>
+            <div className={"h2"}>{item.title}</div>
+            <div className={"p2"}>{item.copy}</div>
         </div>
     ));
     return (

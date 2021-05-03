@@ -6,6 +6,7 @@ import ServicesPagePreview from "./preview-templates/ServicesPagePreview";
 import TermsOfUsePagePreview from "./preview-templates/TermsOfUsePreview";
 import PrivacyPolicyPagePreview from "./preview-templates/PrivacyPolicyPreview";
 import BlogPagePreview from "./preview-templates/BlogPagePreview";
+import BlogPostPreview from "./preview-templates/BlogPostPreview";
 import ValuesPagePreview from "./preview-templates/ValuesPagePreview";
 
 export * from "./cms-components.constants";
@@ -17,7 +18,8 @@ CMS.registerPreviewTemplate("index", IndexPagePreview);
 CMS.registerPreviewTemplate("services", ServicesPagePreview);
 CMS.registerPreviewTemplate("termsOfUse", TermsOfUsePagePreview);
 CMS.registerPreviewTemplate("privacyPolicy", PrivacyPolicyPagePreview);
-CMS.registerPreviewTemplate("blog", BlogPagePreview);
+CMS.registerPreviewTemplate("blogPage", BlogPagePreview);
+CMS.registerPreviewTemplate("blog", BlogPostPreview);
 CMS.registerPreviewTemplate("values", ValuesPagePreview);
 
 const quoteComponent = (props) => {

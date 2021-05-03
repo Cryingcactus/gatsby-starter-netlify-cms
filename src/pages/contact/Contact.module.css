@@ -17,24 +17,9 @@
     align-items: center;
 }
 
-.header {
-    font-size: 11em;
-    line-height: 11rem;
-}
-
-@media (max-width: 1200px) {
-    .header {
-        font-size: 9em;
-    }
-}
-
-@media (max-width: 1000px) {
+@media (min-width: 300px) {
     .container {
         flex-direction: column;
-    }
-
-    .headerContainer {
-        margin-top: 100px;
     }
 
     .headerContainer h1 {
@@ -42,12 +27,35 @@
     }
 
     .header {
-        font-size: 9em;
+        font-size: 9rem;
     }
 
     .container .formContainer {
         flex: 2;
         padding: unset;
+    }
+}
+
+@media (min-width: 700px) {
+    .headerContainer {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .headerContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container .formContainer {
+        flex: 1;
+        padding: 200px 0 130px 0;
     }
 }
 

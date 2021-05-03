@@ -24,6 +24,7 @@ sections:
                       label: Title Options,
                       name: titleOptions,
                       widget: object,
+                      required: false,
                       fields:
                           [
                               {
@@ -36,16 +37,19 @@ sections:
                                   label: Highlighted Title,
                                   name: highlightTitle,
                                   widget: string,
+                                  required: false,
                               },
                               {
                                   label: Text Color,
                                   name: textColor,
                                   widget: color,
+                                  required: false,
                               },
                               {
                                   label: Highlight Color,
                                   name: highlightColor,
                                   widget: color,
+                                  required: false,
                               },
                           ],
                   },
@@ -53,10 +57,21 @@ sections:
                       label: BackgroundImage,
                       name: backgroundImage,
                       widget: object,
+                      required: false,
                       fields:
                           [
-                              { label: Image, name: image, widget: image },
-                              { label: Alt, name: alt, widget: string },
+                              {
+                                  label: Image,
+                                  name: image,
+                                  widget: image,
+                                  required: false,
+                              },
+                              {
+                                  label: Alt,
+                                  name: alt,
+                                  widget: string,
+                                  required: false,
+                              },
                           ],
                   },
               ],
@@ -79,7 +94,12 @@ collections:
           - { label: "Publish Date", name: "date", widget: "datetime" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
-          - { label: "Featured Image", name: "featuredimage", widget: image }
+          - {
+                label: "Featured Image",
+                name: "featuredimage",
+                widget: image,
+                required: false,
+            }
           - *HERO
           - { label: "Body", name: "body", widget: "markdown" }
           - { label: "Tags", name: "tags", widget: "list" }
@@ -627,7 +647,7 @@ collections:
                 - { label: Terms of Use, name: legalPage, widget: markdown }
           - file: "src/pages/blog/index.md"
             label: "Blog"
-            name: "blog"
+            name: "blogPage"
             fields:
                 - {
                       label: "Template Key",

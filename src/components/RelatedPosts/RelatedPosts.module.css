@@ -13,6 +13,7 @@
     min-height: 400px;
     gap: 50px;
     flex-wrap: wrap;
+    margin: 25px;
 }
 
 .cardsContainer > a {

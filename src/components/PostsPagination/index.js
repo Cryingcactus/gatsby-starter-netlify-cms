@@ -94,7 +94,7 @@ const PostsPagination = ({ posts }) => {
                 )}
                 <div>
                     <Pagination
-                        lengthOfPosts={posts.length}
+                        lengthOfPosts={posts}
                         currentPage={currentPage}
                         setCurrentPage={setCurrentPage}
                         postsPerPage={postsPerPage}
@@ -106,6 +106,8 @@ const PostsPagination = ({ posts }) => {
     );
 };
 
-PostsPagination.propTypes = { posts: PropTypes.shape({}).isRequired };
+PostsPagination.propTypes = { posts: PropTypes.shape({}) };
+
+PostsPagination.defaultProps = { posts: [] };
 
 export default PostsPagination;
