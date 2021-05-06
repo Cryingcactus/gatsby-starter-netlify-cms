@@ -1,13 +1,21 @@
 ---
 templateKey: blog-post
 title: "Introducing the Conscious Consumer: What Brands Need to Know"
-date: 2021-05-04T12:27:43.945Z
+date: 2021-05-06T02:50:04.221Z
 description: "Traditionally, our society has always believed that more is more.
   Brands and businesses have been built around the notion that consumers will
   always want and buy more. But as concerns around sustainability have grown, a
   new type of consumer has emerged: the conscious consumer."
 featuredpost: true
 featuredimage: /img/ava-sol-k5icxi1tezc-unsplash-1-.jpg
+heroSection:
+  backgroundImage:
+    image: /img/ava-sol-k5icxi1tezc-unsplash-1-.jpg
+  titleOptions:
+    title: "Introducing the Conscious Consumer: What Brands Need to Know"
+    highlightTitle: Introducing the Conscious Consumer
+    textColor: "#f85a3e"
+    highlightColor: "#f5e0e4"
 ---
 Traditionally, our society has always believed that more is more. Brands and businesses have been built around the notion that consumers will always want and buy more. But as concerns around sustainability have grown, a new type of consumer has emerged: the conscious consumer.
 
