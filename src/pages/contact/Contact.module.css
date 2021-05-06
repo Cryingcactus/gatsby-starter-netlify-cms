@@ -17,13 +17,14 @@
     align-items: center;
 }
 
-@media (min-width: 300px) {
+@media (min-width: 1px) {
     .container {
         flex-direction: column;
     }
 
-    .headerContainer h1 {
+    .headerContainer {
         margin: 0;
+        display: none;
     }
 
     .header {
@@ -37,9 +38,6 @@
 }
 
 @media (min-width: 700px) {
-    .headerContainer {
-        display: none;
-    }
 }
 
 @media (min-width: 1000px) {

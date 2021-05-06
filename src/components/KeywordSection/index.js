@@ -8,7 +8,7 @@ const KeywordSection = ({ section }) => {
     const [active, setActive] = useState(-1);
     return (
         <section className="nonPaddingSection">
-            <div className={styles.container}>
+            <div className={[styles.container, styles.desktop].join(" ")}>
                 {keywords.map((card, i) => {
                     const hide = active !== -1 ? styles.hide : "";
                     const className = active === i ? styles.active : hide;
@@ -23,6 +23,26 @@ const KeywordSection = ({ section }) => {
                                 active={active === i}
                                 primaryColor={primaryColor}
                                 secondaryColor={secondaryColor}
+                            />
+                        </div>
+                    );
+                })}
+            </div>
+            <div className={[styles.container, styles.mobile].join(" ")}>
+                {keywords.map((card, i) => {
+                    const className = styles.active;
+                    return (
+                        <div className={styles.active}>
+                            <Card
+                                key={card.keyword}
+                                cardInfo={card}
+                                active={active === i}
+                                primaryColor={
+                                    i % 2 === 0 ? primaryColor : secondaryColor
+                                }
+                                secondaryColor={
+                                    i % 2 === 0 ? secondaryColor : primaryColor
+                                }
                             />
                         </div>
                     );

@@ -71,16 +71,6 @@ footer .container h3 {
     margin: 0;
 }
 
-@media screen and (min-width: 1000px) {
-    footer .container h2 {
-        font-size: 5em;
-    }
-
-    footer .container h3 {
-        font-size: 3em;
-    }
-}
-
 .row.lineContainer {
     flex: 1;
 }
@@ -96,28 +86,15 @@ footer .container h3 {
     justify-content: space-between;
 }
 
-@media (max-width: 600px) {
-    .bottomRowContainer {
-        flex-direction: column-reverse;
-        justify-content: space-between;
-    }
-
-    .bottomRowContainer .verticalColumn {
-        width: 100%;
-    }
-
-    .socialBar .social {
-        justify-content: space-evenly;
-        font-size: 4em;
-        margin-bottom: 35px;
-        margin-top: 50px;
-    }
-}
-
 .verticalColumn {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.horizontalRow {
+    display: flex;
+    flex-direction: row;
 }
 
 footer h3.logo {
@@ -262,4 +239,57 @@ footer h3.logo svg path {
 .arrow::before {
     top: 100%;
     transform: rotate(-45deg);
+}
+
+@media (min-width: 1px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex: 3;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .formHolder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .horizontalRow {
+        justify-content: space-between;
+    }
+
+    .socialBar .social {
+        font-size: 4em;
+        margin-bottom: 35px;
+        margin-top: 50px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .desktop {
+        display: flex;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    footer .container h2 {
+        font-size: 5em;
+    }
+
+    footer .container h3 {
+        font-size: 3em;
+    }
+
+    .socialBar .social {
+        justify-content: flex-end;
+        font-size: 2em;
+        margin-top: 35px;
+    }
 }

@@ -41,13 +41,15 @@
     flex: 1;
 }
 
+@media screen and (min-width: 1px) {
+    .imageContainer {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 700px) {
     .container {
         flex-direction: column-reverse;
-    }
-
-    .imageContainer {
-        display: none;
     }
 }
 
