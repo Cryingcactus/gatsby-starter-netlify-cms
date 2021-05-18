@@ -7,6 +7,14 @@ description: "Good stories have the ability to transport people into another
   important when it comes to driving social and environmental change. "
 featuredpost: true
 featuredimage: /img/s-o-c-i-a-l-c-u-t-flupnkhfcts-unsplash.jpg
+heroSection:
+  titleOptions:
+    title: How to Drive Change Through Storytelling
+    highlightTitle: How to Drive Change Through Storytelling
+    highlightColor: "#f5e0e4"
+    textColor: "#f85a3e"
+  backgroundImage:
+    image: /img/s-o-c-i-a-l-c-u-t-flupnkhfcts-unsplash.jpg
 tags: []
 ---
 We all know there is power in storytelling. Good stories have the ability to transport people into another time and place, a different world. It grants people the ability to visualize something that may have once seemed unimaginable. And it gives people a glimpse of the world not how it is, but how it could be. As such, storytelling is particularly important when it comes to driving social and environmental change. Below, we explore some of the key elements needed when sparking change through storytelling.
