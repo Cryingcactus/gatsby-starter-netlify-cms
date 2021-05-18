@@ -1,34 +1,62 @@
 ---
-templateKey: 'blog-post'
-title: 'Just in: small batch of Jamaican Blue Mountain in store next week'
-date: 2017-01-04T15:04:10.000Z
+templateKey: blog-post
+title: How to Drive Change Through Storytelling
+date: 2021-05-07T16:55:46.296Z
+description: "Good stories have the ability to transport people into another
+  time and place, a different world. As such, storytelling is particularly
+  important when it comes to driving social and environmental change. "
 featuredpost: true
-description: >-
-  We’re proud to announce that we’ll be offering a small batch of Jamaica Blue
-  Mountain coffee beans in our store next week.
-tags:
-  - jamaica
-  - green beans
-  - flavor
-  - tasting
+featuredimage: /img/s-o-c-i-a-l-c-u-t-flupnkhfcts-unsplash.jpg
+tags: []
 ---
+We all know there is power in storytelling. Good stories have the ability to transport people into another time and place, a different world. It grants people the ability to visualize something that may have once seemed unimaginable. And it gives people a glimpse of the world not how it is, but how it could be. As such, storytelling is particularly important when it comes to driving social and environmental change. Below, we explore some of the key elements needed when sparking change through storytelling.
 
-We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
 
-Blue Mountain Peak is the highest mountain in Jamaica and one of the highest peaks in the Caribbean at 7,402 ft. It is the home of Blue Mountain coffee and their famous tours. It is located on the border of the Portland and Saint Thomas parishes of Jamaica.
 
-## A little history
+#### **Educate, empower, and inspire**
 
-The Blue Mountains are considered by many to be a hiker's and camper's paradise. The traditional Blue Mountain trek is a 7-mile hike to the peak and consists of a 3,000-foot increase in elevation. Jamaicans prefer to reach the peak at sunrise, thus the 3–4 hour hike is usually undertaken in darkness. Since the sky is usually very clear in the mornings, Cuba can be seen in the distance.
 
->Some of the plants found on the Blue Mountain cannot be found anywhere else in the world and they are often of a dwarfed sort.
 
-This is mainly due to the cold climate which inhibits growth. The small coffee farming communities of Claverty Cottage and Hagley Gap are located near the peak.
+Organizations tasked with driving change have different challenges than their conventional counterparts. Whether you’re a not-for-profit trying to raise funds or a consumer company selling more sustainable and ethical products, you have to do more than create desire. Before people are able to take an action towards change, the following things need to happen:
 
-## What you need to know before trying
+ 
 
-Jamaican Blue Mountain Coffee or Jamaica Blue Mountain Coffee is a classification of coffee grown in the Blue Mountains of Jamaica. The best lots of Blue Mountain coffee are noted for their mild flavor and lack of bitterness. Over the past few decades, this coffee has developed a reputation that has made it one of the most expensive and sought-after coffees in the world. Over 80% of all Jamaican Blue Mountain Coffee is exported to Japan. In addition to its use for brewed coffee, the beans are the flavor base of Tia Maria coffee liqueur.
+·  Educate: they need to understand the issue and that there is a problem
 
-Jamaican Blue Mountain Coffee is a globally protected certification mark, meaning only coffee certified by the Coffee Industry Board of Jamaica can be labeled as such. It comes from a recognized growing region in the Blue Mountain region of Jamaica, and its cultivation is monitored by the Coffee Industry Board of Jamaica.
+ 
 
-The Blue Mountains are generally located between Kingston to the south and Port Antonio to the north. Rising 7,402 ft, they are some of the highest mountains in the Caribbean. The climate of the region is cool and misty with high rainfall. The soil is rich, with excellent drainage. This combination of climate and soil is considered ideal for coffee.
+·  Empower: they need to know that they can make a difference
+
+ 
+
+·  Inspire: they need to know what to do to and be prompted to act
+
+
+
+This is where storytelling can be extremely helpful. A good story, whether it’s a video, campaign, blog post, or something else, can accomplish all these things. It can educate people on the issue at hand without making them feel helpless. It can share examples of how change is happening and inspire people to act. And, when done well, it can give people the warm-fuzzies and satisfy the “what’s in it for me” craving that we all have as consumers. 
+
+To create impactful stories that drive change, organizations need to make sure that they’re balancing education, empowerment and inspiration in their stories. If a piece of content is educational but not empowering, your audience may feel discouraged or overwhelmed. If a piece is inspiring but not educational, they may feel like their help isn’t needed. It’s a difficult balance, but when done right can lead to meaningful action. 
+
+
+
+#### **Speak to your audience**
+
+Stories should build a bridge between your organization and your audience. To do this effectively, you need to take time to identify and understand your audience. With consumers’ shortening attention spans, stories need to be entertaining and informative. You must research your who you’re trying to reach, figure out what they already know and where they are on their journey, and what drives them to take action. 
+
+ 
+
+Some of this data can come from traditional research and surveys, but don’t be afraid to do some testing. Create a/b tests on small campaigns to figure out which messaging and tone work best. Take a look at your past organic efforts and try to find trends in performance. A data-driven approach to your audience strategy will save you time, effort, and money in the long run.  
+
+
+
+#### **Be authentic and transparent**
+
+Like with any marketing, authenticity and transparency are key. Make sure that your story doesn’t come off sales-y. It should speak in a natural and human tone that is true to your brand or organization. The messaging in your story should be consistent with your website, social media, and any other efforts you have. Your story should not feel like a random-one off piece, but like a thoughtful extension of what you’ve already done. 
+
+Be transparent about your role and your relationship with the issues at hand. And be clear about any shortcoming you may have. Storytelling for change should not be used for purpose-washing. A good story creates trust between the audience and your organization, and that requires honesty and transparency. 
+
+
+
+**Final thoughts**
+
+Storytelling can be extremely powerful. It can act as a driver of change for some of the urgent social and environmental issues our world is facing today. It can put your audience in someone else’s shoes. It can educate, empower, and inspire your audience to take action today. And it should be part of every purpose-driven organization’s strategy. Are you ready to incorporate storytelling into your growth or impact efforts? Great. Let’s do it, [together](https://tgthrco.com/contact).
