@@ -2,7 +2,7 @@
 templateKey: blog-page
 heroSection:
   titleOptions:
-    highlightTitle: Our perspectives
+    highlightTitle: We believe in building a radically better future.
     textColor: "#d8fafe"
     highlightColor: "#1d4087"
   backgroundImage:
